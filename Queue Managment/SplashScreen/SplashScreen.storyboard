@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SplashScreenController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yvd-m9-DkK" userLabel="Background">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.050000000000000003" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udX-pl-UeQ">
+                                <rect key="frame" x="95" y="415.5" width="224" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="aEL-rt-TVt"/>
+                                    <constraint firstAttribute="width" constant="224" id="jgb-Bs-ct0"/>
+                                </constraints>
+                                <string key="text">Service Registration
+application</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="3YF-77-yMT">
+                                <rect key="frame" x="205.5" y="896" width="248.5" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="xKy-FG-EOR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="blI-0a-xnO">
+                                <rect key="frame" x="-44" y="446" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="26C-1J-cH0"/>
+                                    <constraint firstAttribute="width" constant="44" id="c2n-rq-M4u"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Polygon 1" translatesAutoresizingMaskIntoConstraints="NO" id="4hT-wk-4iR">
+                                <rect key="frame" x="414" y="498" width="57.5" height="58"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 6" translatesAutoresizingMaskIntoConstraints="NO" id="syN-b2-1hv">
+                                <rect key="frame" x="-2" y="152" width="2" height="56"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yvd-m9-DkK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6WG-JV-O8J"/>
+                            <constraint firstItem="udX-pl-UeQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Jy-sO-8fP"/>
+                            <constraint firstItem="syN-b2-1hv" firstAttribute="bottom" secondItem="udX-pl-UeQ" secondAttribute="top" multiplier="0.5" id="AcH-on-Mw5"/>
+                            <constraint firstItem="3YF-77-yMT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="JDA-St-vhM"/>
+                            <constraint firstItem="syN-b2-1hv" firstAttribute="bottom" secondItem="udX-pl-UeQ" secondAttribute="top" priority="750" constant="-44" id="PEj-nH-1fp"/>
+                            <constraint firstAttribute="trailing" secondItem="4hT-wk-4iR" secondAttribute="leading" id="PwK-wD-iS1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yvd-m9-DkK" secondAttribute="trailing" id="QAb-12-HPf"/>
+                            <constraint firstAttribute="leading" secondItem="blI-0a-xnO" secondAttribute="trailing" id="Qla-dk-xOt"/>
+                            <constraint firstItem="3YF-77-yMT" firstAttribute="top" secondItem="udX-pl-UeQ" secondAttribute="bottom" priority="750" constant="44" id="R7G-cw-z67"/>
+                            <constraint firstItem="3YF-77-yMT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="40" id="T3U-yx-gep"/>
+                            <constraint firstItem="4hT-wk-4iR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="79" id="T79-fJ-8eL"/>
+                            <constraint firstItem="blI-0a-xnO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="UXW-IY-0zM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="syN-b2-1hv" secondAttribute="trailing" id="aAg-pS-PuG"/>
+                            <constraint firstItem="Yvd-m9-DkK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bmo-Fu-x6j"/>
+                            <constraint firstItem="Yvd-m9-DkK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottom" priority="750" id="g8h-lc-NBA"/>
+                            <constraint firstItem="3YF-77-yMT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="i0D-R2-dnU"/>
+                            <constraint firstItem="udX-pl-UeQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSH-pO-TtV"/>
+                            <constraint firstAttribute="bottom" secondItem="Yvd-m9-DkK" secondAttribute="bottom" id="tZU-QD-Apo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ce4-HD-h0q"/>
+                    <connections>
+                        <outlet property="appNameLabel" destination="udX-pl-UeQ" id="apt-PL-PzI"/>
+                        <outlet property="background" destination="Yvd-m9-DkK" id="j0a-5K-efI"/>
+                        <outlet property="backgroundTopEqualsSafeAreTop" destination="6WG-JV-O8J" id="UPg-cw-KWV"/>
+                        <outlet property="backgroundTopEqualsSuperViewBottom" destination="g8h-lc-NBA" id="bsH-Bo-uCL"/>
+                        <outlet property="elipseTrailingsDistanceFromSuperViewsLeading" destination="Qla-dk-xOt" id="D43-7o-akp"/>
+                        <outlet property="horizontalRectangleOffScreen" destination="JDA-St-vhM" id="ugh-dm-B20"/>
+                        <outlet property="horizontalRectangleOnScreen" destination="R7G-cw-z67" id="AKS-eE-iRD"/>
+                        <outlet property="polygonLeadingDistanceFromSuperviewTrailing" destination="PwK-wD-iS1" id="0Cg-ua-jYM"/>
+                        <outlet property="verticalRectangleFarFromAppLabelName" destination="AcH-on-Mw5" id="Vd7-Vf-Bd0"/>
+                        <outlet property="verticalRectangleTrailingDistanceFromSuperViewsLeading" destination="aAg-pS-PuG" id="5Hu-Wf-O6l"/>
+                        <outlet property="verticalRectrangleNearAppLabelName" destination="PEj-nH-1fp" id="3IC-XM-0fq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ellipse 1" width="44" height="44"/>
+        <image name="Polygon 1" width="57.798999786376953" height="58.095001220703125"/>
+        <image name="Rectangle 4" width="257" height="5"/>
+        <image name="Rectangle 6" width="2" height="56"/>
+    </resources>
+</document>
