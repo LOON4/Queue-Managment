@@ -35,6 +35,7 @@ class SplashScreenController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateSplashScreen()
+        showLoginScreen()
     }
     
     private func animateSplashScreen() {
@@ -81,5 +82,10 @@ class SplashScreenController: UIViewController {
         appNameLabel.transform = CGAffineTransform(scaleX: 0.1 , y: 0.1)
     }
     
+    private func  showLoginScreen() {
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.5){
+            LoginWireFrame.presentLoginScreen(for: self)
+        }
+    }
 }
 

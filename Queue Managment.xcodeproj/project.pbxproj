@@ -14,6 +14,9 @@
 		AA3EB63F286211BD0004FDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB63E286211BD0004FDB1 /* Assets.xcassets */; };
 		AA3EB64D286214AA0004FDB1 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */; };
 		AA5BA91B2862CD7600A2977B /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA91A2862CD7600A2977B /* UIFont+extension.swift */; };
+		AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA91F2862FF1800A2977B /* Authentication.storyboard */; };
+		AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9212862FF3800A2977B /* LoginController.swift */; };
+		AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9272863017800A2977B /* LoginWireFrame.swift */; };
 		AAC48E8D28622D4D00B336B2 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */; };
 		AAC48E8E28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7C28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf */; };
 		AAC48E8F28622D4D00B336B2 /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7D28622D4D00B336B2 /* SF-Pro-Display-RegularItalic.otf */; };
@@ -44,6 +47,9 @@
 		AA3EB643286211BD0004FDB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		AA5BA91A2862CD7600A2977B /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
+		AA5BA91F2862FF1800A2977B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		AA5BA9212862FF3800A2977B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AA5BA9272863017800A2977B /* LoginWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
 		AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		AAC48E7C28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		AAC48E7D28622D4D00B336B2 /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			children = (
 				AA5BA9192862CD5F00A2977B /* Extensions */,
 				AA3EB649286211F10004FDB1 /* SplashScreen */,
+				AA5BA91E2862FEF800A2977B /* Authentication */,
 				AA3EB632286211BD0004FDB1 /* AppDelegate.swift */,
 				AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */,
 				AAC48E152862279B00B336B2 /* Fonts */,
@@ -121,6 +128,32 @@
 				AA5BA91A2862CD7600A2977B /* UIFont+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AA5BA91E2862FEF800A2977B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AA5BA9232862FF4800A2977B /* Scenes */,
+				AA5BA9262863015800A2977B /* WireFrame */,
+				AA5BA91F2862FF1800A2977B /* Authentication.storyboard */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		AA5BA9232862FF4800A2977B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AA5BA9212862FF3800A2977B /* LoginController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA5BA9262863015800A2977B /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				AA5BA9272863017800A2977B /* LoginWireFrame.swift */,
+			);
+			path = WireFrame;
 			sourceTree = "<group>";
 		};
 		AAC48E152862279B00B336B2 /* Fonts */ = {
@@ -229,6 +262,7 @@
 				AAC48E9C28622D4D00B336B2 /* SF-Pro-Display-Black.otf in Resources */,
 				AAC48E9A28622D4D00B336B2 /* SF-Pro-Display-LightItalic.otf in Resources */,
 				AAC48E9828622D4D00B336B2 /* SF-Pro-Display-Ultralight.otf in Resources */,
+				AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */,
 				AAC48E9328622D4D00B336B2 /* SF-Pro-Display-Medium.otf in Resources */,
 				AAC48E9228622D4D00B336B2 /* SF-Pro-Display-Bold.otf in Resources */,
 				AAC48E9528622D4D00B336B2 /* SF-Pro-Display-Semibold.otf in Resources */,
@@ -245,9 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
+				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont+extension.swift in Sources */,
 				AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
+				AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */,
 				AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
