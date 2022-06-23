@@ -135,7 +135,6 @@
 			children = (
 				AA5BA9232862FF4800A2977B /* Scenes */,
 				AA5BA9262863015800A2977B /* WireFrame */,
-				AA5BA91F2862FF1800A2977B /* Authentication.storyboard */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -144,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				AA5BA9212862FF3800A2977B /* LoginController.swift */,
+				AA5BA91F2862FF1800A2977B /* Authentication.storyboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

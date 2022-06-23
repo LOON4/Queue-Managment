@@ -12,4 +12,10 @@ extension UIFont {
     static func SanFranciscoBold(size: CGFloat) -> UIFont?{
         return UIFont(name: "SF Pro Display Bold", size: size)
     }
+    static func SanFranciscoLight(size: CGFloat) -> UIFont? {
+        return UIFont(name: "SF Pro Display Light", size: size)
+    }
+    static func SanFranciscoSemibold(size: CGFloat) -> UIFont? {
+        return UIFont(name: "SF Pro Display Semibold", size: size)
+    }
 }
