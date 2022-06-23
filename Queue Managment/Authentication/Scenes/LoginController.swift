@@ -28,7 +28,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
 
         
-        
+        appNameLabel.adjustsFontSizeToFitWidth = true
         
         
     }
