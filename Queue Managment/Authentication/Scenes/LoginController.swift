@@ -8,33 +8,41 @@
 import Foundation
 import UIKit
 
+
+
+
 class LoginController: UIViewController {
     
     @IBOutlet weak var appNameLabel: UILabel!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
     
-    @IBOutlet weak var KeepMeSignIcon: UIButton!
+    @IBOutlet weak var emailTextField: PaddingTextField!
+    @IBOutlet weak var passwordTextField: PaddingTextField!
     
-    
-    @IBOutlet weak var KeepMeSignInLabel: UILabel!
-    
+    @IBOutlet weak var keepMeSignIcon: CheckboxButton!
     
     @IBOutlet weak var signInButton: UIButton!
-    
     @IBOutlet weak var forgotPasswordButton: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        appNameLabel.adjustsFontSizeToFitWidth = true
-        
+        setTextFieldsPaddings()
+        adjustLabelFontSizes()
         
     }
-    
 
     
-    @IBAction func KeepMeSignIcon(_ sender: UIButton) {
+    @IBAction func rememberMeClicked() {
+        keepMeSignIcon.toggle()
+    }
+    
+    private func adjustLabelFontSizes () {
+        appNameLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    private func setTextFieldsPaddings () {
+        emailTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
+        passwordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
     }
 }

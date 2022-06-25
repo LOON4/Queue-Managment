@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,14 +21,14 @@
             <objects>
                 <viewController storyboardIdentifier="LoginController" id="Y6W-OH-hqX" customClass="LoginController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-QZ-rDx">
-                                <rect key="frame" x="16" y="47" width="288" height="474"/>
+                                <rect key="frame" x="16" y="214" width="382" height="468.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygM-oO-ztN">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="86"/>
                                         <string key="text">Service registration
 application</string>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
@@ -36,18 +36,21 @@ application</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DUI-cU-lEH">
-                                        <rect key="frame" x="0.0" y="148" width="288" height="170"/>
+                                        <rect key="frame" x="0.0" y="150" width="382" height="148"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-pf-WBa">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPp-zV-I8n">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPp-zV-I8n" customClass="PaddingTextField" customModule="Queue_Managment" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="Q8a-mp-WXc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address is incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgu-9C-O9N">
-                                                        <rect key="frame" x="0.0" y="42" width="288" height="17"/>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address is incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgu-9C-O9N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -55,15 +58,18 @@ application</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A53-cg-wpg">
-                                                <rect key="frame" x="0.0" y="75" width="288" height="59"/>
+                                                <rect key="frame" x="0.0" y="64" width="382" height="48"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-6w-yyw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-6w-yyw" customClass="PaddingTextField" customModule="Queue_Managment" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="hSt-LF-Kdu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The password you entered is incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-9b-0e6">
-                                                        <rect key="frame" x="0.0" y="42" width="247.5" height="17"/>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The password you entered is incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-9b-0e6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="247.5" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -75,22 +81,22 @@ application</string>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hqt-va-QsG">
-                                                <rect key="frame" x="0.0" y="150" width="288" height="20"/>
+                                                <rect key="frame" x="0.0" y="128" width="382" height="20"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q5-ql-leK">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q5-ql-leK" customClass="CheckboxButton" customModule="Queue_Managment" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="21k-Nf-nrj"/>
                                                             <constraint firstAttribute="height" constant="20" id="aQq-pK-0Fz"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="Keep me signed in icon"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="checkedBox1"/>
                                                         <connections>
-                                                            <action selector="KeepMeSignIcon:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FFt-7o-pnd"/>
+                                                            <action selector="rememberMeClicked" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1NX-Gr-DE2"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.56000000000000005" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep me sign in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQc-qF-SVo">
-                                                        <rect key="frame" x="28" y="2" width="260" height="16.5"/>
+                                                        <rect key="frame" x="28" y="1.5" width="354" height="17"/>
                                                         <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -100,10 +106,13 @@ application</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ahA-Qp-Nue">
-                                        <rect key="frame" x="0.0" y="382" width="288" height="92"/>
+                                        <rect key="frame" x="0.0" y="362" width="382" height="106.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-2q-4iD">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="8YH-3S-u8a"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign in">
                                                     <backgroundConfiguration key="background">
@@ -114,7 +123,7 @@ application</string>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dD-hO-8I9">
-                                                <rect key="frame" x="63" y="58" width="162.5" height="34"/>
+                                                <rect key="frame" x="111.5" y="72" width="159" height="34.5"/>
                                                 <inset key="contentEdgeInsets" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
@@ -141,12 +150,11 @@ application</string>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="KeepMeSignIcon" destination="6Q5-ql-leK" id="Z0K-Ur-kKv"/>
-                        <outlet property="KeepMeSignInLabel" destination="MQc-qF-SVo" id="w5N-bb-g7C"/>
                         <outlet property="appNameLabel" destination="ygM-oO-ztN" id="F9N-aG-zB0"/>
-                        <outlet property="emailTextField" destination="SPp-zV-I8n" id="Il5-MV-gfB"/>
+                        <outlet property="emailTextField" destination="SPp-zV-I8n" id="c6F-Qw-70A"/>
                         <outlet property="forgotPasswordButton" destination="6dD-hO-8I9" id="C1A-N0-xh1"/>
-                        <outlet property="passwordTextfield" destination="Q3G-6w-yyw" id="1ge-cf-dj2"/>
+                        <outlet property="keepMeSignIcon" destination="6Q5-ql-leK" id="vPN-Ai-Yg6"/>
+                        <outlet property="passwordTextField" destination="Q3G-6w-yyw" id="3R3-2N-Wyl"/>
                         <outlet property="signInButton" destination="1gP-2q-4iD" id="exc-Tm-VOC"/>
                     </connections>
                 </viewController>
@@ -156,7 +164,7 @@ application</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Keep me signed in icon" width="24" height="24"/>
+        <image name="checkedBox1" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

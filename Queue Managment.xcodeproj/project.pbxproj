@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A06AC652864969200CE6B87 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC642864969200CE6B87 /* UITextField.swift */; };
+		4A06AC6928674B1700CE6B87 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6828674B1700CE6B87 /* ImageConstants.swift */; };
+		4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */; };
+		4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */; };
 		AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB632286211BD0004FDB1 /* AppDelegate.swift */; };
 		AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */; };
 		AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB636286211BD0004FDB1 /* SplashScreenController.swift */; };
 		AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB63B286211BD0004FDB1 /* Queue_Managment.xcdatamodeld */; };
 		AA3EB63F286211BD0004FDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB63E286211BD0004FDB1 /* Assets.xcassets */; };
 		AA3EB64D286214AA0004FDB1 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */; };
-		AA5BA91B2862CD7600A2977B /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA91A2862CD7600A2977B /* UIFont+extension.swift */; };
+		AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA91A2862CD7600A2977B /* UIFont.swift */; };
 		AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA91F2862FF1800A2977B /* Authentication.storyboard */; };
 		AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9212862FF3800A2977B /* LoginController.swift */; };
 		AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9272863017800A2977B /* LoginWireFrame.swift */; };
@@ -38,6 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A06AC632864922300CE6B87 /* Notes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		4A06AC642864969200CE6B87 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		4A06AC6828674B1700CE6B87 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
+		4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		AA3EB62F286211BD0004FDB1 /* Queue Managment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Queue Managment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3EB632286211BD0004FDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +55,7 @@
 		AA3EB63E286211BD0004FDB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA3EB643286211BD0004FDB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
-		AA5BA91A2862CD7600A2977B /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
+		AA5BA91A2862CD7600A2977B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		AA5BA91F2862FF1800A2977B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		AA5BA9212862FF3800A2977B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AA5BA9272863017800A2977B /* LoginWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
@@ -81,6 +90,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A06AC6628674A7900CE6B87 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4A06AC6728674B0100CE6B87 /* Constants */,
+				4A06AC6A28674C7E00CE6B87 /* Views */,
+				AA5BA9192862CD5F00A2977B /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4A06AC6728674B0100CE6B87 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4A06AC6828674B1700CE6B87 /* ImageConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4A06AC6A28674C7E00CE6B87 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */,
+				4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AA3EB626286211BD0004FDB1 = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +136,7 @@
 		AA3EB631286211BD0004FDB1 /* Queue Managment */ = {
 			isa = PBXGroup;
 			children = (
-				AA5BA9192862CD5F00A2977B /* Extensions */,
+				4A06AC6628674A7900CE6B87 /* Common */,
 				AA3EB649286211F10004FDB1 /* SplashScreen */,
 				AA5BA91E2862FEF800A2977B /* Authentication */,
 				AA3EB632286211BD0004FDB1 /* AppDelegate.swift */,
@@ -109,6 +145,7 @@
 				AA3EB63E286211BD0004FDB1 /* Assets.xcassets */,
 				AA3EB643286211BD0004FDB1 /* Info.plist */,
 				AA3EB63B286211BD0004FDB1 /* Queue_Managment.xcdatamodeld */,
+				4A06AC632864922300CE6B87 /* Notes.h */,
 			);
 			path = "Queue Managment";
 			sourceTree = "<group>";
@@ -125,7 +162,8 @@
 		AA5BA9192862CD5F00A2977B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AA5BA91A2862CD7600A2977B /* UIFont+extension.swift */,
+				AA5BA91A2862CD7600A2977B /* UIFont.swift */,
+				4A06AC642864969200CE6B87 /* UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +171,7 @@
 		AA5BA91E2862FEF800A2977B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				AA5BA91F2862FF1800A2977B /* Authentication.storyboard */,
 				AA5BA9232862FF4800A2977B /* Scenes */,
 				AA5BA9262863015800A2977B /* WireFrame */,
 			);
@@ -143,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				AA5BA9212862FF3800A2977B /* LoginController.swift */,
-				AA5BA91F2862FF1800A2977B /* Authentication.storyboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -279,12 +317,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
+				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
+				4A06AC6928674B1700CE6B87 /* ImageConstants.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
-				AA5BA91B2862CD7600A2977B /* UIFont+extension.swift in Sources */,
+				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,
 				AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
+				4A06AC652864969200CE6B87 /* UITextField.swift in Sources */,
 				AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */,
 				AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */,
+				4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
