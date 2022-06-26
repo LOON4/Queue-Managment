@@ -8,7 +8,11 @@
 import Foundation
 
 struct ImgK {
+    
     static let checkedBox1 = "checkedBox1"
     static let uncheckedBox1 = "uncheckedBox1"
 
 }
+
+
+

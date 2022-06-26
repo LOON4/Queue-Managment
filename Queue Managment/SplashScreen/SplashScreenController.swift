@@ -68,7 +68,7 @@ class SplashScreenController: UIViewController {
         }
     }
     
-    private func animateAppNameLabel(){
+    private func animateAppNameLabel() {
         UIView.animate(withDuration: 1){
             self.appNameLabel.transform = .identity
             self.appNameLabel.alpha = 1
@@ -84,7 +84,7 @@ class SplashScreenController: UIViewController {
     
     private func  showLoginScreen() {
         DispatchQueue.main.asyncAfter(deadline: .now()+1.5){
-            LoginWireFrame.presentLoginScreen(for: self)
+            LoginWireFrame.showLoginScreen(for: self)
         }
     }
 }

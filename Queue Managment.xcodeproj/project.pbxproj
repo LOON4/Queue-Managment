@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4A06AC652864969200CE6B87 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC642864969200CE6B87 /* UITextField.swift */; };
-		4A06AC6928674B1700CE6B87 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6828674B1700CE6B87 /* ImageConstants.swift */; };
+		4A06AC6928674B1700CE6B87 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6828674B1700CE6B87 /* Image.swift */; };
 		4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */; };
 		4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */; };
+		4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5932032868732800DA9193 /* ResetPasswordController.swift */; };
+		4A59320628687EC100DA9193 /* ControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320528687EC100DA9193 /* ControllerID.swift */; };
+		4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320728687FDD00DA9193 /* StoryboardsID.swift */; };
 		AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB632286211BD0004FDB1 /* AppDelegate.swift */; };
 		AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */; };
 		AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB636286211BD0004FDB1 /* SplashScreenController.swift */; };
@@ -44,9 +47,12 @@
 /* Begin PBXFileReference section */
 		4A06AC632864922300CE6B87 /* Notes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
 		4A06AC642864969200CE6B87 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		4A06AC6828674B1700CE6B87 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		4A06AC6828674B1700CE6B87 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		4A5932032868732800DA9193 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
+		4A59320528687EC100DA9193 /* ControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerID.swift; sourceTree = "<group>"; };
+		4A59320728687FDD00DA9193 /* StoryboardsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsID.swift; sourceTree = "<group>"; };
 		AA3EB62F286211BD0004FDB1 /* Queue Managment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Queue Managment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3EB632286211BD0004FDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +109,9 @@
 		4A06AC6728674B0100CE6B87 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				4A06AC6828674B1700CE6B87 /* ImageConstants.swift */,
+				4A06AC6828674B1700CE6B87 /* Image.swift */,
+				4A59320528687EC100DA9193 /* ControllerID.swift */,
+				4A59320728687FDD00DA9193 /* StoryboardsID.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				AA5BA9212862FF3800A2977B /* LoginController.swift */,
+				4A5932032868732800DA9193 /* ResetPasswordController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -317,8 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
+				4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */,
 				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
-				4A06AC6928674B1700CE6B87 /* ImageConstants.swift in Sources */,
+				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
+				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
+				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,
 				AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */,

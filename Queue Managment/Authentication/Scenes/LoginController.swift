@@ -37,6 +37,11 @@ class LoginController: UIViewController {
         keepMeSignIcon.toggle()
     }
     
+    @IBAction func forgotPasswordClicked(_ sender: Any) {
+        LoginWireFrame.showPasswordScreen(for: self)
+        
+    }
+    
     private func adjustLabelFontSizes () {
         appNameLabel.adjustsFontSizeToFitWidth = true
     }
@@ -45,4 +50,7 @@ class LoginController: UIViewController {
         emailTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         passwordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
     }
+    
+    
+   
 }
