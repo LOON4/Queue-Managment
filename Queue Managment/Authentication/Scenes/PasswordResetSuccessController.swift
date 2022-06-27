@@ -10,4 +10,13 @@ import UIKit
 
 class PasswordResetSuccess: UIViewController {
     
+    @IBOutlet weak var passwordResetSuccessfulyLabel: UILabel!
+    
+    @IBAction func signInClicked() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    private func adjustFontSize(){
+        passwordResetSuccessfulyLabel.adjustsFontSizeToFitWidth = true
+    }
 }

@@ -17,13 +17,16 @@ class NewPasswordController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        newPasswordTextField.becomeFirstResponder()
         setUpTextField()
     }
     
     
+    @IBAction func resetPasswordClicked() {
+        LoginWireFrame.showPasswordResetSuccess(for: self)
+    }
     
     private func setUpTextField () {
-        
         newPasswordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         repeatPasswordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
     }

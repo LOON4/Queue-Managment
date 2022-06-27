@@ -18,7 +18,7 @@ class ResetPasswordCodeController: UIViewController {
     
 
     @IBAction func nextButtonClicked() {
-
+        LoginWireFrame.showNewPasswordScreen(for: self)
     }
     
     private func setUpTextField () {

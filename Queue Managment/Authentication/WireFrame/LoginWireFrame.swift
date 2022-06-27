@@ -41,7 +41,7 @@ class LoginWireFrame: LoginWireFrameProtocol {
     class func showPasswordScreen(for view: UIViewController) {
         let resetPasswordVC = authenticationStoryboard
             .instantiateViewController(withIdentifier: ControllerIDK.passwordScreen)
-        view.navigationController?.pushViewController(resetPasswordVC, animated: true)
+        loginNVC.pushViewController(resetPasswordVC, animated: true)
     }
     
     class func showCheckEmailScreen(for view: UIViewController){
@@ -51,17 +51,17 @@ class LoginWireFrame: LoginWireFrameProtocol {
     
     class func showCodeEnterSceen(for view: UIViewController){
         let codeEnterVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.passwordScreenCode)
-        loginNVC.push(viewController: codeEnterVC)
+        loginNVC.pushViewController(codeEnterVC, animated: true)
     }
     
     class func showNewPasswordScreen(for view: UIViewController){
         let newPasswordVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.newPassword)
-        loginNVC.push(viewController: newPasswordVC)
+        loginNVC.pushViewController(newPasswordVC, animated: true)
     }
     
     class func showPasswordResetSuccess(for view: UIViewController){
-        let passwordResetSuccessVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.newPassword)
-        loginNVC.push(viewController: passwordResetSuccessVC)
+        let passwordResetSuccessVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.passwordResetSuccess)
+        loginNVC.pushViewController(passwordResetSuccessVC, animated: true)
     }
     
     
