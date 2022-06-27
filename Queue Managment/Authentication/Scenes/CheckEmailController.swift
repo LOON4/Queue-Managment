@@ -23,6 +23,14 @@ class CheckEmailController: UIViewController {
         adjustLabelFont()
     }
     
+    @IBAction func skipButtonClicked() {
+        LoginWireFrame.showCodeEnterSceen(for: self)
+    }
+    
+    @IBAction func openEmailClicked(_ sender: Any) {
+        LoginWireFrame.showCodeEnterSceen(for: self)
+    }
+    
     private func adjustLabelFont () {
         openEmailButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
         skipButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
