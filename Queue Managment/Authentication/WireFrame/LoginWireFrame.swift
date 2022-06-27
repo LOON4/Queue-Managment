@@ -11,6 +11,11 @@ import UIKit
 protocol LoginWireFrameProtocol {
     static func showLoginScreen(for view: UIViewController)
     static func showPasswordScreen(for view: UIViewController)
+    static func showCheckEmailScreen(for view: UIViewController)
+    static func showCodeEnterSceen(for view: UIViewController)
+    static func showNewPasswordScreen(for view: UIViewController)
+    static func showPasswordResetSuccess(for view: UIViewController)
+
 }
 
 class LoginWireFrame: LoginWireFrameProtocol {
@@ -48,6 +53,17 @@ class LoginWireFrame: LoginWireFrameProtocol {
         let codeEnterVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.passwordScreenCode)
         loginNVC.push(viewController: codeEnterVC)
     }
+    
+    class func showNewPasswordScreen(for view: UIViewController){
+        let newPasswordVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.newPassword)
+        loginNVC.push(viewController: newPasswordVC)
+    }
+    
+    class func showPasswordResetSuccess(for view: UIViewController){
+        let passwordResetSuccessVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.newPassword)
+        loginNVC.push(viewController: passwordResetSuccessVC)
+    }
+    
     
     
 }
