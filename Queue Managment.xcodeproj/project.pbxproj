@@ -27,6 +27,7 @@
 		AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA91F2862FF1800A2977B /* Authentication.storyboard */; };
 		AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9212862FF3800A2977B /* LoginController.swift */; };
 		AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9272863017800A2977B /* LoginWireFrame.swift */; };
+		AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB16385286989F400C79DB8 /* UINavigationController.swift */; };
 		AAC48E8D28622D4D00B336B2 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */; };
 		AAC48E8E28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7C28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf */; };
 		AAC48E8F28622D4D00B336B2 /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7D28622D4D00B336B2 /* SF-Pro-Display-RegularItalic.otf */; };
@@ -71,6 +72,7 @@
 		AA5BA91F2862FF1800A2977B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		AA5BA9212862FF3800A2977B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AA5BA9272863017800A2977B /* LoginWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
+		AAB16385286989F400C79DB8 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		AAC48E7C28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		AAC48E7D28622D4D00B336B2 /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				4A06AC642864969200CE6B87 /* UITextField.swift */,
 				AA3A54082868AA8300FF4E77 /* UIImage.swift */,
 				AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */,
+				AAB16385286989F400C79DB8 /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
 				4A06AC652864969200CE6B87 /* UITextField.swift in Sources */,
 				AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */,
+				AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */,
 				AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */,
 				4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */,
 			);
