@@ -178,27 +178,30 @@ application</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-x4-l95">
-                                <rect key="frame" x="16" y="201" width="382" height="234"/>
+                                <rect key="frame" x="16" y="116" width="382" height="236"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-YT-TmW">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="78"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-JW-esm">
-                                                <rect key="frame" x="0.0" y="0.0" width="260" height="42"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Reset password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-JW-esm">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="44"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.56000000000000005" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the email address below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ4-Ce-0n0">
-                                                <rect key="frame" x="0.0" y="58" width="229.66666666666666" height="20"/>
+                                                <rect key="frame" x="0.0" y="60" width="229.66666666666666" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="zTv-82-Cmx"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zED-fq-hBI">
-                                        <rect key="frame" x="0.0" y="122" width="382" height="112"/>
+                                        <rect key="frame" x="0.0" y="124" width="382" height="112"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umx-Hu-1bf" customClass="PaddingTextField" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -237,9 +240,11 @@ application</string>
                         <viewLayoutGuide key="safeArea" id="Toj-1C-oAM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ya0-x4-l95" firstAttribute="top" secondItem="Toj-1C-oAM" secondAttribute="top" constant="157" id="Dbp-fr-pqy"/>
                             <constraint firstItem="Toj-1C-oAM" firstAttribute="trailing" secondItem="ya0-x4-l95" secondAttribute="trailing" constant="16" id="De7-iU-Cmd"/>
+                            <constraint firstItem="Toj-1C-oAM" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ya0-x4-l95" secondAttribute="bottom" priority="888" constant="350" id="JZj-B4-kQO"/>
+                            <constraint firstItem="ya0-x4-l95" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Toj-1C-oAM" secondAttribute="top" constant="16" id="Nbd-jQ-Hnw"/>
                             <constraint firstItem="ya0-x4-l95" firstAttribute="leading" secondItem="Toj-1C-oAM" secondAttribute="leading" constant="16" id="YG7-WM-5ku"/>
+                            <constraint firstItem="ya0-x4-l95" firstAttribute="top" secondItem="Toj-1C-oAM" secondAttribute="top" priority="750" constant="72" id="igj-ka-T5D"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -264,7 +269,7 @@ application</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="I2i-TS-E1x">
-                                <rect key="frame" x="46" y="92.000000000000028" width="322" height="395.66666666666674"/>
+                                <rect key="frame" x="46" y="92.000000000000028" width="322" height="407.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="szN-PU-i8C">
                                         <rect key="frame" x="10.333333333333343" y="0.0" width="301.66666666666663" height="96.666666666666671"/>
@@ -275,7 +280,7 @@ application</string>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-VR-yli">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-VR-yli">
                                                 <rect key="frame" x="0.0" y="56" width="301.66666666666669" height="40.666666666666657"/>
                                                 <string key="text">Password recovery code has been sent 
 to your email address.</string>
@@ -293,13 +298,16 @@ to your email address.</string>
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
-                                        <rect key="frame" x="88.666666666666671" y="311.66666666666669" width="144.66666666666663" height="84"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
+                                        <rect key="frame" x="80.666666666666671" y="311.66666666666669" width="160.66666666666663" height="96"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2q-5w-lWE">
-                                                <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="34"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-yT-z9h">
+                                                <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="iE9-nX-PuC"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Open email app">
+                                                <buttonConfiguration key="configuration" style="plain" title="Open email app" buttonSize="large">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                     </backgroundConfiguration>
@@ -308,36 +316,60 @@ to your email address.</string>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RU-dH-wrh">
-                                                <rect key="frame" x="43.333333333333343" y="50" width="58" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Skip">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.56296564569536423" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <font key="NSFont" size="17" name="MLingWaiMedium-TC"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </buttonConfiguration>
+                                                <rect key="frame" x="63.999999999999986" y="72" width="33" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="MXF-n2-b7n"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Skip">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.56296564569999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="0.26493584437086093" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pFn-ty-EAD">
-                                <rect key="frame" x="130.66666666666666" y="796.33333333333337" width="152.99999999999997" height="41.666666666666629"/>
+                                <rect key="frame" x="111" y="787" width="192" height="51"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-Br-Atf">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="41.666666666666664"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-Br-Atf">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="192" id="2qX-cm-dl9"/>
+                                            <constraint firstAttribute="height" constant="51" id="w9e-BI-mz0"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment>
+                                                    <string key="content">Didn’t receive the code?
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.14902000000000001" green="0.14902000000000001" blue="0.14902000000000001" alpha="0.56000000000000005" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="17" name="SFProDisplay-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Try again">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.47843000000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="17" name="SFProDisplay-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <state key="highlighted">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Didn’t receive the code?">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="12" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.31353476821655629" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="17" name="SFProDisplay-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment>
@@ -345,19 +377,20 @@ to your email address.</string>
 Cg
 </string>
                                                     <attributes>
-                                                        <font key="NSFont" size="12" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="17" name="SFProDisplay-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content="Try again">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="12" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.66778766556291391" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="17" name="SFProDisplay-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                        </buttonConfiguration>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -366,7 +399,7 @@ Cg
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0l2-hM-TNo" firstAttribute="trailing" secondItem="I2i-TS-E1x" secondAttribute="trailing" constant="46" id="2Sy-Fc-EP1"/>
-                            <constraint firstItem="I2i-TS-E1x" firstAttribute="top" secondItem="0l2-hM-TNo" secondAttribute="top" priority="750" constant="100" id="DrV-PW-1ME"/>
+                            <constraint firstItem="I2i-TS-E1x" firstAttribute="top" secondItem="0l2-hM-TNo" secondAttribute="top" priority="750" constant="111" id="DrV-PW-1ME"/>
                             <constraint firstItem="0l2-hM-TNo" firstAttribute="bottom" secondItem="pFn-ty-EAD" secondAttribute="bottom" constant="24" id="DtK-45-zgm"/>
                             <constraint firstItem="pFn-ty-EAD" firstAttribute="centerX" secondItem="w7T-9z-4ti" secondAttribute="centerX" id="PaQ-Iq-6ky"/>
                             <constraint firstItem="I2i-TS-E1x" firstAttribute="top" relation="lessThanOrEqual" secondItem="0l2-hM-TNo" secondAttribute="top" constant="48" id="hWf-H5-Kan"/>
@@ -374,6 +407,13 @@ Cg
                             <constraint firstItem="I2i-TS-E1x" firstAttribute="leading" secondItem="0l2-hM-TNo" secondAttribute="leading" constant="46" id="rw4-ss-vS2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkYourEmailLabel" destination="OV9-hH-15d" id="Ml1-1e-szh"/>
+                        <outlet property="emailSentLabel" destination="9qi-VR-yli" id="9el-08-oOL"/>
+                        <outlet property="openEmailButton" destination="ph1-yT-z9h" id="JWe-W0-T8B"/>
+                        <outlet property="resendCodeButton" destination="FTY-Br-Atf" id="mq4-u2-dJa"/>
+                        <outlet property="skipButton" destination="8RU-dH-wrh" id="IXD-yZ-svS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDa-nY-xhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

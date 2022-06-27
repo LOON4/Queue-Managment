@@ -10,15 +10,27 @@ import UIKit
 
 class CheckEmailController: UIViewController {
     
+    @IBOutlet weak var checkYourEmailLabel: UILabel!
+    @IBOutlet weak var emailSentLabel: UILabel!
+    
+    @IBOutlet weak var openEmailButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var resendCodeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adjustLabelFontSizes()
+        navigationItem.hidesBackButton = true
+        adjustLabelFont()
     }
     
-    private func adjustLabelFontSizes () {
-        //checkYourEmailLabel.adjustsFontSizeToFitWidth = true
-        //emailHasBeenSentLabel.adjustsFontSizeToFitWidth = true
+    private func adjustLabelFont () {
+        openEmailButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
+        skipButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
+        
+        checkYourEmailLabel.font = UIFont.SanFranciscoBold(size: 36)
+        emailSentLabel.font = UIFont.SanFranciscoRegular(size: 17)
+        checkYourEmailLabel.adjustsFontSizeToFitWidth = true
+        emailSentLabel.adjustsFontSizeToFitWidth = true
     }
     
     
