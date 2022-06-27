@@ -314,6 +314,9 @@ to your email address.</string>
                                                     <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="openEmailClicked:" destination="vll-sl-za9" eventType="touchUpInside" id="ykb-TV-UMD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RU-dH-wrh">
                                                 <rect key="frame" x="63.999999999999986" y="72" width="33" height="24"/>
@@ -328,6 +331,9 @@ to your email address.</string>
                                                 <state key="highlighted">
                                                     <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="0.26493584437086093" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="skipButtonClicked" destination="vll-sl-za9" eventType="touchUpInside" id="LSD-df-zSd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -436,6 +442,97 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiJ-4i-vC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="114.50892857142857"/>
+        </scene>
+        <!--Reset Password Code Controller-->
+        <scene sceneID="iAh-IM-bi3">
+            <objects>
+                <viewController storyboardIdentifier="ResetPasswordCodeController" id="cbw-zf-wNc" customClass="ResetPasswordCodeController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HLN-7o-qxK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Ojt-zT-BYJ">
+                                <rect key="frame" x="16" y="116" width="382" height="236"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BWg-h5-3Dz">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Reset password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QA-ao-rf3">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="44"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.56000000238418579" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the 8 digit code sent to your email." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-Tj-vsf">
+                                                <rect key="frame" x="0.0" y="60" width="308" height="20"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="io8-lU-625"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="X9e-2m-2Ae">
+                                        <rect key="frame" x="0.0" y="124" width="382" height="112"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NhF-wM-2TH" customClass="PaddingTextField" customModule="Queue_Managment" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Md1-D2-lD3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-8e-KfQ">
+                                                <rect key="frame" x="0.0" y="64" width="382" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="evT-7A-ZhM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="nextButtonClicked" destination="cbw-zf-wNc" eventType="touchUpInside" id="cY5-C5-xnl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="NhF-wM-2TH" secondAttribute="trailing" id="Jzb-RG-uJG"/>
+                                            <constraint firstItem="NhF-wM-2TH" firstAttribute="leading" secondItem="X9e-2m-2Ae" secondAttribute="leading" id="LWZ-yq-0Wb"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GOL-i1-eWT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ojt-zT-BYJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GOL-i1-eWT" secondAttribute="top" constant="16" id="Tlc-nU-gcZ"/>
+                            <constraint firstItem="Ojt-zT-BYJ" firstAttribute="top" secondItem="GOL-i1-eWT" secondAttribute="top" priority="750" constant="72" id="Zh3-Mp-MIy"/>
+                            <constraint firstItem="GOL-i1-eWT" firstAttribute="trailing" secondItem="Ojt-zT-BYJ" secondAttribute="trailing" constant="16" id="bpq-72-x06"/>
+                            <constraint firstItem="Ojt-zT-BYJ" firstAttribute="leading" secondItem="GOL-i1-eWT" secondAttribute="leading" constant="16" id="xN9-hX-slW"/>
+                            <constraint firstItem="GOL-i1-eWT" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ojt-zT-BYJ" secondAttribute="bottom" priority="888" constant="350" id="yuf-sQ-Dgw"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="iJ9-9Q-XXB">
+                        <barButtonItem key="leftBarButtonItem" id="RST-Mt-eGf" userLabel="goback"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="codeTextField" destination="NhF-wM-2TH" id="U67-VN-UFo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fam-Pb-y3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3419" y="115"/>
         </scene>
     </scenes>
     <resources>

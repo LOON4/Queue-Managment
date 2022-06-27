@@ -44,5 +44,10 @@ class LoginWireFrame: LoginWireFrameProtocol {
         loginNVC.push(viewController: checkEmailVC)
     }
     
+    class func showCodeEnterSceen(for view: UIViewController){
+        let codeEnterVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.passwordScreenCode)
+        loginNVC.push(viewController: codeEnterVC)
+    }
+    
     
 }
