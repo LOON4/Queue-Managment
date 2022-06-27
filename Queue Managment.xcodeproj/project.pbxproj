@@ -14,6 +14,9 @@
 		4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5932032868732800DA9193 /* ResetPasswordController.swift */; };
 		4A59320628687EC100DA9193 /* ControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320528687EC100DA9193 /* ControllerID.swift */; };
 		4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320728687FDD00DA9193 /* StoryboardsID.swift */; };
+		AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A54082868AA8300FF4E77 /* UIImage.swift */; };
+		AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */; };
+		AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */; };
 		AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB632286211BD0004FDB1 /* AppDelegate.swift */; };
 		AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */; };
 		AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB636286211BD0004FDB1 /* SplashScreenController.swift */; };
@@ -53,6 +56,9 @@
 		4A5932032868732800DA9193 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		4A59320528687EC100DA9193 /* ControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerID.swift; sourceTree = "<group>"; };
 		4A59320728687FDD00DA9193 /* StoryboardsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsID.swift; sourceTree = "<group>"; };
+		AA3A54082868AA8300FF4E77 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonConfiguration.swift; sourceTree = "<group>"; };
+		AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailController.swift; sourceTree = "<group>"; };
 		AA3EB62F286211BD0004FDB1 /* Queue Managment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Queue Managment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3EB632286211BD0004FDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 			children = (
 				AA5BA91A2862CD7600A2977B /* UIFont.swift */,
 				4A06AC642864969200CE6B87 /* UITextField.swift */,
+				AA3A54082868AA8300FF4E77 /* UIImage.swift */,
+				AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			children = (
 				AA5BA9212862FF3800A2977B /* LoginController.swift */,
 				4A5932032868732800DA9193 /* ResetPasswordController.swift */,
+				AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -326,12 +335,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
+				AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */,
 				4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */,
 				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
 				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
 				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
+				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
+				AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,
 				AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,

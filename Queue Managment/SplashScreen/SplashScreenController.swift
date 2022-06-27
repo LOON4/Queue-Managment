@@ -78,7 +78,6 @@ class SplashScreenController: UIViewController {
 
     
     private func scaleAppNameLabel() {
-//        appNameLabel.font = UIFont.SanFranciscoBold(size: 24)
         appNameLabel.transform = CGAffineTransform(scaleX: 0.1 , y: 0.1)
     }
     

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,10 +28,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-QZ-rDx">
-                                <rect key="frame" x="16" y="214" width="382" height="468.5"/>
+                                <rect key="frame" x="16" y="215" width="382" height="466"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygM-oO-ztN">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="86"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="84"/>
                                         <string key="text">Service registration
 application</string>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
@@ -39,7 +39,7 @@ application</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DUI-cU-lEH">
-                                        <rect key="frame" x="0.0" y="150" width="382" height="148"/>
+                                        <rect key="frame" x="0.0" y="148" width="382" height="148"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-pf-WBa">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -69,10 +69,10 @@ application</string>
                                                             <constraint firstAttribute="height" constant="48" id="hSt-LF-Kdu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The password you entered is incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-9b-0e6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="247.5" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="247.33333333333334" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@ application</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.56000000000000005" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep me sign in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQc-qF-SVo">
-                                                        <rect key="frame" x="28" y="1.5" width="354" height="17"/>
+                                                        <rect key="frame" x="28" y="2" width="354" height="16.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@ application</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ahA-Qp-Nue">
-                                        <rect key="frame" x="0.0" y="362" width="382" height="106.5"/>
+                                        <rect key="frame" x="0.0" y="360" width="382" height="106"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-2q-4iD">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -126,7 +126,7 @@ application</string>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dD-hO-8I9">
-                                                <rect key="frame" x="111.5" y="72" width="159" height="34.5"/>
+                                                <rect key="frame" x="110.00000000000001" y="72" width="162.33333333333337" height="34"/>
                                                 <inset key="contentEdgeInsets" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
@@ -169,7 +169,7 @@ application</string>
             </objects>
             <point key="canvasLocation" x="1018.840579710145" y="114.50892857142857"/>
         </scene>
-        <!--Title-->
+        <!--Reset Password Controller-->
         <scene sceneID="eOI-u8-ted">
             <objects>
                 <viewController storyboardIdentifier="ResetPasswordController" id="xu0-rG-orC" customClass="ResetPasswordController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,19 +178,19 @@ application</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-x4-l95">
-                                <rect key="frame" x="16" y="201" width="382" height="235.5"/>
+                                <rect key="frame" x="16" y="201" width="382" height="234"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-YT-TmW">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="79.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-JW-esm">
-                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="42"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.56000000000000005" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the email address below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ4-Ce-0n0">
-                                                <rect key="frame" x="0.0" y="59" width="211.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="58" width="229.66666666666666" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@ application</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zED-fq-hBI">
-                                        <rect key="frame" x="0.0" y="123.5" width="382" height="112"/>
+                                        <rect key="frame" x="0.0" y="122" width="382" height="112"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umx-Hu-1bf" customClass="PaddingTextField" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -221,6 +221,9 @@ application</string>
                                                     <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="nextButtonClicked" destination="xu0-rG-orC" eventType="touchUpInside" id="dpW-Pp-ozH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -240,8 +243,8 @@ application</string>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="kVf-qi-tqB">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="jvk-TO-fq5"/>
+                    <navigationItem key="navigationItem" id="kVf-qi-tqB">
+                        <barButtonItem key="leftBarButtonItem" id="jvk-TO-fq5" userLabel="goback"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -251,6 +254,130 @@ application</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4W-sa-TQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1779.7101449275365" y="114.50892857142857"/>
+        </scene>
+        <!--Check Email Controller-->
+        <scene sceneID="KNn-pS-pDv">
+            <objects>
+                <viewController storyboardIdentifier="CheckEmailController" id="vll-sl-za9" customClass="CheckEmailController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7T-9z-4ti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="I2i-TS-E1x">
+                                <rect key="frame" x="46" y="92.000000000000028" width="322" height="395.66666666666674"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="szN-PU-i8C">
+                                        <rect key="frame" x="10.333333333333343" y="0.0" width="301.66666666666663" height="96.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-hH-15d">
+                                                <rect key="frame" x="0.0" y="0.0" width="301.66666666666669" height="40"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="System Font" pointSize="36"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-VR-yli">
+                                                <rect key="frame" x="0.0" y="56" width="301.66666666666669" height="40.666666666666657"/>
+                                                <string key="text">Password recovery code has been sent 
+to your email address.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QSn-V2-dN5">
+                                        <rect key="frame" x="53.333333333333329" y="130.66666666666666" width="215.66666666666669" height="146.99999999999997"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email8" translatesAutoresizingMaskIntoConstraints="NO" id="lcw-eY-Tau">
+                                                <rect key="frame" x="0.0" y="0.0" width="215.66666666666666" height="147"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
+                                        <rect key="frame" x="88.666666666666671" y="311.66666666666669" width="144.66666666666663" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2q-5w-lWE">
+                                                <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Open email app">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RU-dH-wrh">
+                                                <rect key="frame" x="43.333333333333343" y="50" width="58" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Skip">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.56296564569536423" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="17" name="MLingWaiMedium-TC"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pFn-ty-EAD">
+                                <rect key="frame" x="130.66666666666666" y="796.33333333333337" width="152.99999999999997" height="41.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-Br-Atf">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="41.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Didn’t receive the code?">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Try again">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0l2-hM-TNo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0l2-hM-TNo" firstAttribute="trailing" secondItem="I2i-TS-E1x" secondAttribute="trailing" constant="46" id="2Sy-Fc-EP1"/>
+                            <constraint firstItem="I2i-TS-E1x" firstAttribute="top" secondItem="0l2-hM-TNo" secondAttribute="top" priority="750" constant="100" id="DrV-PW-1ME"/>
+                            <constraint firstItem="0l2-hM-TNo" firstAttribute="bottom" secondItem="pFn-ty-EAD" secondAttribute="bottom" constant="24" id="DtK-45-zgm"/>
+                            <constraint firstItem="pFn-ty-EAD" firstAttribute="centerX" secondItem="w7T-9z-4ti" secondAttribute="centerX" id="PaQ-Iq-6ky"/>
+                            <constraint firstItem="I2i-TS-E1x" firstAttribute="top" relation="lessThanOrEqual" secondItem="0l2-hM-TNo" secondAttribute="top" constant="48" id="hWf-H5-Kan"/>
+                            <constraint firstItem="pFn-ty-EAD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I2i-TS-E1x" secondAttribute="bottom" constant="16" id="mVh-aO-Y5h"/>
+                            <constraint firstItem="I2i-TS-E1x" firstAttribute="leading" secondItem="0l2-hM-TNo" secondAttribute="leading" constant="46" id="rw4-ss-vS2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDa-nY-xhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2594.202898550725" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GYb-IP-F0r">
@@ -273,6 +400,7 @@ application</string>
     </scenes>
     <resources>
         <image name="checkedBox1" width="24" height="24"/>
+        <image name="email8" width="215.66667175292969" height="147"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

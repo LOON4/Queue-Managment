@@ -16,32 +16,32 @@ protocol LoginWireFrameProtocol {
 class LoginWireFrame: LoginWireFrameProtocol {
 
     static let authenticationStoryboard = {
-        UIStoryboard(name: StoryboardsID.authentication, bundle: .main)
+        UIStoryboard(name: StoryboardIDK.authentication, bundle: .main)
+    }()
+    
+    static let loginNVC = {
+        authenticationStoryboard
+            .instantiateViewController(withIdentifier: NavContollerIDK.loginNavigationController)
+            as! UINavigationController
     }()
     
     class func showLoginScreen(for view: UIViewController) {
-        
-        let loginNVC = authenticationStoryboard
-            .instantiateViewController(withIdentifier: NavContollerIDK.loginNavigationController)
-            as! UINavigationController
-        
         let loginVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.loginScreen)
-        
         loginNVC.setViewControllers([loginVC], animated: true)
-        
         loginNVC.modalPresentationStyle = .overFullScreen
-        
         view.present(loginNVC, animated: true)
-        
     }
     
     
     class func showPasswordScreen(for view: UIViewController) {
-        
         let resetPasswordVC = authenticationStoryboard
             .instantiateViewController(withIdentifier: ControllerIDK.passwordScreen)
         view.navigationController?.pushViewController(resetPasswordVC, animated: true)
-      
+    }
+    
+    class func showCheckEmailScreen(for view: UIViewController){
+        let checkEmailVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.checkEmail)
+        view.navigationController?.pushViewController(checkEmailVC, animated: true)
     }
     
     

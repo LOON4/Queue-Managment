@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StoryboardsID {
+struct StoryboardIDK {
     
     static let authentication = "Authentication"
     

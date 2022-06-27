@@ -13,14 +13,21 @@ class ResetPasswordController : UIViewController {
     
     
     @IBOutlet weak var emailAdressTextField: PaddingTextField!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextField()
         setUpBarButton()
     }
     
+    @objc
+    private func backButtonClicked(){
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextButtonClicked() {
+        LoginWireFrame.showCheckEmailScreen(for: self)
+    }
     
     private func setUpTextField () {
         emailAdressTextField.becomeFirstResponder()
@@ -28,18 +35,10 @@ class ResetPasswordController : UIViewController {
     }
     
     private func setUpBarButton () {
-        let backButtom = UIButton(type: .system)
-        backButtom.setTitle(" Back", for: .normal)
-        
-        let image = UIImage(systemName: "arrow.backward")
-//        image = image?.withTintColor(UIColor.init(red: 0, green: 0, blue: 0, alpha: 1))
-        
-        backButtom.setImage(image, for: .normal)
-//        backButtom.foreground
-        
-        backButtom.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        let leftItem1 = UIBarButtonItem(customView: backButtom)
-        
+        let backButton = UIButton(type: .custom)
+        backButton.addTarget(self, action: #selector(backButtonClicked), for: .touchUpInside)
+        backButton.configuration = .navigationBarButtonTemplate()
+        let leftItem1 = UIBarButtonItem(customView: backButton)
         self.navigationItem.leftBarButtonItem = leftItem1
     }
     

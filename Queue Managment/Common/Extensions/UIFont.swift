@@ -18,6 +18,10 @@ extension UIFont {
     static func SanFranciscoSemibold(size: CGFloat) -> UIFont? {
         return UIFont(name: "SF Pro Display Semibold", size: size)
     }
+    static func SanFranciscoRegular(size: CGFloat) -> UIFont? {
+        return UIFont(name: "SF Pro Display Regular", size: size)
+    }
 }
+
 
 

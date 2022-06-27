@@ -12,7 +12,7 @@ struct ControllerIDK {
     
     static let loginScreen = "LoginController"
     static let passwordScreen = "ResetPasswordController"
-
+    static let checkEmail = "CheckEmailController"
 }
 
 
