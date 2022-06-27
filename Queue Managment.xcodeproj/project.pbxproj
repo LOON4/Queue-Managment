@@ -47,6 +47,8 @@
 		AAC48E9D28622D4D00B336B2 /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E8B28622D4D00B336B2 /* SF-Pro-Display-ThinItalic.otf */; };
 		AAC48E9E28622D4D00B336B2 /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E8C28622D4D00B336B2 /* SF-Pro-Display-BoldItalic.otf */; };
 		AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */; };
+		AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE246B2869FF6400C54A8C /* NewPasswordController.swift */; };
+		AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		AAC48E8B28622D4D00B336B2 /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
 		AAC48E8C28622D4D00B336B2 /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
 		AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCodeController.swift; sourceTree = "<group>"; };
+		AADE246B2869FF6400C54A8C /* NewPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordController.swift; sourceTree = "<group>"; };
+		AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccessController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 				4A5932032868732800DA9193 /* ResetPasswordController.swift */,
 				AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */,
 				AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */,
+				AADE246B2869FF6400C54A8C /* NewPasswordController.swift */,
+				AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -347,7 +353,9 @@
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
 				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
 				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
+				AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */,
 				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,
+				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
 				AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,

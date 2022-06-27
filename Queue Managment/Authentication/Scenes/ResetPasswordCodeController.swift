@@ -17,7 +17,6 @@ class ResetPasswordCodeController: UIViewController {
     }
     
 
-    
     @IBAction func nextButtonClicked() {
 
     }
@@ -27,7 +26,4 @@ class ResetPasswordCodeController: UIViewController {
         codeTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
     }
     
-    private func setUpBarButton () {
-        
-    }
 }
