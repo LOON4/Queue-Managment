@@ -20,16 +20,15 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var keepMeSignIcon: CheckboxButton!
     
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInButton: QueueButtonOne!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextFieldsPaddings()
+        setupTextFields()
         adjustLabelFontSizes()
-        
     }
 
     
@@ -46,9 +45,11 @@ class LoginController: UIViewController {
         appNameLabel.adjustsFontSizeToFitWidth = true
     }
     
-    private func setTextFieldsPaddings () {
+    private func setupTextFields () {
         emailTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         passwordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
+        emailTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
+        passwordTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
     }
     
     

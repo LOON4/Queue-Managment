@@ -10,10 +10,13 @@ import UIKit
 
 class CheckEmailController: UIViewController {
     
+    @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var checkYourEmailLabel: UILabel!
     @IBOutlet weak var emailSentLabel: UILabel!
+    @IBOutlet weak var didNotreceiveCodeLabel: UILabel!
     
-    @IBOutlet weak var openEmailButton: UIButton!
+    @IBOutlet weak var openEmailButton: QueueButtonOne!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var resendCodeButton: UIButton!
     
@@ -27,20 +30,22 @@ class CheckEmailController: UIViewController {
         LoginWireFrame.showCodeEnterSceen(for: self)
     }
     
-    @IBAction func openEmailClicked(_ sender: Any) {
+    @IBAction func openEmailClicked() {
+        let mailURL = URL(string: "message://")!
+        if UIApplication.shared.canOpenURL(mailURL) {
+            UIApplication.shared.open(mailURL, options: [:], completionHandler: nil)
+         }
         LoginWireFrame.showCodeEnterSceen(for: self)
     }
     
     private func adjustLabelFont () {
         openEmailButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
         skipButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
+        didNotreceiveCodeLabel.font = UIFont.SanFranciscoSemibold(size: 17)
         
         checkYourEmailLabel.font = UIFont.SanFranciscoBold(size: 36)
         emailSentLabel.font = UIFont.SanFranciscoRegular(size: 17)
         checkYourEmailLabel.adjustsFontSizeToFitWidth = true
         emailSentLabel.adjustsFontSizeToFitWidth = true
     }
-    
-    
-    
 }

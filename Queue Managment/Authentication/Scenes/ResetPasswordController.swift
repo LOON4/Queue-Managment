@@ -11,13 +11,29 @@ import UIKit
 
 class ResetPasswordController : UIViewController {
     
-    
     @IBOutlet weak var emailAdressTextField: PaddingTextField!
-        
+    @IBOutlet weak var nextButton: QueueButtonOne!
+    
+    private let buttonLoweringAnimator = BackgroundFadeButtonLoweringAnimator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpDelegates()
         setUpTextField()
         setUpBarButton()
+        setUpButton()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        unsetDelegates()
+    }
+    
+    private func unsetDelegates(){
+        navigationController?.delegate = nil
+    }
+    
+    private func setUpDelegates(){
+        navigationController?.delegate = self
     }
     
     @objc
@@ -32,6 +48,7 @@ class ResetPasswordController : UIViewController {
     private func setUpTextField () {
         emailAdressTextField.becomeFirstResponder()
         emailAdressTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
+        emailAdressTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
     }
     
     private func setUpBarButton () {
@@ -42,4 +59,21 @@ class ResetPasswordController : UIViewController {
         self.navigationItem.leftBarButtonItem = leftItem1
     }
     
+    private func setUpButton(){
+        nextButton.layer.cornerRadius = 8
+    }
+    
+}
+
+extension ResetPasswordController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController,
+                              animationControllerFor operation: UINavigationController.Operation,
+                              from fromVC: UIViewController,
+                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if let _ = toVC as? CheckEmailController {
+            return buttonLoweringAnimator
+        } else {
+            return nil
+        }
+    }
 }

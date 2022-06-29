@@ -17,6 +17,7 @@ class NewPasswordController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         newPasswordTextField.becomeFirstResponder()
         setUpTextField()
     }
@@ -29,5 +30,7 @@ class NewPasswordController: UIViewController {
     private func setUpTextField () {
         newPasswordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         repeatPasswordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
+        newPasswordTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
+        repeatPasswordTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
     }
 }

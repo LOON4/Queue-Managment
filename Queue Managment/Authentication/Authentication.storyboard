@@ -111,7 +111,7 @@ application</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ahA-Qp-Nue">
                                         <rect key="frame" x="0.0" y="360" width="358" height="106"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-2q-4iD">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-2q-4iD" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="8YH-3S-u8a"/>
@@ -211,19 +211,17 @@ application</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sC-Er-Q3s">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sC-Er-Q3s" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64" width="358" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="UyI-6v-khZ"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Next">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="nextButtonClicked" destination="xu0-rG-orC" eventType="touchUpInside" id="dpW-Pp-ozH"/>
                                                 </connections>
@@ -254,6 +252,7 @@ application</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailAdressTextField" destination="Umx-Hu-1bf" id="CDu-bw-Bjf"/>
+                        <outlet property="nextButton" destination="8sC-Er-Q3s" id="3tc-c2-Xcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4W-sa-TQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -264,157 +263,151 @@ application</string>
         <scene sceneID="KNn-pS-pDv">
             <objects>
                 <viewController storyboardIdentifier="CheckEmailController" id="vll-sl-za9" customClass="CheckEmailController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w7T-9z-4ti">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="w7T-9z-4ti">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="I2i-TS-E1x">
-                                <rect key="frame" x="46" y="92.000000000000028" width="298" height="407.66666666666674"/>
+                            <view tag="155" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OU9-cH-hkD">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="szN-PU-i8C">
-                                        <rect key="frame" x="0.0" y="0.0" width="298" height="96.666666666666671"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="I2i-TS-E1x">
+                                        <rect key="frame" x="46" y="77.000000000000028" width="298" height="407.66666666666674"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-hH-15d">
-                                                <rect key="frame" x="0.0" y="0.0" width="298" height="40"/>
-                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="System Font" pointSize="36"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-VR-yli">
-                                                <rect key="frame" x="0.0" y="56" width="298" height="40.666666666666657"/>
-                                                <string key="text">Password recovery code has been sent 
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="szN-PU-i8C">
+                                                <rect key="frame" x="0.0" y="0.0" width="298" height="96.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-hH-15d">
+                                                        <rect key="frame" x="0.0" y="0.0" width="298" height="40"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="System Font" pointSize="36"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-VR-yli">
+                                                        <rect key="frame" x="0.0" y="56" width="298" height="40.666666666666657"/>
+                                                        <string key="text">Password recovery code has been sent 
 to your email address.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QSn-V2-dN5">
+                                                <rect key="frame" x="41.333333333333329" y="130.66666666666666" width="215.66666666666669" height="146.99999999999997"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email8" translatesAutoresizingMaskIntoConstraints="NO" id="lcw-eY-Tau">
+                                                        <rect key="frame" x="0.0" y="0.0" width="215.66666666666666" height="147"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
+                                                <rect key="frame" x="68.666666666666671" y="311.66666666666669" width="160.66666666666663" height="96"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-yT-z9h" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="iE9-nX-PuC"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Open email app" buttonSize="large">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="openEmailClicked" destination="vll-sl-za9" eventType="touchUpInside" id="F4N-oK-OfI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RU-dH-wrh">
+                                                        <rect key="frame" x="63.999999999999986" y="72" width="33" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="MXF-n2-b7n"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Skip">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.56296564569999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="0.26493584437086093" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="skipButtonClicked" destination="vll-sl-za9" eventType="touchUpInside" id="LSD-df-zSd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pFn-ty-EAD">
+                                        <rect key="frame" x="99" y="690" width="192" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t receive the code? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI9-mL-PeY">
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="0.26493584440000001" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QSn-V2-dN5">
-                                        <rect key="frame" x="41.333333333333329" y="130.66666666666666" width="215.66666666666669" height="146.99999999999997"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email8" translatesAutoresizingMaskIntoConstraints="NO" id="lcw-eY-Tau">
-                                                <rect key="frame" x="0.0" y="0.0" width="215.66666666666666" height="147"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
-                                        <rect key="frame" x="68.666666666666671" y="311.66666666666669" width="160.66666666666663" height="96"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-yT-z9h">
-                                                <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="48"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="iE9-nX-PuC"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Open email app" buttonSize="large">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="openEmailClicked:" destination="vll-sl-za9" eventType="touchUpInside" id="ykb-TV-UMD"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RU-dH-wrh">
-                                                <rect key="frame" x="63.999999999999986" y="72" width="33" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="MXF-n2-b7n"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-Br-Atf">
+                                                <rect key="frame" x="0.0" y="20" width="192" height="32"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Skip">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.56296564569999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Try again">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.47843000000000002" blue="1" alpha="0.5565500827814569" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="17" name="SFProDisplay-Semibold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </state>
                                                 <state key="highlighted">
-                                                    <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="0.26493584437086093" colorSpace="calibratedRGB"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Try again">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.32805670529801328" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </state>
-                                                <connections>
-                                                    <action selector="skipButtonClicked" destination="vll-sl-za9" eventType="touchUpInside" id="LSD-df-zSd"/>
-                                                </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="dvw-Do-5PI"/>
+                                            <constraint firstAttribute="width" constant="192" id="dxD-6G-wvN"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pFn-ty-EAD">
-                                <rect key="frame" x="99" y="735" width="192" height="51"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-Br-Atf">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="51"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="192" id="2qX-cm-dl9"/>
-                                            <constraint firstAttribute="height" constant="51" id="w9e-BI-mz0"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button">
-                                            <attributedString key="attributedTitle">
-                                                <fragment>
-                                                    <string key="content">Didn’t receive the code?
-</string>
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.14902000000000001" green="0.14902000000000001" blue="0.14902000000000001" alpha="0.56000000000000005" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" metaFont="system" size="17"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content="Try again">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.47843000000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" metaFont="system" size="17"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <state key="highlighted">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Didn’t receive the code?">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.31353476821655629" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="17"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment>
-                                                    <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" metaFont="system" size="17"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content="Try again">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.66778766556291391" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" metaFont="system" size="17"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="I2i-TS-E1x" firstAttribute="top" secondItem="OU9-cH-hkD" secondAttribute="top" priority="750" constant="77" id="06l-iD-O8N"/>
+                                    <constraint firstItem="I2i-TS-E1x" firstAttribute="leading" secondItem="OU9-cH-hkD" secondAttribute="leading" constant="46" id="6sW-I5-CSN"/>
+                                    <constraint firstItem="pFn-ty-EAD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I2i-TS-E1x" secondAttribute="bottom" constant="16" id="EsS-7Q-R05"/>
+                                    <constraint firstItem="I2i-TS-E1x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OU9-cH-hkD" secondAttribute="top" constant="16" id="IYK-P0-5hb"/>
+                                    <constraint firstAttribute="trailing" secondItem="I2i-TS-E1x" secondAttribute="trailing" constant="46" id="OEc-XS-dli"/>
+                                    <constraint firstAttribute="bottom" secondItem="pFn-ty-EAD" secondAttribute="bottom" priority="750" constant="24" id="Yt4-In-xPg"/>
+                                    <constraint firstItem="pFn-ty-EAD" firstAttribute="centerX" secondItem="OU9-cH-hkD" secondAttribute="centerX" id="rsm-Kl-Ad3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0l2-hM-TNo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0l2-hM-TNo" firstAttribute="trailing" secondItem="I2i-TS-E1x" secondAttribute="trailing" constant="46" id="2Sy-Fc-EP1"/>
-                            <constraint firstItem="I2i-TS-E1x" firstAttribute="top" secondItem="0l2-hM-TNo" secondAttribute="top" priority="750" constant="111" id="DrV-PW-1ME"/>
-                            <constraint firstItem="0l2-hM-TNo" firstAttribute="bottom" secondItem="pFn-ty-EAD" secondAttribute="bottom" constant="24" id="DtK-45-zgm"/>
-                            <constraint firstItem="pFn-ty-EAD" firstAttribute="centerX" secondItem="w7T-9z-4ti" secondAttribute="centerX" id="PaQ-Iq-6ky"/>
-                            <constraint firstItem="I2i-TS-E1x" firstAttribute="top" relation="lessThanOrEqual" secondItem="0l2-hM-TNo" secondAttribute="top" constant="48" id="hWf-H5-Kan"/>
-                            <constraint firstItem="pFn-ty-EAD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I2i-TS-E1x" secondAttribute="bottom" constant="16" id="mVh-aO-Y5h"/>
-                            <constraint firstItem="I2i-TS-E1x" firstAttribute="leading" secondItem="0l2-hM-TNo" secondAttribute="leading" constant="46" id="rw4-ss-vS2"/>
+                            <constraint firstItem="0l2-hM-TNo" firstAttribute="trailing" secondItem="OU9-cH-hkD" secondAttribute="trailing" id="4HB-6i-iAR"/>
+                            <constraint firstItem="OU9-cH-hkD" firstAttribute="top" secondItem="0l2-hM-TNo" secondAttribute="top" id="5Mi-Nk-eAU"/>
+                            <constraint firstItem="OU9-cH-hkD" firstAttribute="leading" secondItem="0l2-hM-TNo" secondAttribute="leading" id="Jht-0L-U8f"/>
+                            <constraint firstItem="0l2-hM-TNo" firstAttribute="bottom" secondItem="OU9-cH-hkD" secondAttribute="bottom" id="Ntf-SJ-LF5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="checkYourEmailLabel" destination="OV9-hH-15d" id="Ml1-1e-szh"/>
+                        <outlet property="containerView" destination="OU9-cH-hkD" id="DuS-Dz-fua"/>
+                        <outlet property="didNotreceiveCodeLabel" destination="zI9-mL-PeY" id="3DG-zX-pko"/>
                         <outlet property="emailSentLabel" destination="9qi-VR-yli" id="9el-08-oOL"/>
                         <outlet property="openEmailButton" destination="ph1-yT-z9h" id="JWe-W0-T8B"/>
                         <outlet property="resendCodeButton" destination="FTY-Br-Atf" id="mq4-u2-dJa"/>
@@ -423,7 +416,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDa-nY-xhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594.202898550725" y="114.50892857142857"/>
+            <point key="canvasLocation" x="2593.8461538461538" y="114.45497630331754"/>
         </scene>
         <!--New Password Controller-->
         <scene sceneID="Smv-Sy-Bgy">
@@ -476,7 +469,7 @@ Cg
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-nU-ych">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-nU-ych" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="153" width="358" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="dvL-h5-jh9"/>
@@ -572,7 +565,7 @@ Cg
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-va-zcf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-va-zcf" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="371.33333333333331" width="358" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="EBM-9J-nHP"/>
@@ -669,7 +662,7 @@ Cg
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-8e-KfQ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-8e-KfQ" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64" width="358" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="evT-7A-ZhM"/>

@@ -23,10 +23,14 @@
 		AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB63B286211BD0004FDB1 /* Queue_Managment.xcdatamodeld */; };
 		AA3EB63F286211BD0004FDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB63E286211BD0004FDB1 /* Assets.xcassets */; };
 		AA3EB64D286214AA0004FDB1 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */; };
+		AA5B00A1286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B00A0286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift */; };
+		AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B00A2286B31A300C2A79A /* UIView.swift */; };
 		AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA91A2862CD7600A2977B /* UIFont.swift */; };
 		AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA91F2862FF1800A2977B /* Authentication.storyboard */; };
 		AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9212862FF3800A2977B /* LoginController.swift */; };
 		AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9272863017800A2977B /* LoginWireFrame.swift */; };
+		AA99A379286AD88D00FB930D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A378286AD88D00FB930D /* UIColor.swift */; };
+		AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */; };
 		AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB16385286989F400C79DB8 /* UINavigationController.swift */; };
 		AAC48E8D28622D4D00B336B2 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */; };
 		AAC48E8E28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7C28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf */; };
@@ -71,10 +75,14 @@
 		AA3EB63E286211BD0004FDB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA3EB643286211BD0004FDB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		AA5B00A0286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundFadeButtonLoweringAnimator.swift; sourceTree = "<group>"; };
+		AA5B00A2286B31A300C2A79A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		AA5BA91A2862CD7600A2977B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		AA5BA91F2862FF1800A2977B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		AA5BA9212862FF3800A2977B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AA5BA9272863017800A2977B /* LoginWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
+		AA99A378286AD88D00FB930D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueButtonOne.swift; sourceTree = "<group>"; };
 		AAB16385286989F400C79DB8 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		AAC48E7C28622D4D00B336B2 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 		4A06AC6628674A7900CE6B87 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AA5B009E286B1F1E00C2A79A /* Animators */,
 				4A06AC6728674B0100CE6B87 /* Constants */,
 				4A06AC6A28674C7E00CE6B87 /* Views */,
 				AA5BA9192862CD5F00A2977B /* Extensions */,
@@ -133,8 +142,8 @@
 		4A06AC6A28674C7E00CE6B87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */,
-				4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */,
+				AAAA8E63286BFAAE003D4429 /* Buttons */,
+				AA99A37A286ADD1F00FB930D /* TextFields */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,10 +170,8 @@
 				4A06AC6628674A7900CE6B87 /* Common */,
 				AA3EB649286211F10004FDB1 /* SplashScreen */,
 				AA5BA91E2862FEF800A2977B /* Authentication */,
-				AA3EB632286211BD0004FDB1 /* AppDelegate.swift */,
-				AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */,
-				AAC48E152862279B00B336B2 /* Fonts */,
-				AA3EB63E286211BD0004FDB1 /* Assets.xcassets */,
+				AAAA8E66286C0B23003D4429 /* App Delegate */,
+				AAAA8E67286C0B51003D4429 /* Resources */,
 				AA3EB643286211BD0004FDB1 /* Info.plist */,
 				AA3EB63B286211BD0004FDB1 /* Queue_Managment.xcdatamodeld */,
 				4A06AC632864922300CE6B87 /* Notes.h */,
@@ -181,6 +188,22 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
+		AA5B009E286B1F1E00C2A79A /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				AA5B009F286B1F2900C2A79A /* Controller Transition Animations */,
+			);
+			path = Animators;
+			sourceTree = "<group>";
+		};
+		AA5B009F286B1F2900C2A79A /* Controller Transition Animations */ = {
+			isa = PBXGroup;
+			children = (
+				AA5B00A0286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift */,
+			);
+			path = "Controller Transition Animations";
+			sourceTree = "<group>";
+		};
 		AA5BA9192862CD5F00A2977B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +212,8 @@
 				AA3A54082868AA8300FF4E77 /* UIImage.swift */,
 				AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */,
 				AAB16385286989F400C79DB8 /* UINavigationController.swift */,
+				AA99A378286AD88D00FB930D /* UIColor.swift */,
+				AA5B00A2286B31A300C2A79A /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,6 +247,41 @@
 				AA5BA9272863017800A2977B /* LoginWireFrame.swift */,
 			);
 			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		AA99A37A286ADD1F00FB930D /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		AAAA8E63286BFAAE003D4429 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */,
+				AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		AAAA8E66286C0B23003D4429 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */,
+				AA3EB632286211BD0004FDB1 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		AAAA8E67286C0B51003D4429 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA3EB63E286211BD0004FDB1 /* Assets.xcassets */,
+				AAC48E152862279B00B336B2 /* Fonts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AAC48E152862279B00B336B2 /* Fonts */ = {
@@ -353,17 +413,21 @@
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
 				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
 				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
+				AA99A379286AD88D00FB930D /* UIColor.swift in Sources */,
 				AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */,
 				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,
 				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
+				AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
 				AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,
 				AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */,
 				AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */,
+				AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
 				4A06AC652864969200CE6B87 /* UITextField.swift in Sources */,
 				AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */,
+				AA5B00A1286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift in Sources */,
 				AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */,
 				AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */,
 				4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */,

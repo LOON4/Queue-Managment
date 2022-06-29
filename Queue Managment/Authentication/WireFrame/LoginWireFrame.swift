@@ -46,7 +46,7 @@ class LoginWireFrame: LoginWireFrameProtocol {
     
     class func showCheckEmailScreen(for view: UIViewController){
         let checkEmailVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.checkEmail)
-        loginNVC.push(viewController: checkEmailVC)
+        loginNVC.pushViewController(checkEmailVC, animated: true)
     }
     
     class func showCodeEnterSceen(for view: UIViewController){

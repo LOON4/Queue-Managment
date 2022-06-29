@@ -12,6 +12,12 @@ class PasswordResetSuccess: UIViewController {
     
     @IBOutlet weak var passwordResetSuccessfulyLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        adjustFontSize()
+        navigationItem.hidesBackButton = true
+    }
+    
     @IBAction func signInClicked() {
         navigationController?.popToRootViewController(animated: true)
     }
