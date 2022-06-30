@@ -53,6 +53,7 @@
 		AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */; };
 		AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE246B2869FF6400C54A8C /* NewPasswordController.swift */; };
 		AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */; };
+		AADFD3B9286D8A9E00885B68 /* EmailActionSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3B8286D8A9E00885B68 /* EmailActionSheetPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCodeController.swift; sourceTree = "<group>"; };
 		AADE246B2869FF6400C54A8C /* NewPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordController.swift; sourceTree = "<group>"; };
 		AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccessController.swift; sourceTree = "<group>"; };
+		AADFD3B8286D8A9E00885B68 /* EmailActionSheetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailActionSheetPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */,
 				AADE246B2869FF6400C54A8C /* NewPasswordController.swift */,
 				AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */,
+				AADFD3B8286D8A9E00885B68 /* EmailActionSheetPresenter.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */,
 				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
+				AADFD3B9286D8A9E00885B68 /* EmailActionSheetPresenter.swift in Sources */,
 				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
 				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
 				AA99A379286AD88D00FB930D /* UIColor.swift in Sources */,
@@ -568,6 +572,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,6 +601,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
