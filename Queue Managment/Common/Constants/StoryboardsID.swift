@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 struct StoryboardIDK {
     
     static let authentication = "Authentication"
-    
 }

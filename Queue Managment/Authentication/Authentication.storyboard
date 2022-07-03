@@ -124,6 +124,9 @@ application</string>
                                                     <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signInButtonClicked" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Cng-5C-Rea"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dD-hO-8I9">
                                                 <rect key="frame" x="98.000000000000014" y="72" width="162.33333333333337" height="34"/>
@@ -710,6 +713,114 @@ to your email address.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fam-Pb-y3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3419" y="115"/>
+        </scene>
+        <!--Logged In Successfully-->
+        <scene sceneID="Hlp-eL-VGp">
+            <objects>
+                <viewController storyboardIdentifier="LoggedInSuccessfully" id="bbQ-bc-VIO" customClass="LoggedInSuccessfully" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6MH-9i-Mjx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="wax-MJ-7N3">
+                                <rect key="frame" x="16" y="103.99999999999997" width="358" height="491.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="qDm-k5-7vY">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="335.33333333333331"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRS-hg-vki">
+                                                <rect key="frame" x="46" y="0.0" width="266" height="193"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password Reset Successfully" translatesAutoresizingMaskIntoConstraints="NO" id="QIC-M2-GjA">
+                                                        <rect key="frame" x="108.66666666666666" y="72" width="49" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="49" id="ggt-oJ-qrb"/>
+                                                            <constraint firstAttribute="height" constant="49" id="yIy-wf-62B"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="0.048297806290000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="QIC-M2-GjA" firstAttribute="centerY" secondItem="fRS-hg-vki" secondAttribute="centerY" id="9pi-Sn-l9m"/>
+                                                    <constraint firstItem="QIC-M2-GjA" firstAttribute="centerX" secondItem="fRS-hg-vki" secondAttribute="centerX" id="gFS-nW-wuZ"/>
+                                                    <constraint firstAttribute="width" constant="266" id="kxM-oc-fj2"/>
+                                                    <constraint firstAttribute="height" constant="193" id="rgB-Jm-ZEP"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-7Q-hwB">
+                                                <rect key="frame" x="0.0" y="249.00000000000003" width="358" height="86.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8P-uh-g3T">
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged In successfully" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vd-aU-AXA">
+                                                        <rect key="frame" x="92" y="66" width="174" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.34901960780000002" alpha="0.55771419700000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TUH-UO-mWU">
+                                        <rect key="frame" x="0.0" y="379.33333333333331" width="358" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNf-Pk-0uy" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="qet-aR-Lv9"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Service 1">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="service1Clicked:" destination="bbQ-bc-VIO" eventType="touchUpInside" id="ZbP-YY-GWc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-eh-H3y" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="64.000000000000057" width="358" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="fE0-ns-4Tk"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Service 2">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="service2Clicked:" destination="bbQ-bc-VIO" eventType="touchUpInside" id="6Ch-ID-qTh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HjZ-dv-zHB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wax-MJ-7N3" firstAttribute="top" secondItem="6MH-9i-Mjx" secondAttribute="topMargin" priority="750" constant="60" id="0FA-Kj-Vfw"/>
+                            <constraint firstItem="wax-MJ-7N3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HjZ-dv-zHB" secondAttribute="top" constant="16" id="KPE-5u-Go9"/>
+                            <constraint firstItem="wax-MJ-7N3" firstAttribute="leading" secondItem="HjZ-dv-zHB" secondAttribute="leading" constant="16" id="cYw-WW-vBa"/>
+                            <constraint firstItem="HjZ-dv-zHB" firstAttribute="trailing" secondItem="wax-MJ-7N3" secondAttribute="trailing" constant="16" id="nds-tl-Hjg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5i4-JT-oWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="-653"/>
         </scene>
     </scenes>
     <resources>

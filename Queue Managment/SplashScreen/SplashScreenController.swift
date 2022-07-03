@@ -81,9 +81,12 @@ class SplashScreenController: UIViewController {
         appNameLabel.transform = CGAffineTransform(scaleX: 0.1 , y: 0.1)
     }
     
+    static let showFirstScreenSemaphore = DispatchSemaphore(value: 0)
+    
     private func  showLoginScreen() {
-        DispatchQueue.main.asyncAfter(deadline: .now()+1.5){
-            LoginWireFrame.showLoginScreen(for: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            SplashScreenController.showFirstScreenSemaphore.wait()
+            LoginWireFrame.showFirstScreen(for: self)
         }
     }
 }

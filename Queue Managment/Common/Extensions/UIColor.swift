@@ -11,7 +11,7 @@ import UIKit
 
 extension UIColor {
     
-    static let myLightBlack = UIColor(named: "MyLightDark")!
+    static let myLightBlack = UIColor(named: ColorK.myLightDark)!
     
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()

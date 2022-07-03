@@ -60,7 +60,7 @@ class ResetPasswordController : UIViewController {
     }
     
     private func setUpButton(){
-        nextButton.layer.cornerRadius = 8
+        nextButton.cornerRadius = 8
     }
     
 }

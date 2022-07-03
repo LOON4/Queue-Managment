@@ -9,16 +9,17 @@ import Foundation
 import UIKit
 
 protocol LoginWireFrameProtocol {
+    static func showFirstScreen(for view: UIViewController)
     static func showLoginScreen(for view: UIViewController)
     static func showPasswordScreen(for view: UIViewController)
     static func showCheckEmailScreen(for view: UIViewController)
     static func showCodeEnterSceen(for view: UIViewController)
     static func showNewPasswordScreen(for view: UIViewController)
     static func showPasswordResetSuccess(for view: UIViewController)
-
 }
 
 class LoginWireFrame: LoginWireFrameProtocol {
+    
 
     static let authenticationStoryboard = {
         UIStoryboard(name: StoryboardIDK.authentication, bundle: .main)
@@ -29,6 +30,22 @@ class LoginWireFrame: LoginWireFrameProtocol {
             .instantiateViewController(withIdentifier: NavContollerIDK.loginNavigationController)
             as! UINavigationController
     }()
+    
+    enum FirstScreenState {
+        case loginVC
+        case profileVC
+    }
+    
+    static var firstScreen: FirstScreenState = .loginVC
+    
+    static func showFirstScreen(for view: UIViewController) {
+        switch firstScreen {
+        case .loginVC :
+            showLoginScreen(for: view)
+        case .profileVC:
+            showLoggedInSuccessfully(for: view)
+        }
+    }
     
     class func showLoginScreen(for view: UIViewController) {
         let loginVC = authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.loginScreen)
@@ -64,6 +81,12 @@ class LoginWireFrame: LoginWireFrameProtocol {
         loginNVC.pushViewController(passwordResetSuccessVC, animated: true)
     }
     
+    class func showLoggedInSuccessfully(for view: UIViewController){
+        let loggedInSuccessfullyVC = authenticationStoryboard.instantiateViewController(withIdentifier: "LoggedInSuccessfully")
+        loginNVC.setViewControllers([loggedInSuccessfullyVC], animated: true)
+        loginNVC.modalPresentationStyle = .overFullScreen
+        view.present(loginNVC, animated: true)
+    }
     
     
 }

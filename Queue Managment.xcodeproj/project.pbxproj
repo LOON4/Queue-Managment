@@ -14,6 +14,7 @@
 		4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5932032868732800DA9193 /* ResetPasswordController.swift */; };
 		4A59320628687EC100DA9193 /* ControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320528687EC100DA9193 /* ControllerID.swift */; };
 		4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320728687FDD00DA9193 /* StoryboardsID.swift */; };
+		550C27F1A996BD222C0E84AE /* libPods-Queue Managment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */; };
 		AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A54082868AA8300FF4E77 /* UIImage.swift */; };
 		AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */; };
 		AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */; };
@@ -29,6 +30,10 @@
 		AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA91F2862FF1800A2977B /* Authentication.storyboard */; };
 		AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9212862FF3800A2977B /* LoginController.swift */; };
 		AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9272863017800A2977B /* LoginWireFrame.swift */; };
+		AA974BDF286FF81500005553 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BDE286FF81500005553 /* UserDefaultsManager.swift */; };
+		AA974BE12870B67000005553 /* LoggedInSuccessfully.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE02870B67000005553 /* LoggedInSuccessfully.swift */; };
+		AA974BE32870B94C00005553 /* Service1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE22870B94C00005553 /* Service1.swift */; };
+		AA974BE52870B97300005553 /* Service1Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE42870B97300005553 /* Service1Response.swift */; };
 		AA99A379286AD88D00FB930D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A378286AD88D00FB930D /* UIColor.swift */; };
 		AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */; };
 		AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB16385286989F400C79DB8 /* UINavigationController.swift */; };
@@ -50,13 +55,23 @@
 		AAC48E9C28622D4D00B336B2 /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E8A28622D4D00B336B2 /* SF-Pro-Display-Black.otf */; };
 		AAC48E9D28622D4D00B336B2 /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E8B28622D4D00B336B2 /* SF-Pro-Display-ThinItalic.otf */; };
 		AAC48E9E28622D4D00B336B2 /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E8C28622D4D00B336B2 /* SF-Pro-Display-BoldItalic.otf */; };
+		AAD94663286ED8DF00C7FCF4 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD94662286ED8DF00C7FCF4 /* AccountManager.swift */; };
+		AAD94665286EEDD900C7FCF4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD94664286EEDD900C7FCF4 /* Color.swift */; };
+		AAD94667286F07E800C7FCF4 /* RefreshTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD94666286F07E800C7FCF4 /* RefreshTokenService.swift */; };
+		AAD94669286F497800C7FCF4 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD94668286F497800C7FCF4 /* OAuth.swift */; };
 		AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */; };
 		AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE246B2869FF6400C54A8C /* NewPasswordController.swift */; };
 		AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */; };
 		AADFD3B9286D8A9E00885B68 /* EmailActionSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3B8286D8A9E00885B68 /* EmailActionSheetPresenter.swift */; };
+		AADFD3BD286D9B4C00885B68 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3BC286D9B4C00885B68 /* NetworkLayer.swift */; };
+		AADFD3C0286DA71100885B68 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3BF286DA71100885B68 /* LoginService.swift */; };
+		AADFD3C6286DA7BD00885B68 /* ServerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3C5286DA7BD00885B68 /* ServerErrors.swift */; };
+		AADFD3C9286DAB1A00885B68 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3C8286DAB1A00885B68 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CE4E2A8F4AA6721814ED3A3 /* Pods-Queue Managment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Queue Managment.release.xcconfig"; path = "Target Support Files/Pods-Queue Managment/Pods-Queue Managment.release.xcconfig"; sourceTree = "<group>"; };
+		276E44CB16AB7508D319E10E /* Pods-Queue Managment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Queue Managment.debug.xcconfig"; path = "Target Support Files/Pods-Queue Managment/Pods-Queue Managment.debug.xcconfig"; sourceTree = "<group>"; };
 		4A06AC632864922300CE6B87 /* Notes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
 		4A06AC642864969200CE6B87 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		4A06AC6828674B1700CE6B87 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -65,6 +80,7 @@
 		4A5932032868732800DA9193 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		4A59320528687EC100DA9193 /* ControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerID.swift; sourceTree = "<group>"; };
 		4A59320728687FDD00DA9193 /* StoryboardsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsID.swift; sourceTree = "<group>"; };
+		50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Queue Managment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3A54082868AA8300FF4E77 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonConfiguration.swift; sourceTree = "<group>"; };
 		AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailController.swift; sourceTree = "<group>"; };
@@ -82,6 +98,10 @@
 		AA5BA91F2862FF1800A2977B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		AA5BA9212862FF3800A2977B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AA5BA9272863017800A2977B /* LoginWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
+		AA974BDE286FF81500005553 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		AA974BE02870B67000005553 /* LoggedInSuccessfully.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInSuccessfully.swift; sourceTree = "<group>"; };
+		AA974BE22870B94C00005553 /* Service1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1.swift; sourceTree = "<group>"; };
+		AA974BE42870B97300005553 /* Service1Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1Response.swift; sourceTree = "<group>"; };
 		AA99A378286AD88D00FB930D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueButtonOne.swift; sourceTree = "<group>"; };
 		AAB16385286989F400C79DB8 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
@@ -103,10 +123,18 @@
 		AAC48E8A28622D4D00B336B2 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		AAC48E8B28622D4D00B336B2 /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
 		AAC48E8C28622D4D00B336B2 /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
+		AAD94662286ED8DF00C7FCF4 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		AAD94664286EEDD900C7FCF4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AAD94666286F07E800C7FCF4 /* RefreshTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenService.swift; sourceTree = "<group>"; };
+		AAD94668286F497800C7FCF4 /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCodeController.swift; sourceTree = "<group>"; };
 		AADE246B2869FF6400C54A8C /* NewPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordController.swift; sourceTree = "<group>"; };
 		AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccessController.swift; sourceTree = "<group>"; };
 		AADFD3B8286D8A9E00885B68 /* EmailActionSheetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailActionSheetPresenter.swift; sourceTree = "<group>"; };
+		AADFD3BC286D9B4C00885B68 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		AADFD3BF286DA71100885B68 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		AADFD3C5286DA7BD00885B68 /* ServerErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerErrors.swift; sourceTree = "<group>"; };
+		AADFD3C8286DAB1A00885B68 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +142,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550C27F1A996BD222C0E84AE /* libPods-Queue Managment.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0376452BEFC42A408477B6A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				276E44CB16AB7508D319E10E /* Pods-Queue Managment.debug.xcconfig */,
+				1CE4E2A8F4AA6721814ED3A3 /* Pods-Queue Managment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4A06AC6628674A7900CE6B87 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +175,7 @@
 				4A06AC6828674B1700CE6B87 /* Image.swift */,
 				4A59320528687EC100DA9193 /* ControllerID.swift */,
 				4A59320728687FDD00DA9193 /* StoryboardsID.swift */,
+				AAD94664286EEDD900C7FCF4 /* Color.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -150,11 +189,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		54FF39616686497CFE4B1512 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA3EB626286211BD0004FDB1 = {
 			isa = PBXGroup;
 			children = (
 				AA3EB631286211BD0004FDB1 /* Queue Managment */,
 				AA3EB630286211BD0004FDB1 /* Products */,
+				0376452BEFC42A408477B6A6 /* Pods */,
+				54FF39616686497CFE4B1512 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,10 +218,12 @@
 		AA3EB631286211BD0004FDB1 /* Queue Managment */ = {
 			isa = PBXGroup;
 			children = (
+				AAAA8E66286C0B23003D4429 /* App Delegate */,
+				AADFD3BA286D9AF800885B68 /* Network */,
+				AAD94661286ED8A800C7FCF4 /* Managers */,
 				4A06AC6628674A7900CE6B87 /* Common */,
 				AA3EB649286211F10004FDB1 /* SplashScreen */,
 				AA5BA91E2862FEF800A2977B /* Authentication */,
-				AAAA8E66286C0B23003D4429 /* App Delegate */,
 				AAAA8E67286C0B51003D4429 /* Resources */,
 				AA3EB643286211BD0004FDB1 /* Info.plist */,
 				AA3EB63B286211BD0004FDB1 /* Queue_Managment.xcdatamodeld */,
@@ -240,6 +291,7 @@
 				AADE246B2869FF6400C54A8C /* NewPasswordController.swift */,
 				AADE246D2869FFE100C54A8C /* PasswordResetSuccessController.swift */,
 				AADFD3B8286D8A9E00885B68 /* EmailActionSheetPresenter.swift */,
+				AA974BE02870B67000005553 /* LoggedInSuccessfully.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -272,8 +324,8 @@
 		AAAA8E66286C0B23003D4429 /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */,
 				AA3EB632286211BD0004FDB1 /* AppDelegate.swift */,
+				AA3EB634286211BD0004FDB1 /* SceneDelegate.swift */,
 			);
 			path = "App Delegate";
 			sourceTree = "<group>";
@@ -320,6 +372,78 @@
 			path = "SF Pro Display";
 			sourceTree = "<group>";
 		};
+		AAD94661286ED8A800C7FCF4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AAD94662286ED8DF00C7FCF4 /* AccountManager.swift */,
+				AA974BDE286FF81500005553 /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AADFD3BA286D9AF800885B68 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3BB286D9B1F00885B68 /* Base */,
+				AADFD3BE286DA6F200885B68 /* Services */,
+				AADFD3C3286DA77300885B68 /* Data */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AADFD3BB286D9B1F00885B68 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3BC286D9B4C00885B68 /* NetworkLayer.swift */,
+				AAD94668286F497800C7FCF4 /* OAuth.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AADFD3BE286DA6F200885B68 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3C1286DA72300885B68 /* Authentication */,
+				AA974BE22870B94C00005553 /* Service1.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AADFD3C1286DA72300885B68 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3BF286DA71100885B68 /* LoginService.swift */,
+				AAD94666286F07E800C7FCF4 /* RefreshTokenService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		AADFD3C3286DA77300885B68 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3C4286DA7AF00885B68 /* Common */,
+				AADFD3C7286DA7CA00885B68 /* Authentication */,
+				AA974BE42870B97300005553 /* Service1Response.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AADFD3C4286DA7AF00885B68 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3C5286DA7BD00885B68 /* ServerErrors.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AADFD3C7286DA7CA00885B68 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3C8286DAB1A00885B68 /* Token.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,6 +451,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA3EB646286211BD0004FDB1 /* Build configuration list for PBXNativeTarget "Queue Managment" */;
 			buildPhases = (
+				1CA459F58D326F3D14AC9771 /* [CP] Check Pods Manifest.lock */,
 				AA3EB62B286211BD0004FDB1 /* Sources */,
 				AA3EB62C286211BD0004FDB1 /* Frameworks */,
 				AA3EB62D286211BD0004FDB1 /* Resources */,
@@ -404,20 +529,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CA459F58D326F3D14AC9771 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Queue Managment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA3EB62B286211BD0004FDB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
+				AADFD3C6286DA7BD00885B68 /* ServerErrors.swift in Sources */,
 				AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */,
+				AAD94669286F497800C7FCF4 /* OAuth.swift in Sources */,
+				AAD94663286ED8DF00C7FCF4 /* AccountManager.swift in Sources */,
 				4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */,
+				AAD94665286EEDD900C7FCF4 /* Color.swift in Sources */,
 				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
+				AA974BE32870B94C00005553 /* Service1.swift in Sources */,
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
 				AADFD3B9286D8A9E00885B68 /* EmailActionSheetPresenter.swift in Sources */,
 				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
+				AA974BE12870B67000005553 /* LoggedInSuccessfully.swift in Sources */,
+				AA974BE52870B97300005553 /* Service1Response.swift in Sources */,
 				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
 				AA99A379286AD88D00FB930D /* UIColor.swift in Sources */,
+				AADFD3BD286D9B4C00885B68 /* NetworkLayer.swift in Sources */,
 				AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */,
 				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,
 				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
@@ -427,11 +585,15 @@
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,
 				AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */,
 				AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */,
+				AADFD3C0286DA71100885B68 /* LoginService.swift in Sources */,
+				AADFD3C9286DAB1A00885B68 /* Token.swift in Sources */,
 				AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
 				4A06AC652864969200CE6B87 /* UITextField.swift in Sources */,
 				AA5BA9282863017800A2977B /* LoginWireFrame.swift in Sources */,
 				AA5B00A1286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift in Sources */,
+				AAD94667286F07E800C7FCF4 /* RefreshTokenService.swift in Sources */,
+				AA974BDF286FF81500005553 /* UserDefaultsManager.swift in Sources */,
 				AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */,
 				AA3EB635286211BD0004FDB1 /* SceneDelegate.swift in Sources */,
 				4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */,
@@ -559,6 +721,7 @@
 		};
 		AA3EB647286211BD0004FDB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 276E44CB16AB7508D319E10E /* Pods-Queue Managment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -588,6 +751,7 @@
 		};
 		AA3EB648286211BD0004FDB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE4E2A8F4AA6721814ED3A3 /* Pods-Queue Managment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
