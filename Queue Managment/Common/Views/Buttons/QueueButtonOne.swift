@@ -12,7 +12,7 @@ class QueueButtonOne: UIButton, NSCopying {
     
     func copy(with zone: NSZone? = nil) -> Any {
         let copy = UIButton(frame: self.globalFrame!)
-        copy.layer.cornerRadius = self.layer.cornerRadius
+        copy.cornerRadius = self.cornerRadius
         copy.backgroundColor = self.backgroundColor
         copy.titleLabel?.textAlignment = .center
         copy.titleLabel?.font = self.titleLabel?.font

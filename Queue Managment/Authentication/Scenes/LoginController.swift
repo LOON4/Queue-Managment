@@ -23,7 +23,7 @@ class LoginController: UIViewController {
     @IBOutlet weak var signInButton: QueueButtonOne!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
-    
+    let accountManager = AccountManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,19 @@ class LoginController: UIViewController {
     
     @IBAction func forgotPasswordClicked(_ sender: Any) {
         LoginWireFrame.showPasswordScreen(for: self)
-        
+    }
+    
+    @IBAction func signInButtonClicked() {
+        accountManager.login(email: "ceo@mail.com", passcode: "Aa12345.", rememberMe: true){
+            result in
+            switch result {
+            case .success(let token):
+                print(token)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        LoginWireFrame.showPasswordScreen(for: self)
     }
     
     private func adjustLabelFontSizes () {

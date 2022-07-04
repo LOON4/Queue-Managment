@@ -31,11 +31,9 @@ class CheckEmailController: UIViewController {
     }
     
     @IBAction func openEmailClicked() {
-        let mailURL = URL(string: "message://")!
-        if UIApplication.shared.canOpenURL(mailURL) {
-            UIApplication.shared.open(mailURL, options: [:], completionHandler: nil)
-         }
-        LoginWireFrame.showCodeEnterSceen(for: self)
+        let emailPresenter = EmailActionSheetPresenter()
+        emailPresenter.presentingController = self
+        present(emailPresenter.chooseEmailActionSheet, animated: true)
     }
     
     private func adjustLabelFont () {

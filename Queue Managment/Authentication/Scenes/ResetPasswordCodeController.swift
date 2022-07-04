@@ -26,5 +26,5 @@ class ResetPasswordCodeController: UIViewController {
         codeTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
         codeTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
     }
-    
+        
 }

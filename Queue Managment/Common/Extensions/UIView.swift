@@ -9,12 +9,17 @@ import Foundation
 import UIKit
 
 extension UIView{
-    var globalPoint :CGPoint? {
+    var globalPoint: CGPoint? {
         return self.superview?.convert(self.frame.origin, to: nil)
     }
 
-    var globalFrame :CGRect? {
+    var globalFrame: CGRect? {
         return self.superview?.convert(self.frame, to: nil)
+    }
+    
+    var cornerRadius: CGFloat {
+        set { self.layer.cornerRadius = newValue }
+        get { self.layer.cornerRadius }
     }
 }
 

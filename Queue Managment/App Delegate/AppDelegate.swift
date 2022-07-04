@@ -15,6 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+//        UserDefaultsManager.shared.unsetToken()
+//        UserDefaultsManager.shared.setIsRemembered(remember: false)
+        if UserDefaultsManager.shared.isRemembered() {
+            AccountManager.shared.configure(){ completed in
+                SplashScreenController.showFirstScreenSemaphore.signal()
+                if completed {
+                    LoginWireFrame.firstScreen = .profileVC
+                } else {
+                    LoginWireFrame.firstScreen = .loginVC
+                }
+            }
+        } else {
+            SplashScreenController.showFirstScreenSemaphore.signal()
+        }
+        
         return true
     }
 
