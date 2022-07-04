@@ -4,7 +4,7 @@
 //
 //  Created by WINTAA on 21.06.22.
 //
-
+//swiftlint
 import UIKit
 
 class SplashScreenController: UIViewController {
