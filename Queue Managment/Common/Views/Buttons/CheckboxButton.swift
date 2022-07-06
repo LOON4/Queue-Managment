@@ -13,14 +13,8 @@ class CheckboxButton: UIButton {
     
     func toggle(){
         isChecked.toggle()
-        if isChecked {
-            if let image = UIImage(named: ImgK.checkedBox1) {
-                self.setImage(image, for: .normal)
-            }
-        } else {
-            if let image = UIImage(named: ImgK.uncheckedBox1) {
-                self.setImage(image, for: .normal)
-            }
+        if let image = UIImage(named: isChecked ? ImgK.checkedBox1 : ImgK.uncheckedBox1) {
+            self.setImage(image, for: .normal)
         }
     }
     

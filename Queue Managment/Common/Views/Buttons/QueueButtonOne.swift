@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class QueueButtonOne: UIButton, NSCopying {
+    
     func copy(with zone: NSZone? = nil) -> Any {
         let copy = UIButton(frame: self.globalFrame!)
         copy.cornerRadius = self.cornerRadius
@@ -33,6 +34,5 @@ class QueueButtonOne: UIButton, NSCopying {
         self.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
         self.layer.cornerRadius = 8
     }
-    
     
 }
