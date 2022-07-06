@@ -72,6 +72,8 @@
 		AADFD3C0286DA71100885B68 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3BF286DA71100885B68 /* LoginService.swift */; };
 		AADFD3C6286DA7BD00885B68 /* ServerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3C5286DA7BD00885B68 /* ServerErrors.swift */; };
 		AADFD3C9286DAB1A00885B68 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFD3C8286DAB1A00885B68 /* Token.swift */; };
+		AAE11E5D2875B6C9004F346C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE11E5C2875B6C9004F346C /* BaseViewController.swift */; };
+		AAE11E612875B8C2004F346C /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE11E602875B8C2004F346C /* OnboardingRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +147,8 @@
 		AADFD3BF286DA71100885B68 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		AADFD3C5286DA7BD00885B68 /* ServerErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerErrors.swift; sourceTree = "<group>"; };
 		AADFD3C8286DAB1A00885B68 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		AAE11E5C2875B6C9004F346C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AAE11E602875B8C2004F346C /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 		4A06AC6628674A7900CE6B87 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AAE11E5B2875B6BC004F346C /* ViewControllers */,
 				AA5B009E286B1F1E00C2A79A /* Animators */,
 				4A06AC6728674B0100CE6B87 /* Constants */,
 				4A06AC6A28674C7E00CE6B87 /* Views */,
@@ -237,6 +242,7 @@
 		AA3EB631286211BD0004FDB1 /* Queue Managment */ = {
 			isa = PBXGroup;
 			children = (
+				AAE11E5E2875B8B4004F346C /* Routers */,
 				AAAA8E66286C0B23003D4429 /* App Delegate */,
 				AADFD3BA286D9AF800885B68 /* Network */,
 				AAD94661286ED8A800C7FCF4 /* Managers */,
@@ -483,6 +489,22 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		AAE11E5B2875B6BC004F346C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAE11E5C2875B6C9004F346C /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AAE11E5E2875B8B4004F346C /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				AAE11E602875B8C2004F346C /* OnboardingRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -611,6 +633,7 @@
 				AA974BE32870B94C00005553 /* Service1.swift in Sources */,
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
 				AADFD3B9286D8A9E00885B68 /* EmailActionSheetPresenter.swift in Sources */,
+				AAE11E5D2875B6C9004F346C /* BaseViewController.swift in Sources */,
 				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
 				AA974BE12870B67000005553 /* LoggedInSuccessfully.swift in Sources */,
 				AA974BE52870B97300005553 /* Service1Response.swift in Sources */,
@@ -622,6 +645,7 @@
 				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
 				4A3CFAB2287323B400D5496F /* UIView+Layout.swift in Sources */,
 				AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */,
+				AAE11E612875B8C2004F346C /* OnboardingRouter.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
 				AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,

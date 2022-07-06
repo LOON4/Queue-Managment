@@ -7,8 +7,12 @@
 
 import Foundation
 import UIKit
+import Resolver
 
 class LoginController: UIViewController {
+    
+    @LazyInjected
+    private var router: OnboardingRouter
     
     @IBOutlet weak var appNameLabel: UILabel!
     
@@ -34,7 +38,7 @@ class LoginController: UIViewController {
     }
     
     @IBAction func forgotPasswordClicked(_ sender: Any) {
-        LoginWireFrame.showPasswordScreen(for: self)
+        router.showPasswordReset()
     }
     
     @IBAction func signInButtonClicked() {

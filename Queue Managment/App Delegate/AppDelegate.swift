@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Resolver
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        UserDefaultsManager.shared.unsetToken()
 //        UserDefaultsManager.shared.setIsRemembered(remember: false)
+        createDependencies()
         if UserDefaultsManager.shared.isRemembered() {
             AccountManager.shared.configure(){ completed in
                 SplashScreenController.showFirstScreenSemaphore.signal()
@@ -31,6 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
+    }
+    
+    private func createDependencies() {
+        let router = OnboardingRouterImpl(nc: LoginWireFrame.loginNVC)
+        let onboardingRouter: OnboardingRouter = router
+        
+        Resolver.register {
+            onboardingRouter
+        }.scope(.cached)
+        
     }
 
     // MARK: UISceneSession Lifecycle
