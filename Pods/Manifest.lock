@@ -1,24 +1,38 @@
 PODS:
   - Alamofire (5.6.1)
   - Resolver (1.5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - Resolver
+  - RxCocoa
+  - RxSwift
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Resolver
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   Resolver: 68984624572763018fd8ec7b8e3e8df0e3b6bba5
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: f914b99f2d193c3d372af8cdb2d595e3b7eea032
+PODFILE CHECKSUM: 65fd3d02cc1c0de77f3fcfa68cdfea6eb3b9aef5
 
 COCOAPODS: 1.11.2

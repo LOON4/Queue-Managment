@@ -11,6 +11,10 @@
 		4A06AC6928674B1700CE6B87 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6828674B1700CE6B87 /* Image.swift */; };
 		4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */; };
 		4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */; };
+		4A3CFAB2287323B400D5496F /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFAAE287323B400D5496F /* UIView+Layout.swift */; };
+		4A3CFAB3287323B400D5496F /* UIView+Stacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFAAF287323B400D5496F /* UIView+Stacking.swift */; };
+		4A3CFAB4287323B400D5496F /* UIView+LayoutPriorityConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFAB0287323B400D5496F /* UIView+LayoutPriorityConvenience.swift */; };
+		4A3CFAB5287323B400D5496F /* UIView+Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFAB1287323B400D5496F /* UIView+Tree.swift */; };
 		4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5932032868732800DA9193 /* ResetPasswordController.swift */; };
 		4A59320628687EC100DA9193 /* ControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320528687EC100DA9193 /* ControllerID.swift */; };
 		4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320728687FDD00DA9193 /* StoryboardsID.swift */; };
@@ -77,6 +81,10 @@
 		4A06AC6828674B1700CE6B87 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A06AC6B28674CB500CE6B87 /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		4A3CFAAE287323B400D5496F /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		4A3CFAAF287323B400D5496F /* UIView+Stacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Stacking.swift"; sourceTree = "<group>"; };
+		4A3CFAB0287323B400D5496F /* UIView+LayoutPriorityConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutPriorityConvenience.swift"; sourceTree = "<group>"; };
+		4A3CFAB1287323B400D5496F /* UIView+Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Tree.swift"; sourceTree = "<group>"; };
 		4A5932032868732800DA9193 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		4A59320528687EC100DA9193 /* ControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerID.swift; sourceTree = "<group>"; };
 		4A59320728687FDD00DA9193 /* StoryboardsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsID.swift; sourceTree = "<group>"; };
@@ -267,6 +275,10 @@
 				AAB16385286989F400C79DB8 /* UINavigationController.swift */,
 				AA99A378286AD88D00FB930D /* UIColor.swift */,
 				AA5B00A2286B31A300C2A79A /* UIView.swift */,
+				4A3CFAAE287323B400D5496F /* UIView+Layout.swift */,
+				4A3CFAB0287323B400D5496F /* UIView+LayoutPriorityConvenience.swift */,
+				4A3CFAAF287323B400D5496F /* UIView+Stacking.swift */,
+				4A3CFAB1287323B400D5496F /* UIView+Tree.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -559,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3CFAB3287323B400D5496F /* UIView+Stacking.swift in Sources */,
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
 				AADFD3C6286DA7BD00885B68 /* ServerErrors.swift in Sources */,
 				AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */,
@@ -579,6 +592,7 @@
 				AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */,
 				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,
 				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
+				4A3CFAB2287323B400D5496F /* UIView+Layout.swift in Sources */,
 				AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
 				AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */,
@@ -586,6 +600,8 @@
 				AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */,
 				AA3EB637286211BD0004FDB1 /* SplashScreenController.swift in Sources */,
 				AADFD3C0286DA71100885B68 /* LoginService.swift in Sources */,
+				4A3CFAB4287323B400D5496F /* UIView+LayoutPriorityConvenience.swift in Sources */,
+				4A3CFAB5287323B400D5496F /* UIView+Tree.swift in Sources */,
 				AADFD3C9286DAB1A00885B68 /* Token.swift in Sources */,
 				AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,

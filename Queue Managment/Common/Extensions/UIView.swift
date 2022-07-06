@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIView{
+    
     var globalPoint: CGPoint? {
         return self.superview?.convert(self.frame.origin, to: nil)
     }
