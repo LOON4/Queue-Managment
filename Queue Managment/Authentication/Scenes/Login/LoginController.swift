@@ -60,7 +60,8 @@ class LoginController: UIViewController {
         emailTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
         passwordTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
     }
+}
+
+extension LoginController: UITextFieldDelegate {
     
-    
-   
 }
