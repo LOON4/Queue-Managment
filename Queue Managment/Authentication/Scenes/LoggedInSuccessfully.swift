@@ -12,6 +12,11 @@ class LoggedInSuccessfully : UIViewController {
     
     static var count = 5
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func service1Clicked(_ sender: Any) {
         LoggedInSuccessfully.count += 1
         let service1 = Service1(serviceName: "gaketeba+\(LoggedInSuccessfully.count)", servicePrice: 200)
