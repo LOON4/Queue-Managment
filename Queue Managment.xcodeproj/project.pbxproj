@@ -15,6 +15,8 @@
 		4A59320628687EC100DA9193 /* ControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320528687EC100DA9193 /* ControllerID.swift */; };
 		4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320728687FDD00DA9193 /* StoryboardsID.swift */; };
 		550C27F1A996BD222C0E84AE /* libPods-Queue Managment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */; };
+		AA0F58732875A1CE00E46714 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F58722875A1CE00E46714 /* LoginViewModel.swift */; };
+		AA0F58752875A25200E46714 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F58742875A25200E46714 /* LoginModel.swift */; };
 		AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A54082868AA8300FF4E77 /* UIImage.swift */; };
 		AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */; };
 		AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */; };
@@ -81,6 +83,8 @@
 		4A59320528687EC100DA9193 /* ControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerID.swift; sourceTree = "<group>"; };
 		4A59320728687FDD00DA9193 /* StoryboardsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsID.swift; sourceTree = "<group>"; };
 		50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Queue Managment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0F58722875A1CE00E46714 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AA0F58742875A25200E46714 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		AA3A54082868AA8300FF4E77 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		AA3A540C2868D0B400FF4E77 /* UIButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonConfiguration.swift; sourceTree = "<group>"; };
 		AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailController.swift; sourceTree = "<group>"; };
@@ -197,6 +201,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA0F58702875A17B00E46714 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AA5BA9212862FF3800A2977B /* LoginController.swift */,
+				AA0F58722875A1CE00E46714 /* LoginViewModel.swift */,
+				AA0F58742875A25200E46714 /* LoginModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		AA3EB626286211BD0004FDB1 = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +298,7 @@
 		AA5BA9232862FF4800A2977B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				AA5BA9212862FF3800A2977B /* LoginController.swift */,
+				AA0F58702875A17B00E46714 /* Login */,
 				4A5932032868732800DA9193 /* ResetPasswordController.swift */,
 				AA3A540E2868DE4600FF4E77 /* CheckEmailController.swift */,
 				AADE24692869F56000C54A8C /* ResetPasswordCodeController.swift */,
@@ -564,9 +578,11 @@
 				AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */,
 				AAD94669286F497800C7FCF4 /* OAuth.swift in Sources */,
 				AAD94663286ED8DF00C7FCF4 /* AccountManager.swift in Sources */,
+				AA0F58752875A25200E46714 /* LoginModel.swift in Sources */,
 				4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */,
 				AAD94665286EEDD900C7FCF4 /* Color.swift in Sources */,
 				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
+				AA0F58732875A1CE00E46714 /* LoginViewModel.swift in Sources */,
 				AA974BE32870B94C00005553 /* Service1.swift in Sources */,
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
 				AADFD3B9286D8A9E00885B68 /* EmailActionSheetPresenter.swift in Sources */,

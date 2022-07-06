@@ -67,3 +67,6 @@ class LoginController: UIViewController {
     
    
 }
+
+extension LoginController {
+}
