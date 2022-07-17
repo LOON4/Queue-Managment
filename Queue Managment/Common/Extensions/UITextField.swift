@@ -11,8 +11,6 @@ import UIKit
 
 extension UITextField {
     
-
-    
     func setPlaceholderFont(color: UIColor, font: UIFont){
         var placeholderAttributes = [NSAttributedString.Key: AnyObject]()
         placeholderAttributes[.foregroundColor] = color

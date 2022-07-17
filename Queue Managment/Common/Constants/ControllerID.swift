@@ -9,6 +9,8 @@ import Foundation
 
 
 struct ControllerIDK {
+
+    static let splashScreen = "SplashScreenController"
     
     static let loginScreen = "LoginController"
     static let passwordScreen = "ResetPasswordController"
@@ -16,7 +18,6 @@ struct ControllerIDK {
     static let passwordScreenCode = "ResetPasswordCodeController"
     static let newPassword = "NewPasswordController"
     static let passwordResetSuccess = "PasswordResetSuccess"
-    
 }
 
 
