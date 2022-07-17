@@ -7,13 +7,17 @@
 
 import Foundation
 import UIKit
+import Resolver
+import Combine
 
 class ResetPasswordController : UIViewController {
     
     @IBOutlet weak var emailAdressTextField: PaddingTextField!
     @IBOutlet weak var nextButton: QueueButtonOne!
-        
+    
     private let buttonLoweringAnimator = BackgroundFadeButtonLoweringAnimator()
+    
+    @LazyInjected private var resetPasswordViewModel: ResetPasswordViewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +45,7 @@ class ResetPasswordController : UIViewController {
     }
     
     @IBAction func nextButtonClicked() {
-        LoginWireFrame.showCheckEmailScreen(for: self)
+        resetPasswordViewModel.router.showCheckEmailScreen()
     }
     
     private func setUpTextField () {

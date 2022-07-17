@@ -52,8 +52,8 @@ class LoginController: UIViewController {
         
         func bindViewModelToView() {
             loginViewModel.$isLoading
-                .sink { [weak self] receivedValue in
-                    if receivedValue {
+                .sink { [weak self] isLoading in
+                    if isLoading {
                         self?.loader.startLoader()
                     } else {
                         self?.loader.stopLoader()

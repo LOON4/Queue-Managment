@@ -46,6 +46,11 @@ extension Resolver: ResolverRegistering {
     private static func RegisterViewModels(){
         register { SplashScreenViewModel() }
         register { LoginViewModel() }
+        register { ResetPasswordViewModel() }
+        register { CheckEmailViewModel() }
+        register { ResetpasswordCodeViewmodel() }
+        register { NewPasswordViewModel() }
+        register { PasswordResetSuccessVIewModel() }
     }
     
 }

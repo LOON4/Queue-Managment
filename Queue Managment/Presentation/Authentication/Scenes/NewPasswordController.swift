@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Resolver
+import Combine
 
 class NewPasswordController: UIViewController {
     
@@ -15,6 +17,8 @@ class NewPasswordController: UIViewController {
     
     @IBOutlet weak var repeatPasswordTextField: PaddingTextField!
     
+    @LazyInjected private var newPasswordViewModel: NewPasswordViewModel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -22,9 +26,8 @@ class NewPasswordController: UIViewController {
         setUpTextField()
     }
     
-    
     @IBAction func resetPasswordClicked() {
-        LoginWireFrame.showPasswordResetSuccess(for: self)
+        newPasswordViewModel.router.showPasswordResetSuccess()
     }
     
     private func setUpTextField () {

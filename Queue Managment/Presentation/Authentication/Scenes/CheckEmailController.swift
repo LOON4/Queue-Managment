@@ -7,6 +7,9 @@
 
 import Foundation
 import UIKit
+import Resolver
+import Combine
+
 
 class CheckEmailController: UIViewController {
     
@@ -20,6 +23,8 @@ class CheckEmailController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var resendCodeButton: UIButton!
     
+    @LazyInjected private var checkEmailViewModel: CheckEmailViewModel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -27,7 +32,7 @@ class CheckEmailController: UIViewController {
     }
     
     @IBAction func skipButtonClicked() {
-        LoginWireFrame.showCodeEnterSceen(for: self)
+        checkEmailViewModel.router.showCodeEnterSceen()
     }
     
     @IBAction func openEmailClicked() {

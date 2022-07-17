@@ -7,10 +7,14 @@
 
 import Foundation
 import UIKit
+import Resolver
+import Combine
 
 class PasswordResetSuccess: UIViewController {
     
     @IBOutlet weak var passwordResetSuccessfulyLabel: UILabel!
+    
+    @LazyInjected private var passwordResetSuccessVIewModel: PasswordResetSuccessVIewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()

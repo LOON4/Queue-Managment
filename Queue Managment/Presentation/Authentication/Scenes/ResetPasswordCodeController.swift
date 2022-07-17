@@ -7,18 +7,21 @@
 
 import Foundation
 import UIKit
+import Resolver
+import Combine
 
 class ResetPasswordCodeController: UIViewController {
     @IBOutlet weak var codeTextField: PaddingTextField!
-        
+    
+    @LazyInjected private var resetpasswordCodeViewmodel: ResetpasswordCodeViewmodel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextField()
     }
     
-
     @IBAction func nextButtonClicked() {
-        LoginWireFrame.showNewPasswordScreen(for: self)
+        resetpasswordCodeViewmodel.router.showNewPasswordScreen()
     }
     
     private func setUpTextField () {
