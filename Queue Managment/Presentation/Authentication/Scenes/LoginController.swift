@@ -21,6 +21,7 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var signInButton: QueueButtonOne!
     @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var errorMessage: UILabel!
     private var loader: LoaderView!
 
     @LazyInjected private var loginViewModel: LoginViewModel
@@ -61,23 +62,42 @@ class LoginController: UIViewController {
                 .store(in: &bindings)
             
             loginViewModel.validationResult
-                .sink { completion in
-                    switch completion {
-                    case .failure:
-                        self.emailTextField.layer.borderColor = UIColor.red.cgColor
-                        return
-                    case .finished:
-                        return
+                .sink { [weak self] receivedValue in
+                    switch receivedValue {
+                    case .success(()):
+                        self?.displayDefaultState()
+                        self?.navigateToProfile()
+                    case .failure(let error):
+                        self?.displayErrorState(error.message)
                     }
-                } receiveValue: { [weak self] _ in
-                    self?.navigateToProfile()
                 }
                 .store(in: &bindings)
-            
         }
         
         bindViewToViewModel()
         bindViewModelToView()
+    }
+    
+    private func displayDefaultState(){
+        errorMessage.isHidden = true
+        emailTextField.layer.borderColor = .none
+        emailTextField.layer.borderWidth = 0
+        emailTextField.borderStyle = .roundedRect
+        passwordTextField.layer.borderColor = .none
+        passwordTextField.layer.borderWidth = 0
+        passwordTextField.borderStyle = .roundedRect
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    private func displayErrorState(_ errorMessage: String){
+        self.errorMessage.isHidden = false
+        self.errorMessage.text = errorMessage
+        emailTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.borderWidth = 1.0
+        emailTextField.layer.borderColor = UIColor.red.cgColor
+        passwordTextField.layer.borderColor = UIColor.red.cgColor
+        passwordTextField.text = ""
     }
     
     private func navigateToProfile(){
@@ -87,6 +107,7 @@ class LoginController: UIViewController {
     
     @IBAction func rememberMeClicked() {
         keepMeSignIcon.toggle()
+        loginViewModel.rememberMe.toggle()
     }
     
     @IBAction func forgotPasswordClicked(_ sender: Any) {

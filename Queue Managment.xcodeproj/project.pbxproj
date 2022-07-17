@@ -23,7 +23,7 @@
 		AA2AB1F82882C79C00526F34 /* App+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1F72882C79C00526F34 /* App+Injection.swift */; };
 		AA2AB1FC2882EBDE00526F34 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1FB2882EBDE00526F34 /* SplashScreenViewModel.swift */; };
 		AA2AB1FE2882EC1000526F34 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1FD2882EC1000526F34 /* UserDefaultsRepository.swift */; };
-		AA2AB2002882EC5A00526F34 /* SplashScreenUsaCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1FF2882EC5A00526F34 /* SplashScreenUsaCase.swift */; };
+		AA2AB2002882EC5A00526F34 /* SplashScreenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1FF2882EC5A00526F34 /* SplashScreenUseCase.swift */; };
 		AA2AB2052882F07900526F34 /* StandardUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB2042882F07900526F34 /* StandardUserDefaults.swift */; };
 		AA2AB20A2882FA6900526F34 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB2092882FA6900526F34 /* ServerError.swift */; };
 		AA2AB20E2883190200526F34 /* LoginUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB20D2883190200526F34 /* LoginUsecase.swift */; };
@@ -107,7 +107,7 @@
 		AA2AB1F72882C79C00526F34 /* App+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Injection.swift"; sourceTree = "<group>"; };
 		AA2AB1FB2882EBDE00526F34 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		AA2AB1FD2882EC1000526F34 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
-		AA2AB1FF2882EC5A00526F34 /* SplashScreenUsaCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUsaCase.swift; sourceTree = "<group>"; };
+		AA2AB1FF2882EC5A00526F34 /* SplashScreenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUseCase.swift; sourceTree = "<group>"; };
 		AA2AB2042882F07900526F34 /* StandardUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUserDefaults.swift; sourceTree = "<group>"; };
 		AA2AB2092882FA6900526F34 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		AA2AB20D2883190200526F34 /* LoginUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecase.swift; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		AA2AB2012882EC5E00526F34 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				AA2AB1FF2882EC5A00526F34 /* SplashScreenUsaCase.swift */,
+				AA2AB1FF2882EC5A00526F34 /* SplashScreenUseCase.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -816,7 +816,7 @@
 				AA2AB1F3288294DC00526F34 /* AuthRemoteAPI.swift in Sources */,
 				AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */,
 				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,
-				AA2AB2002882EC5A00526F34 /* SplashScreenUsaCase.swift in Sources */,
+				AA2AB2002882EC5A00526F34 /* SplashScreenUseCase.swift in Sources */,
 				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
 				AA2AB20E2883190200526F34 /* LoginUsecase.swift in Sources */,
 				AA2AB1FE2882EC1000526F34 /* UserDefaultsRepository.swift in Sources */,

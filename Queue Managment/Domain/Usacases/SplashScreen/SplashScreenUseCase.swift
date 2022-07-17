@@ -8,7 +8,7 @@
 import Foundation
 import Resolver
 
-protocol SplashScreenUsaCase {
+protocol SplashScreenUseCase {
     func determineUserStatus(completion:  @escaping (Result<UserStatusAfterLaunch, ServerError>) -> Void)
 }
 
@@ -18,7 +18,7 @@ enum UserStatusAfterLaunch {
     case sessionExpired
 }
 
-class SplashScreenUsaCaseImpl: SplashScreenUsaCase{
+class SplashScreenUseCaseImpl: SplashScreenUseCase{
     
     @LazyInjected private var userDefaults: UserDefaultsRepository
     @LazyInjected private var userSession: UserSessionRepository

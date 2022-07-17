@@ -28,7 +28,9 @@ class QueueUserSessionRepository: UserSessionRepository {
             case .success(let APIToken):
                 let token = Token(APIToken)
                 Token.shared = token
-                dataStore.setToken(token: token)
+                if rememberMe {
+                    dataStore.setToken(token: token)
+                }
                 userDefaults.setIsRemembered(remember: rememberMe)
                 completion(.success(token))
             case .failure(let error):
@@ -43,7 +45,10 @@ class QueueUserSessionRepository: UserSessionRepository {
             case .success(let APIToken):
                 let token = Token(APIToken)
                 Token.shared = token
-                dataStore.setToken(token: token)
+                if userDefaults.isRemembered() {
+                    dataStore.setToken(token: token)
+
+                }
                 completion(.success(token))
             case .failure(let error):
                 Token.shared = nil

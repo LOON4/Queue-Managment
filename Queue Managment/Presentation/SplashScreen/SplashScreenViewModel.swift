@@ -10,7 +10,7 @@ import Resolver
 import Combine
 
 class SplashScreenViewModel {
-    @LazyInjected private var splashScreenUsaCase: SplashScreenUsaCase
+    @LazyInjected private var splashScreenUsaCase: SplashScreenUseCase
     @LazyInjected var router: OnboardingRouter
     @LazyInjected private var userDefaults: UserDefaultsRepository
     

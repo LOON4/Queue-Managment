@@ -39,7 +39,7 @@ extension Resolver: ResolverRegistering {
     }
     
     private static func RegisterUseCases(){
-        register { SplashScreenUsaCaseImpl() }.implements(SplashScreenUsaCase.self).scope(.application)
+        register { SplashScreenUseCaseImpl() }.implements(SplashScreenUseCase.self).scope(.application)
         register { LoginUsecaseImpl() }.implements(LoginUsecase.self).scope(.application)
     }
     

@@ -14,9 +14,10 @@ class LoginViewModel {
     @LazyInjected var router: OnboardingRouter
 
     @Published var isLoading = false
-    private let validationResultPassthourgh = PassthroughSubject<Void, Error>()
+    private let validationResultPassthourgh =
+        PassthroughSubject< Result<Void, ServerError>, Never >()
 
-    var validationResult: AnyPublisher<Void, Error> {
+    var validationResult: AnyPublisher< Result<Void, ServerError>, Never > {
         validationResultPassthourgh.eraseToAnyPublisher()
     }
 
@@ -31,11 +32,11 @@ class LoginViewModel {
                                 rememberMe: rememberMe){ [self] result in
             isLoading = false
             switch result {
-            case .success(let token):
-                print(token)
-                router.showLoggedInSuccessfully()
+            case .success(_):
+                validationResultPassthourgh.send(.success(()))
             case .failure(let error):
-                print(error)
+                validationResultPassthourgh.send(.failure(error))
+                break
             }
         }
     }
