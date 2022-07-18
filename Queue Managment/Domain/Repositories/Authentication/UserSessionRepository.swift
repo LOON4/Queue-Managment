@@ -9,8 +9,10 @@ import Foundation
 
 protocol UserSessionRepository {
     func readToken()
+    func saveToken(token: Token)
+    func deleteToken()
     func loginUser(email: String, passcode: String, rememberMe: Bool,
-                completion: @escaping (Result<Token, ServerError>) -> Void)
-    func refreshToken(completion:  @escaping (Result<Token, ServerError>) -> Void)
+                completion: @escaping (Result<APIToken, ServerError>) -> Void)
+    func refreshToken(completion:  @escaping (Result<APIToken, ServerError>) -> Void)
 }
 

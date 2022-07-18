@@ -10,11 +10,11 @@ import Resolver
 import Combine
 
 class SplashScreenViewModel {
-    @LazyInjected private var splashScreenUsaCase: SplashScreenUseCase
+    @LazyInjected private var splashScreenUsaCase: RefreshTokenUseCase
     @LazyInjected var router: OnboardingRouter
     @LazyInjected private var userDefaults: UserDefaultsRepository
     
-    @Published var userStatus: UserStatusAfterLaunch? = nil
+    @Published var userStatus: UserStatus? = nil
     @Published var isLoading = false
     
     
@@ -24,8 +24,8 @@ class SplashScreenViewModel {
         }
         self.splashScreenUsaCase.determineUserStatus(){ [self] result in
             switch result {
-            case .success(let userStatus):
-                self.userStatus = userStatus
+            case .success(let response):
+                self.userStatus = response.userStatus
             case .failure(_):
                 break
             }

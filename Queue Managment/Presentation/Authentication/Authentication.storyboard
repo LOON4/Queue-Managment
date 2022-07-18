@@ -283,13 +283,13 @@ application</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="szN-PU-i8C">
                                                 <rect key="frame" x="2.3333333333333428" y="0.0" width="301.66666666666663" height="96.666666666666671"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-hH-15d">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Check your email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-hH-15d">
                                                         <rect key="frame" x="0.0" y="0.0" width="301.66666666666669" height="40"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="System Font" pointSize="36"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-VR-yli">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-VR-yli">
                                                         <rect key="frame" x="0.0" y="56" width="301.66666666666669" height="40.666666666666657"/>
                                                         <string key="text">Password recovery code has been sent 
 to your email address.</string>
@@ -307,7 +307,7 @@ to your email address.</string>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
+                                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
                                                 <rect key="frame" x="72.666666666666671" y="311.66666666666669" width="160.66666666666663" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-yT-z9h" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
@@ -334,6 +334,9 @@ to your email address.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="750" constant="80" id="p1k-9u-173"/>
+                                                </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RU-dH-wrh">
                                                 <rect key="frame" x="136.66666666666666" y="393.66666666666663" width="33" height="24"/>
@@ -403,7 +406,7 @@ to your email address.</string>
                                     <constraint firstItem="pFn-ty-EAD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I2i-TS-E1x" secondAttribute="bottom" constant="16" id="EsS-7Q-R05"/>
                                     <constraint firstItem="I2i-TS-E1x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OU9-cH-hkD" secondAttribute="top" constant="16" id="IYK-P0-5hb"/>
                                     <constraint firstAttribute="trailing" secondItem="I2i-TS-E1x" secondAttribute="trailing" constant="38" id="OEc-XS-dli"/>
-                                    <constraint firstAttribute="bottom" secondItem="pFn-ty-EAD" secondAttribute="bottom" priority="750" constant="16" id="Yt4-In-xPg"/>
+                                    <constraint firstAttribute="bottom" secondItem="pFn-ty-EAD" secondAttribute="bottom" constant="16" id="Yt4-In-xPg"/>
                                     <constraint firstItem="pFn-ty-EAD" firstAttribute="centerX" secondItem="OU9-cH-hkD" secondAttribute="centerX" id="rsm-Kl-Ad3"/>
                                 </constraints>
                             </view>
@@ -413,8 +416,10 @@ to your email address.</string>
                         <constraints>
                             <constraint firstItem="0l2-hM-TNo" firstAttribute="trailing" secondItem="OU9-cH-hkD" secondAttribute="trailing" id="4HB-6i-iAR"/>
                             <constraint firstItem="OU9-cH-hkD" firstAttribute="top" secondItem="0l2-hM-TNo" secondAttribute="top" id="5Mi-Nk-eAU"/>
+                            <constraint firstItem="lcw-eY-Tau" firstAttribute="width" secondItem="w7T-9z-4ti" secondAttribute="width" multiplier="0.552991" id="9Tm-Sq-62u"/>
                             <constraint firstItem="OU9-cH-hkD" firstAttribute="leading" secondItem="0l2-hM-TNo" secondAttribute="leading" id="Jht-0L-U8f"/>
                             <constraint firstItem="0l2-hM-TNo" firstAttribute="bottom" secondItem="OU9-cH-hkD" secondAttribute="bottom" id="Ntf-SJ-LF5"/>
+                            <constraint firstItem="lcw-eY-Tau" firstAttribute="height" secondItem="w7T-9z-4ti" secondAttribute="height" multiplier="0.174171" id="pNw-Lx-Yas"/>
                         </constraints>
                     </view>
                     <connections>
