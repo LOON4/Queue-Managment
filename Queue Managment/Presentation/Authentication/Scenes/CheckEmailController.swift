@@ -23,6 +23,8 @@ class CheckEmailController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var resendCodeButton: UIButton!
     
+    @IBOutlet weak var emailNotDetectedLabel: UILabel!
+    
     @LazyInjected private var checkEmailViewModel: CheckEmailViewModel
     
     override func viewDidLoad() {
@@ -36,15 +38,19 @@ class CheckEmailController: UIViewController {
     }
     
     @IBAction func openEmailClicked() {
-        let emailPresenter = EmailActionSheetPresenter()
-        emailPresenter.presentingController = self
-        present(emailPresenter.chooseEmailActionSheet, animated: true)
+        let emailSheetController = EmailActionSheetController(presentingController: self)
+        if emailSheetController.openableUrls.isEmpty {
+            emailNotDetectedLabel.isHidden = false
+        } else {
+            emailSheetController.present()
+        }
     }
     
     private func adjustLabelFont () {
         openEmailButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
         skipButton.titleLabel?.font = UIFont.SanFranciscoSemibold(size: 17)
         didNotreceiveCodeLabel.font = UIFont.SanFranciscoSemibold(size: 17)
+        emailNotDetectedLabel.font = UIFont.SanFranciscoLight(size: 14)
         
         checkYourEmailLabel.font = UIFont.SanFranciscoBold(size: 36)
         emailSentLabel.font = UIFont.SanFranciscoRegular(size: 17)
