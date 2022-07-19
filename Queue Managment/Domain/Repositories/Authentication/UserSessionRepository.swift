@@ -14,5 +14,7 @@ protocol UserSessionRepository {
     func loginUser(email: String, passcode: String, rememberMe: Bool,
                 completion: @escaping (Result<APIToken, ServerError>) -> Void)
     func refreshToken(completion:  @escaping (Result<APIToken, ServerError>) -> Void)
+    func forgetPasswordProccedure(credentials: ForgetPasswordCredentials, for stage: Any,
+                                  completion: @escaping (Result<Bool, ServerError>) -> Void)
 }
 

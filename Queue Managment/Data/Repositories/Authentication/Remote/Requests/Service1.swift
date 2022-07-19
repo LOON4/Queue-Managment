@@ -20,7 +20,7 @@ class Service1: RequestType {
     typealias ResponseType = Service1Response
     var data: RequestData {
         get {
-            var request = RequestData(path: "/client/ceo/services", baseURL: BaseURL.identity)
+            var request = RequestData(path: "/client/ceo/services")
             request.params = ["serviceName" : serviceName, "servicePrice": servicePrice]
             request.method = .post
             return request

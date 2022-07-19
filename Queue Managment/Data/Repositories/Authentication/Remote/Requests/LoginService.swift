@@ -21,7 +21,7 @@ class LoginService: RequestType {
     typealias ResponseType = APIToken
     var data: RequestData {
         get {
-            var request = RequestData(path: "/client/auth/login", baseURL: BaseURL.identity)
+            var request = RequestData(path: "/client/auth/login")
             request.params = ["email" : email, "password" : password, "rememberme" : rememberMe]
             request.method = .post
             return request

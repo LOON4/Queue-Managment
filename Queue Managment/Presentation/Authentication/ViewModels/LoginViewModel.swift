@@ -10,7 +10,7 @@ import Resolver
 import Combine
 
 class LoginViewModel {
-    @LazyInjected private var loginUsercase: LoginUsecase
+    @LazyInjected private var loginUsecase: LoginUsecase
     @LazyInjected var router: OnboardingRouter
 
     @Published var isLoading = false
@@ -27,7 +27,7 @@ class LoginViewModel {
     
     func loginUser(){
         isLoading = true
-        loginUsercase.loginUser(email: email,
+        loginUsecase.loginUser(email: email,
                                 passcode: passcode,
                                 rememberMe: rememberMe){ [self] result in
             isLoading = false

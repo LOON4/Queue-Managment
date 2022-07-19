@@ -54,7 +54,7 @@ struct RequestData {
     }
 
     init(path: String,
-         baseURL: String,
+         baseURL: String = BaseURL.identity,
          method: Alamofire.HTTPMethod = .post,
          params: [String: Any]? = nil,
          arrayParams: [Any]? = nil,

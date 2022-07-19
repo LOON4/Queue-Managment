@@ -73,7 +73,7 @@ class ResetPasswordController : UIViewController {
     }
     
     @IBAction func nextButtonClicked() {
-        resetPasswordViewModel.router.showCheckEmailScreen()
+        resetPasswordViewModel.checkEmail()
     }
     
     private func setUpTextField () {

@@ -40,5 +40,10 @@ class QueueUserSessionRepository: UserSessionRepository {
             completion(result)
         }
     }
-
+    
+    func forgetPasswordProccedure(credentials: ForgetPasswordCredentials, for stage: Any,
+                                  completion: @escaping (Result<Bool, ServerError>) -> Void) {
+        
+    }
+    
 }

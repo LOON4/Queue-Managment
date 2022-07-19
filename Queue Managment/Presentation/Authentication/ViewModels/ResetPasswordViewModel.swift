@@ -20,6 +20,8 @@ class ResetPasswordViewModel {
         validationResultPassthourgh.eraseToAnyPublisher()
     }
     
-    
+    func checkEmail() {
+        
+    }
     
 }
