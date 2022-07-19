@@ -12,7 +12,7 @@ import Resolver
 struct OAuthCredential: AuthenticationCredential {
     var token: Token?
     var requiresRefresh: Bool {
-        Date(timeIntervalSinceNow: 300) > token?.expiringDate ??
+        Date(timeIntervalSinceNow: 3580) > token?.expiringDate ??
         Date(timeIntervalSinceNow: 301)
     }
     
@@ -21,7 +21,7 @@ struct OAuthCredential: AuthenticationCredential {
 
 class OAuthAuthenticator: Authenticator {
     
-    @LazyInjected private var userSessionRepository: UserSessionRepository
+    @LazyInjected private var refreshTokenUseCase: RefreshTokenUseCase
     
     func apply(_ credential: OAuthCredential, to urlRequest: inout URLRequest) {
         //urlRequest.timeoutInterval = 5
@@ -34,11 +34,13 @@ class OAuthAuthenticator: Authenticator {
                  for session: Session,
                  completion: @escaping (Result<OAuthCredential, Error>) -> Void) {
     
-        userSessionRepository.refreshToken { result in
+        refreshTokenUseCase.determineUserStatus { result in
             switch result {
-            case .success(let token):
-                let newCredentials = OAuthCredential(token: token)
-                completion(.success(newCredentials))
+            case .success(let response):
+                if let token = response.token {
+                    let newCredentials = OAuthCredential(token: token)
+                    completion(.success(newCredentials))
+                } 
             case .failure(let error):
                 completion(.failure(error))
             }

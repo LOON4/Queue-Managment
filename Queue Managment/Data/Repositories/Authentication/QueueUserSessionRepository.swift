@@ -16,46 +16,28 @@ class QueueUserSessionRepository: UserSessionRepository {
     
     func readToken(){
         Token.shared = dataStore.getToken()
-
+    }
+    
+    func saveToken(token: Token){
+        dataStore.setToken(token: token)
+    }
+    
+    func deleteToken(){
+        dataStore.unsetToken()
     }
     
     func loginUser(email: String, passcode: String, rememberMe: Bool,
-                completion: @escaping (Result<Token, ServerError>) -> Void) {
+                completion: @escaping (Result<APIToken, ServerError>) -> Void) {
         remoteAPI.signIn(email: email,
                          passcode: passcode,
-                         rememberMe: rememberMe){ [self] result in
-            switch result {
-            case .success(let APIToken):
-                let token = Token(APIToken)
-                Token.shared = token
-                if rememberMe {
-                    dataStore.setToken(token: token)
-                }
-                userDefaults.setIsRemembered(remember: rememberMe)
-                completion(.success(token))
-            case .failure(let error):
-                completion(.failure(error))
-            }
+                         rememberMe: rememberMe){ result in
+            completion(result)
         }
     }
 
-    func refreshToken(completion: @escaping (Result<Token, ServerError>) -> Void) {
-        remoteAPI.refreshToken(){ [self] result in
-            switch result {
-            case .success(let APIToken):
-                let token = Token(APIToken)
-                Token.shared = token
-                if userDefaults.isRemembered() {
-                    dataStore.setToken(token: token)
-
-                }
-                completion(.success(token))
-            case .failure(let error):
-                Token.shared = nil
-                dataStore.unsetToken()
-                userDefaults.setIsRemembered(remember: false)
-                completion(.failure(error))
-            }
+    func refreshToken(completion: @escaping (Result<APIToken, ServerError>) -> Void) {
+        remoteAPI.refreshToken(){ result in
+            completion(result)
         }
     }
 
