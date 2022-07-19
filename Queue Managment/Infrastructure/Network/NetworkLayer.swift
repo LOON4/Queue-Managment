@@ -12,7 +12,6 @@ protocol RequestType {
     var data: RequestData { get }
 }
 
-
 extension RequestType {
     public func execute(completion: @escaping (Result<ResponseType, ServerError>) -> Void) {
         data.session!.request(

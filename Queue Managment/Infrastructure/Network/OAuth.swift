@@ -12,7 +12,7 @@ import Resolver
 struct OAuthCredential: AuthenticationCredential {
     var token: Token?
     var requiresRefresh: Bool {
-        Date(timeIntervalSinceNow: 3580) > token?.expiringDate ??
+        Date(timeIntervalSinceNow: 300) > token?.expiringDate ??
         Date(timeIntervalSinceNow: 301)
     }
     
