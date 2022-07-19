@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FX9-LQ-n4P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History-->
+        <scene sceneID="Xj3-Mw-nUf">
+            <objects>
+                <navigationController storyboardIdentifier="HistoryNavigationController" id="FX9-LQ-n4P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="History_tabbar_item" id="fnw-ve-hsP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" alpha="0.93999999999999995" contentMode="scaleToFill" largeTitles="YES" id="kXH-6v-6b2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="0.94011278973509937" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1s4-cd-wJ4" kind="relationship" relationship="rootViewController" id="HkP-SU-QoE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fmu-4B-ywb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="336"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="L7F-sw-0Ug">
+            <objects>
+                <viewController storyboardIdentifier="ragaca" id="1s4-cd-wJ4" customClass="HistoryViewController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vgw-zH-bGr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-J6-jVe" customClass="RotatableView" customModule="Queue_Managment" customModuleProvider="target">
+                                <rect key="frame" x="97.997705987670685" y="363.49770598767071" width="218.0045880246586" height="218.00458802465863"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="3Ld-sM-5tH"/>
+                                    <constraint firstAttribute="width" constant="178" id="R8R-PL-4GQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotationDegrees">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvK-0J-4np" customClass="RotatableView" customModule="Queue_Managment" customModuleProvider="target">
+                                <rect key="frame" x="127.78306441932651" y="340.28306441932654" width="158.43387116134696" height="158.43387116134699"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="24E-HS-dGY"/>
+                                    <constraint firstAttribute="height" constant="120" id="JFN-iZ-W2b"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotationDegrees">
+                                        <real key="value" value="336"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 0 requests at the moment." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJk-i1-eck">
+                                <rect key="frame" x="70" y="391.5" width="274" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="p2v-lO-OYj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1MV-3v-e4K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MJk-i1-eck" firstAttribute="centerY" secondItem="vgw-zH-bGr" secondAttribute="centerY" multiplier="0.896256" id="Cpf-Wx-ZDs"/>
+                            <constraint firstItem="cvK-0J-4np" firstAttribute="centerX" secondItem="vgw-zH-bGr" secondAttribute="centerX" id="GlZ-7u-DNb"/>
+                            <constraint firstItem="hH5-J6-jVe" firstAttribute="centerY" secondItem="vgw-zH-bGr" secondAttribute="centerY" multiplier="1.055" id="LA0-5a-2ib"/>
+                            <constraint firstItem="cvK-0J-4np" firstAttribute="centerY" secondItem="vgw-zH-bGr" secondAttribute="centerY" multiplier="0.936528" id="Wrw-cy-L70"/>
+                            <constraint firstItem="hH5-J6-jVe" firstAttribute="centerX" secondItem="vgw-zH-bGr" secondAttribute="centerX" id="ujs-iY-c32"/>
+                            <constraint firstItem="MJk-i1-eck" firstAttribute="centerX" secondItem="vgw-zH-bGr" secondAttribute="centerX" id="vA5-PQ-vHo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lqy-e4-GiC">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Bell_tabbar_item" id="OwS-kS-G9W"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="justView" destination="cvK-0J-4np" id="dWl-Dv-VfC"/>
+                        <outlet property="label" destination="MJk-i1-eck" id="21J-hp-Hy2"/>
+                        <outlet property="viewWithBorder" destination="hH5-J6-jVe" id="fxN-a5-wMI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2jq-oQ-Qk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.60869565217399" y="334.82142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bell_tabbar_item" width="24" height="24"/>
+        <image name="History_tabbar_item" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

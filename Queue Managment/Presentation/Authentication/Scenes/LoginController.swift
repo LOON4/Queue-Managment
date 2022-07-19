@@ -27,7 +27,6 @@ class LoginController: UIViewController {
     @LazyInjected private var loginViewModel: LoginViewModel
     private var bindings = Set<AnyCancellable>()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextFields()
@@ -36,6 +35,10 @@ class LoginController: UIViewController {
         adjustLabelFontSizes()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        displayDefaultState()
+    }
     
     private func setUpBindings() {
         func bindViewToViewModel() {

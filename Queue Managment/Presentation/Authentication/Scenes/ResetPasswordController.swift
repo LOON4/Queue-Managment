@@ -18,6 +18,7 @@ class ResetPasswordController : UIViewController {
     private let buttonLoweringAnimator = BackgroundFadeButtonLoweringAnimator()
     
     @LazyInjected private var resetPasswordViewModel: ResetPasswordViewModel
+    private var bindings = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +26,37 @@ class ResetPasswordController : UIViewController {
         setUpTextField()
         setUpBarButton()
         setUpButton()
+        setUpBindings()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         unsetDelegates()
+    }
+    
+    private func setUpBindings() {
+        func bindViewToViewModel() {
+            emailAdressTextField.textPublisher()
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.forgetPasswordCredentials.email, on: resetPasswordViewModel)
+                .store(in: &bindings)
+        }
+        
+        func bindViewModelToView() {
+            
+            resetPasswordViewModel.validationResult
+                .sink { [weak self] receivedValue in
+                    switch receivedValue {
+                    case .success(()):
+                        break
+                    case .failure(let error):
+                        break
+                    }
+                }
+                .store(in: &bindings)
+        }
+        
+        bindViewToViewModel()
+        bindViewModelToView()
     }
     
     private func unsetDelegates(){

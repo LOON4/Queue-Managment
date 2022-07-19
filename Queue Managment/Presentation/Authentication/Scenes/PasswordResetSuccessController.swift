@@ -23,7 +23,13 @@ class PasswordResetSuccess: UIViewController {
     }
     
     @IBAction func signInClicked() {
-        navigationController?.popToRootViewController(animated: true)
+        //        navigationController?.popToRootViewController(animated: true)
+        //        UIStoryboard(name: "MainTabbar",
+        //                    bundle: .main).instantiateViewController(withIdentifier: "MainTabbarController")
+        let mainStoryboard = UIStoryboard(name: "MainTabBar", bundle: Bundle.main)
+           if let viewController = mainStoryboard.instantiateViewController(withIdentifier: "MainTabBarController") as? UIViewController {
+               self.present(viewController, animated: true, completion: nil)
+           }
     }
     
     private func adjustFontSize(){

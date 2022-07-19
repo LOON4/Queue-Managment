@@ -11,4 +11,15 @@ import Combine
 
 class ResetPasswordViewModel {
     @LazyInjected var router: OnboardingRouter
+    
+    var forgetPasswordCredentials = ForgetPasswordCredentials()
+    private let validationResultPassthourgh =
+        PassthroughSubject< Result<Void, ServerError>, Never >()
+    
+    var validationResult: AnyPublisher< Result<Void, ServerError>, Never > {
+        validationResultPassthourgh.eraseToAnyPublisher()
+    }
+    
+    
+    
 }
