@@ -37,7 +37,7 @@ class CheckEmailController: UIViewController {
     }
     
     @IBAction func skipButtonClicked() {
-        checkEmailViewModel.router.showCodeEnterSceen()
+        checkEmailViewModel.navigateToCheckCode()
     }
     
     @IBAction func tryAgainClicked() {

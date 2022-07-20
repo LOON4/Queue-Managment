@@ -10,9 +10,7 @@ import UIKit
 import Resolver
 
 class EmailActionSheetController {
-    
-    @LazyInjected private var router: OnboardingRouter
-    
+        
     private let mailUrlData = ["mailto:" : "Mail",
                                "googlegmail:///" : "Gmail",
                                "inbox-gmail://" : "Inbox",
@@ -20,10 +18,10 @@ class EmailActionSheetController {
     var openableUrls: [URL: String] = [URL: String]()
     
     private var chooseEmailActionSheet: UIAlertController
-    private var presentingController: UIViewController!
+    private var presentingController: CheckEmailController!
 
         
-    init(presentingController: UIViewController) {
+    init(presentingController: CheckEmailController) {
         self.presentingController = presentingController
         self.chooseEmailActionSheet = UIAlertController(title: "Choose email", message: nil,
                                             preferredStyle: .actionSheet)
@@ -55,7 +53,7 @@ class EmailActionSheetController {
     
     func addOpenAction(withURL url: URL, andTitleActionTitle: String) {
         let completionHandler = { (completed: Bool) in
-            self.router.showCodeEnterSceen()
+            self.presentingController.checkEmailViewModel.navigateToCheckCode()
         }
 
         let action = UIAlertAction(title: andTitleActionTitle, style: .default) { (action) in

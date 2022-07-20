@@ -20,7 +20,7 @@ protocol OnboardingRouter {
     func showLoginScreen()
     func showPasswordScreen()
     func showCheckEmailScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials)
-    func showCodeEnterSceen()
+    func showCodeEnterSceen(_ forgetPasswordCredentials: ForgetPasswordCredentials)
     func showNewPasswordScreen()
     func showPasswordResetSuccess()
     func showLoggedInSuccessfully()
@@ -70,15 +70,16 @@ class OnboardingRouterImpl: OnboardingRouter {
     func showCheckEmailScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials){
         guard let checkEmailVC = OnboardingRouterImpl.authenticationStoryboard
                 .instantiateViewController(withIdentifier: ControllerIDK.checkEmail) as? CheckEmailController else { return }
-        
         checkEmailVC.checkEmailViewModel = Resolver.resolve(CheckEmailViewModel.self,
                                                             args: forgetPasswordCredentials)
         OnboardingRouterImpl.loginNVC.pushViewController(checkEmailVC, animated: true)
     }
     
-    func showCodeEnterSceen(){
-        let codeEnterVC =
-        OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.passwordScreenCode)
+    func showCodeEnterSceen(_ forgetPasswordCredentials: ForgetPasswordCredentials){
+        guard let codeEnterVC =
+                OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.passwordScreenCode) as? ResetPasswordCodeController else { return }
+        codeEnterVC.resetpasswordCodeViewmodel = Resolver.resolve(ResetpasswordCodeViewmodel.self,
+                                                                  args: forgetPasswordCredentials)
         OnboardingRouterImpl.loginNVC.pushViewController(codeEnterVC, animated: true)
     }
     

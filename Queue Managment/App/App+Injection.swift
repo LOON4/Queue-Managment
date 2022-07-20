@@ -49,7 +49,7 @@ extension Resolver: ResolverRegistering {
         register { LoginViewModel() }
         register { ResetPasswordViewModel() }
         register { _, args in CheckEmailViewModel(args()) }
-        register { ResetpasswordCodeViewmodel() }
+        register { _, args in ResetpasswordCodeViewmodel(args()) }
         register { NewPasswordViewModel() }
         register { PasswordResetSuccessViewModel() }
     }
