@@ -46,6 +46,8 @@ class EmailActionSheetController {
     }
     
     func setupChooseEmailActionSheet() {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        chooseEmailActionSheet.addAction(cancelAction)
         openableUrls.forEach {
             addOpenAction(withURL: $0.key, andTitleActionTitle: $0.value)
         }
