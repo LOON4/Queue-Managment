@@ -11,4 +11,10 @@ import Combine
 
 class ResetpasswordCodeViewmodel {
     @LazyInjected var router: OnboardingRouter
+    
+    var forgetPasswordCredentials: ForgetPasswordCredentials
+    
+    init(_ forgetPasswordCredentials: ForgetPasswordCredentials){
+        self.forgetPasswordCredentials = forgetPasswordCredentials
+    }
 }

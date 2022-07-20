@@ -25,4 +25,7 @@ class CheckEmailViewModel {
                                                        for: .checkEmail){_ in}
     }
     
+    func navigateToCheckCode () {
+        router.showCodeEnterSceen(forgetPasswordCredentials)
+    }
 }
