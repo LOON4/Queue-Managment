@@ -8,26 +8,24 @@
 import Foundation
 
 protocol AuthRemoteAPI {
-  
-  func signIn(email: String, passcode: String, rememberMe: Bool,
+    func signIn(email: String, passcode: String, rememberMe: Bool,
               completion: @escaping (Result<APIToken, ServerError>) -> Void)
-  func refreshToken(completion:  @escaping (Result<APIToken, ServerError>) -> Void)
     
+    func refreshToken(completion:  @escaping (Result<APIToken, ServerError>) -> Void)
+    
+    func forgetPasswordProccedure(credentials: ForgetPasswordCredentials,
+                                  for stage: ForgetPasswordProccedureStage,
+                                  completion: @escaping (Result<NoReply, ServerError>) -> Void)
 }
 
 class AuthRemoteAPIImpl: AuthRemoteAPI {
         
     func signIn(email: String, passcode: String, rememberMe: Bool,
                 completion: @escaping (Result<APIToken, ServerError>) -> Void){
-            let loginService = LoginService(email: email, password: passcode, rememberMe: rememberMe)
-            loginService.execute { result in
-                switch result {
-                case .success(let token):
-                    completion(.success(token))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
-            }
+        let loginService = LoginService(email: email, password: passcode, rememberMe: rememberMe)
+        loginService.execute { result in
+            completion(result)
+        }
     }
     
     func refreshToken(completion:  @escaping (Result<APIToken, ServerError>) -> Void) {
@@ -39,18 +37,18 @@ class AuthRemoteAPIImpl: AuthRemoteAPI {
         
         let refreshTokenService = RefreshTokenService(refreshToken: refreshToken)
         refreshTokenService.execute { result in
-            switch result {
-            case .success(let token):
-                completion(.success(token))
-            case .failure(let error):
-                completion(.failure(error))
-            }
+            completion(result)
         }
     }
     
-    func forgetPasswordProccedure(credentials: ForgetPasswordCredentials, for stage: Any,
-                                  completion: @escaping (Result<Bool, ServerError>) -> Void) {
+    func forgetPasswordProccedure(credentials: ForgetPasswordCredentials,
+                                  for stage: ForgetPasswordProccedureStage,
+                                  completion: @escaping (Result<NoReply, ServerError>) -> Void) {
         
+        let forgetPasswordService = ForgetPasswordProccedureService(credentials, stage)
+        forgetPasswordService.execute { result in
+            completion(result)
+        }
     }
     
 }

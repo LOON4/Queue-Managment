@@ -14,18 +14,17 @@ class ResetPasswordController : UIViewController {
     
     @IBOutlet weak var emailAdressTextField: PaddingTextField!
     @IBOutlet weak var nextButton: QueueButtonOne!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
     private let buttonLoweringAnimator = BackgroundFadeButtonLoweringAnimator()
     
-    @LazyInjected private var resetPasswordViewModel: ResetPasswordViewModel
+    @LazyInjected var resetPasswordViewModel: ResetPasswordViewModel
     private var bindings = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDelegates()
-        setUpTextField()
-        setUpBarButton()
-        setUpButton()
+        setupUI()
         setUpBindings()
     }
     
@@ -47,8 +46,12 @@ class ResetPasswordController : UIViewController {
                 .sink { [weak self] receivedValue in
                     switch receivedValue {
                     case .success(()):
+                        self?.errorMessageLabel.isHidden = true
+                        self?.resetPasswordViewModel.navigateToCheckEmailScene()
                         break
                     case .failure(let error):
+                        self?.errorMessageLabel.text = error.message
+                        self?.errorMessageLabel.isHidden = false
                         break
                     }
                 }
@@ -57,6 +60,13 @@ class ResetPasswordController : UIViewController {
         
         bindViewToViewModel()
         bindViewModelToView()
+    }
+    
+    private func setupUI(){
+        setupLabels()
+        setUpTextField()
+        setUpBarButton()
+        setUpButton()
     }
     
     private func unsetDelegates(){
@@ -74,6 +84,11 @@ class ResetPasswordController : UIViewController {
     
     @IBAction func nextButtonClicked() {
         resetPasswordViewModel.checkEmail()
+    }
+    
+    func setupLabels() {
+        errorMessageLabel.font = UIFont.SanFranciscoLight(size: 14)
+        errorMessageLabel.isHidden = true
     }
     
     private func setUpTextField () {

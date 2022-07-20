@@ -13,13 +13,37 @@ enum ForgetPasswordProccedureStage: Int {
     case checkEmail = 0
     case checkCode
     case checkPassword
+    
+    func endPoint() -> String {
+        switch self {
+        case .checkEmail:
+            return "/send-reset-code"
+        case .checkCode:
+            return "/send-reset-code"
+        case .checkPassword:
+            return "/reset-password"
+        }
+    }
+    
+    func params(_ forgetPasswordCredentials: ForgetPasswordCredentials) -> [String : Any] {
+        var params = [String : Any]()
+        
+        switch self {
+        case .checkPassword:
+            params["newPassword"] = forgetPasswordCredentials.newPassword
+            fallthrough
+        case .checkCode:
+            params["code"] = forgetPasswordCredentials.code
+            fallthrough
+        case .checkEmail:
+            params["email"] = forgetPasswordCredentials.email
+        }
+        return params
+    }
+    
 }
 
 class ForgetPasswordProccedureService: RequestType {
-
-    let endPoints = ["/send-reset-code",
-                     "​/check-code",
-                     "/reset-password"]
     
     var forgetPasswordCredentials: ForgetPasswordCredentials
     var currentStage: ForgetPasswordProccedureStage
@@ -30,12 +54,12 @@ class ForgetPasswordProccedureService: RequestType {
         self.currentStage = stage
     }
 
-    typealias ResponseType = Bool
+    typealias ResponseType = NoReply
 
     var data: RequestData  {
         get {
-            var request = RequestData(path: "/client/auth" + endPoints[currentStage.rawValue])
-            request.params = ["email": forgetPasswordCredentials.email]
+            var request = RequestData(path: "/client/auth" + currentStage.endPoint())
+            request.params = currentStage.params(forgetPasswordCredentials)
             request.method = .post
             return request
         }

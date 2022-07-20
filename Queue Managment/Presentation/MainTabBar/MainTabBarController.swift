@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class MainTabBarController : UINavigationController {
+class MainTabBarController : UITabBarController {
     
     
 }

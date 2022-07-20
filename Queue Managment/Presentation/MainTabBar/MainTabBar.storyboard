@@ -9,7 +9,7 @@
         <!--Main Tabbar Controller-->
         <scene sceneID="jO2-V7-4Ul">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="Vzn-n2-okL" customClass="MainTabbarController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="Vzn-n2-okL" customClass="MainTabbarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kk6-jW-nGB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

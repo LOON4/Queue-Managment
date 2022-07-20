@@ -11,7 +11,7 @@ import Resolver
 
 class EmailActionSheetController {
     
-    @LazyInjected private  var router: OnboardingRouter
+    @LazyInjected private var router: OnboardingRouter
     
     private let mailUrlData = ["mailto:" : "Mail",
                                "googlegmail:///" : "Gmail",

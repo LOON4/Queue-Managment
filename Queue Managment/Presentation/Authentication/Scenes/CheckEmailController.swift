@@ -25,7 +25,7 @@ class CheckEmailController: UIViewController {
     
     @IBOutlet weak var emailNotDetectedLabel: UILabel!
     
-    @LazyInjected private var checkEmailViewModel: CheckEmailViewModel
+    @LazyInjected var checkEmailViewModel: CheckEmailViewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,10 @@ class CheckEmailController: UIViewController {
     
     @IBAction func skipButtonClicked() {
         checkEmailViewModel.router.showCodeEnterSceen()
+    }
+    
+    @IBAction func tryAgainClicked() {
+        checkEmailViewModel.resendCode()
     }
     
     @IBAction func openEmailClicked() {

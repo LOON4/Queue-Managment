@@ -28,6 +28,8 @@
 		4A82480B2886F84800B268C7 /* ForgetPasswordProccedureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A82480A2886F84800B268C7 /* ForgetPasswordProccedureService.swift */; };
 		4AA2BAD12885EEEA007143BB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */; };
 		550C27F1A996BD222C0E84AE /* libPods-Queue Managment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */; };
+		AA1FF5912887D3A7007E1BF2 /* RotatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1FF5902887D3A7007E1BF2 /* RotatableView.swift */; };
+		AA1FF5942888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1FF5932888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift */; };
 		AA2AB1E428828EB700526F34 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1E328828EB700526F34 /* UserSessionRepository.swift */; };
 		AA2AB1E82882907D00526F34 /* QueueUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1E72882907D00526F34 /* QueueUserSessionRepository.swift */; };
 		AA2AB1EE2882922600526F34 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AB1ED2882922600526F34 /* UserSessionDataStore.swift */; };
@@ -124,6 +126,8 @@
 		4A82480A2886F84800B268C7 /* ForgetPasswordProccedureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureService.swift; sourceTree = "<group>"; };
 		4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Queue Managment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1FF5902887D3A7007E1BF2 /* RotatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatableView.swift; sourceTree = "<group>"; };
+		AA1FF5932888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureUsacase.swift; sourceTree = "<group>"; };
 		AA2AB1E328828EB700526F34 /* UserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRepository.swift; sourceTree = "<group>"; };
 		AA2AB1E72882907D00526F34 /* QueueUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueUserSessionRepository.swift; sourceTree = "<group>"; };
 		AA2AB1ED2882922600526F34 /* UserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				AA2AB2202883D68F00526F34 /* ComponentViews */,
+				AA1FF58F2887D376007E1BF2 /* Views */,
 				AAAA8E63286BFAAE003D4429 /* Buttons */,
 				AA99A37A286ADD1F00FB930D /* TextFields */,
 			);
@@ -278,6 +283,14 @@
 				50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA1FF58F2887D376007E1BF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA1FF5902887D3A7007E1BF2 /* RotatableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AA2AB1E9288290F800526F34 /* Authentication */ = {
@@ -353,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				AA2AB20D2883190200526F34 /* LoginUsecase.swift */,
+				AA1FF5932888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -860,6 +874,7 @@
 				AA974BE52870B97300005553 /* Service1Response.swift in Sources */,
 				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
 				AA99A379286AD88D00FB930D /* UIColor.swift in Sources */,
+				AA1FF5942888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift in Sources */,
 				4A23DAF2288472DC006D5ED0 /* ResetPasswordCodeViewModel.swift in Sources */,
 				AADFD3BD286D9B4C00885B68 /* NetworkLayer.swift in Sources */,
 				AA2AB2222883D84000526F34 /* LoaderView.swift in Sources */,
@@ -877,6 +892,7 @@
 				AA2AB1E428828EB700526F34 /* UserSessionRepository.swift in Sources */,
 				AAE11E612875B8C2004F346C /* OnboardingRouter.swift in Sources */,
 				AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */,
+				AA1FF5912887D3A7007E1BF2 /* RotatableView.swift in Sources */,
 				AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,
 				AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */,

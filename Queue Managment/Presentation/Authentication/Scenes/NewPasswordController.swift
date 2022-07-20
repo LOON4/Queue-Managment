@@ -17,7 +17,7 @@ class NewPasswordController: UIViewController {
     
     @IBOutlet weak var repeatPasswordTextField: PaddingTextField!
     
-    @LazyInjected private var newPasswordViewModel: NewPasswordViewModel
+    @LazyInjected var newPasswordViewModel: NewPasswordViewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -24,7 +24,7 @@ class LoginController: UIViewController {
     @IBOutlet weak var errorMessage: UILabel!
     private var loader: LoaderView!
 
-    @LazyInjected private var loginViewModel: LoginViewModel
+    @LazyInjected var loginViewModel: LoginViewModel
     private var bindings = Set<AnyCancellable>()
 
     override func viewDidLoad() {

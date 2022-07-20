@@ -185,7 +185,7 @@ application</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-x4-l95">
-                                <rect key="frame" x="16" y="116" width="358" height="236"/>
+                                <rect key="frame" x="16" y="116" width="358" height="259.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-YT-TmW">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="80"/>
@@ -207,8 +207,8 @@ application</string>
                                             <constraint firstAttribute="height" constant="80" id="zTv-82-Cmx"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zED-fq-hBI">
-                                        <rect key="frame" x="0.0" y="124" width="358" height="112"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zED-fq-hBI">
+                                        <rect key="frame" x="0.0" y="123.99999999999999" width="358" height="135.66666666666663"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umx-Hu-1bf" customClass="PaddingTextField" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="48"/>
@@ -218,8 +218,14 @@ application</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flk-Ze-aqa">
+                                                <rect key="frame" x="0.0" y="59.999999999999993" width="358" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="System Font" pointSize="14"/>
+                                                <color key="textColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sC-Er-Q3s" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="64" width="358" height="48"/>
+                                                <rect key="frame" x="0.0" y="87.666666666666686" width="358" height="48"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="UyI-6v-khZ"/>
@@ -259,6 +265,7 @@ application</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailAdressTextField" destination="Umx-Hu-1bf" id="CDu-bw-Bjf"/>
+                        <outlet property="errorMessageLabel" destination="Flk-Ze-aqa" id="SSI-OT-10c"/>
                         <outlet property="nextButton" destination="8sC-Er-Q3s" id="3tc-c2-Xcd"/>
                     </connections>
                 </viewController>
@@ -391,6 +398,9 @@ to your email address.</string>
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tryAgainClicked" destination="vll-sl-za9" eventType="touchUpInside" id="gdy-xS-Uyh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

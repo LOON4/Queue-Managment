@@ -11,4 +11,18 @@ import Combine
 
 class CheckEmailViewModel {
     @LazyInjected var router: OnboardingRouter
+    @LazyInjected var forgotPasswordUsecase: ForgetPasswordProccedureUsecase
+    
+    var forgetPasswordCredentials: ForgetPasswordCredentials
+    
+    init(_ forgetPasswordCredentials: ForgetPasswordCredentials){
+        self.forgetPasswordCredentials = forgetPasswordCredentials
+    }
+    
+    func resendCode(){
+        
+        forgotPasswordUsecase.forgetPasswordProccedure(credentials: forgetPasswordCredentials,
+                                                       for: .checkEmail){_ in}
+    }
+    
 }

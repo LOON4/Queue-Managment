@@ -19,6 +19,9 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
+struct NoReply: Decodable {}
+let emptyJsonReply = "{}".data(using: .utf8)!
+
 enum ResponseStatusCode: Int {
     case success = 200
     case badRequest = 400

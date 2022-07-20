@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Resolver
 
 enum FirstScreenState {
     case loginVC
@@ -18,7 +19,7 @@ protocol OnboardingRouter {
     func showFirstScreen(firstScreen: FirstScreenState)
     func showLoginScreen()
     func showPasswordScreen()
-    func showCheckEmailScreen()
+    func showCheckEmailScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials)
     func showCodeEnterSceen()
     func showNewPasswordScreen()
     func showPasswordResetSuccess()
@@ -66,10 +67,13 @@ class OnboardingRouterImpl: OnboardingRouter {
             OnboardingRouterImpl.loginNVC.pushViewController(resetPasswordVC, animated: true)
     }
     
-    func showCheckEmailScreen(){
-        let checkEmailVC =
-            OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.checkEmail)
-            OnboardingRouterImpl.loginNVC.pushViewController(checkEmailVC, animated: true)
+    func showCheckEmailScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials){
+        guard let checkEmailVC = OnboardingRouterImpl.authenticationStoryboard
+                .instantiateViewController(withIdentifier: ControllerIDK.checkEmail) as? CheckEmailController else { return }
+        
+        checkEmailVC.checkEmailViewModel = Resolver.resolve(CheckEmailViewModel.self,
+                                                            args: forgetPasswordCredentials)
+        OnboardingRouterImpl.loginNVC.pushViewController(checkEmailVC, animated: true)
     }
     
     func showCodeEnterSceen(){

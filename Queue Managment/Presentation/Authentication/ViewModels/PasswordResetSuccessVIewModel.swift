@@ -9,7 +9,7 @@ import Foundation
 import Resolver
 import Combine
 
-class PasswordResetSuccessVIewModel {
+class PasswordResetSuccessViewModel {
     @LazyInjected var router: OnboardingRouter
 
 }

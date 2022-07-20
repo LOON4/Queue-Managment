@@ -8,7 +8,7 @@
 import Foundation
 import Resolver
 
-class QueueUserSessionRepository: UserSessionRepository {
+class QueueUserSessionRepository: UserSessionRepository {    
     
     @LazyInjected private var dataStore: UserSessionDataStore
     @LazyInjected private var remoteAPI: AuthRemoteAPI
@@ -41,9 +41,12 @@ class QueueUserSessionRepository: UserSessionRepository {
         }
     }
     
-    func forgetPasswordProccedure(credentials: ForgetPasswordCredentials, for stage: Any,
-                                  completion: @escaping (Result<Bool, ServerError>) -> Void) {
-        
+    func forgetPasswordProccedure(credentials: ForgetPasswordCredentials,
+                                  for stage: ForgetPasswordProccedureStage,
+                                  completion: @escaping (Result<NoReply, ServerError>) -> Void) {
+        remoteAPI.forgetPasswordProccedure(credentials: credentials, for: stage){ result in
+            completion(result)
+        }
     }
     
 }

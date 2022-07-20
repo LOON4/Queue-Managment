@@ -41,16 +41,17 @@ extension Resolver: ResolverRegistering {
     private static func RegisterUseCases(){
         register { RefreshTokenUseCaseImpl() }.implements(RefreshTokenUseCase.self).scope(.application)
         register { LoginUsecaseImpl() }.implements(LoginUsecase.self).scope(.application)
+        register { ForgetPasswordProccedureUsecaseImpl() }.implements(ForgetPasswordProccedureUsecase.self).scope(.application)
     }
     
     private static func RegisterViewModels(){
         register { SplashScreenViewModel() }
         register { LoginViewModel() }
         register { ResetPasswordViewModel() }
-        register { CheckEmailViewModel() }
+        register { _, args in CheckEmailViewModel(args()) }
         register { ResetpasswordCodeViewmodel() }
         register { NewPasswordViewModel() }
-        register { PasswordResetSuccessVIewModel() }
+        register { PasswordResetSuccessViewModel() }
     }
     
 }

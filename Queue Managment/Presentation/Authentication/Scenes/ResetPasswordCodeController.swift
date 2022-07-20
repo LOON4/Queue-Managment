@@ -13,7 +13,7 @@ import Combine
 class ResetPasswordCodeController: UIViewController {
     @IBOutlet weak var codeTextField: PaddingTextField!
     
-    @LazyInjected private var resetpasswordCodeViewmodel: ResetpasswordCodeViewmodel
+    @LazyInjected var resetpasswordCodeViewmodel: ResetpasswordCodeViewmodel
     
     override func viewDidLoad() {
         super.viewDidLoad()
