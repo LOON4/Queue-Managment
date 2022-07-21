@@ -17,6 +17,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KTc-N8-ToB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="0.94376034768211925" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Ym4-9N-wzK" kind="relationship" relationship="rootViewController" id="2IW-po-tbg"/>
@@ -26,17 +27,46 @@
             </objects>
             <point key="canvasLocation" x="-55" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--Storage-->
         <scene sceneID="ziZ-WR-q3N">
             <objects>
-                <viewController id="Ym4-9N-wzK" sceneMemberID="viewController">
+                <viewController id="Ym4-9N-wzK" customClass="StorageViewController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFT-gB-bmV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u1-cx-GE5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-FX-gmv">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="51"/>
+                                        <color key="barTintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="0.93532698675496684" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ieg-FX-gmv" firstAttribute="top" secondItem="7u1-cx-GE5" secondAttribute="top" id="7fp-15-j28"/>
+                                    <constraint firstAttribute="height" constant="56" id="9cH-hM-KmG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ieg-FX-gmv" secondAttribute="trailing" constant="16" id="Nvy-XB-H7w"/>
+                                    <constraint firstItem="Ieg-FX-gmv" firstAttribute="leading" secondItem="7u1-cx-GE5" secondAttribute="leading" constant="16" id="Oz9-HZ-UD0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UcP-bB-yAM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UcP-bB-yAM" firstAttribute="trailing" secondItem="7u1-cx-GE5" secondAttribute="trailing" id="Cdt-in-FAw"/>
+                            <constraint firstItem="7u1-cx-GE5" firstAttribute="top" secondItem="UcP-bB-yAM" secondAttribute="top" id="ZEx-Mc-oqK"/>
+                            <constraint firstItem="7u1-cx-GE5" firstAttribute="leading" secondItem="UcP-bB-yAM" secondAttribute="leading" id="tGZ-kF-wpO"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8AV-bd-fbB"/>
+                    <navigationItem key="navigationItem" title="Storage" id="8AV-bd-fbB">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="KcP-BT-C6H"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SearchBar" destination="Ieg-FX-gmv" id="10V-Jc-oqZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CgI-Hg-PHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,12 +21,16 @@
 		4A3E41B32885605700DB0713 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3E41B22885605700DB0713 /* Profile.storyboard */; };
 		4A3E41B5288561FD00DB0713 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3E41B4288561FD00DB0713 /* MainTabBar.storyboard */; };
 		4A3E41B728856EE900DB0713 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E41B628856EE900DB0713 /* MainTabBarController.swift */; };
+		4A43C8FB288967B7000547B4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43C8F9288967B7000547B4 /* CollectionViewCell.swift */; };
+		4A43C8FC288967B7000547B4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A43C8FA288967B7000547B4 /* CollectionViewCell.xib */; };
 		4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5932032868732800DA9193 /* ResetPasswordController.swift */; };
 		4A59320628687EC100DA9193 /* ControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320528687EC100DA9193 /* ControllerID.swift */; };
 		4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59320728687FDD00DA9193 /* StoryboardsID.swift */; };
 		4A8248092886E5C500B268C7 /* ForgetPasswordCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8248082886E5C500B268C7 /* ForgetPasswordCredentials.swift */; };
 		4A82480B2886F84800B268C7 /* ForgetPasswordProccedureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A82480A2886F84800B268C7 /* ForgetPasswordProccedureService.swift */; };
 		4AA2BAD12885EEEA007143BB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */; };
+		4AC6ACB8288966A100AFE9AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6ACB7288966A000AFE9AE /* ProfileViewController.swift */; };
+		4AD7126728894651001A3D0B /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7126628894651001A3D0B /* StorageViewController.swift */; };
 		550C27F1A996BD222C0E84AE /* libPods-Queue Managment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */; };
 		AA1FF5912887D3A7007E1BF2 /* RotatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1FF5902887D3A7007E1BF2 /* RotatableView.swift */; };
 		AA1FF5942888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1FF5932888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift */; };
@@ -121,12 +125,16 @@
 		4A3E41B22885605700DB0713 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		4A3E41B4288561FD00DB0713 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		4A3E41B628856EE900DB0713 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4A43C8F9288967B7000547B4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4A43C8FA288967B7000547B4 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		4A5932032868732800DA9193 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		4A59320528687EC100DA9193 /* ControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerID.swift; sourceTree = "<group>"; };
 		4A59320728687FDD00DA9193 /* StoryboardsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsID.swift; sourceTree = "<group>"; };
 		4A8248082886E5C500B268C7 /* ForgetPasswordCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordCredentials.swift; sourceTree = "<group>"; };
 		4A82480A2886F84800B268C7 /* ForgetPasswordProccedureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureService.swift; sourceTree = "<group>"; };
 		4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		4AC6ACB7288966A000AFE9AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4AD7126628894651001A3D0B /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
 		50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Queue Managment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1FF5902887D3A7007E1BF2 /* RotatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatableView.swift; sourceTree = "<group>"; };
 		AA1FF5932888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureUsacase.swift; sourceTree = "<group>"; };
@@ -268,7 +276,11 @@
 				4A3E41AE2885603D00DB0713 /* History.storyboard */,
 				4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */,
 				4A3E41B02885604A00DB0713 /* Storage.storyboard */,
+				4AD7126628894651001A3D0B /* StorageViewController.swift */,
 				4A3E41B22885605700DB0713 /* Profile.storyboard */,
+				4A43C8F9288967B7000547B4 /* CollectionViewCell.swift */,
+				4A43C8FA288967B7000547B4 /* CollectionViewCell.xib */,
+				4AC6ACB7288966A000AFE9AE /* ProfileViewController.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -831,6 +843,7 @@
 				AAC48E9528622D4D00B336B2 /* SF-Pro-Display-Semibold.otf in Resources */,
 				AAC48E8D28622D4D00B336B2 /* SF-Pro-Display-Thin.otf in Resources */,
 				AAC48E9D28622D4D00B336B2 /* SF-Pro-Display-ThinItalic.otf in Resources */,
+				4A43C8FC288967B7000547B4 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,7 +881,7 @@
 			files = (
 				4A8248092886E5C500B268C7 /* ForgetPasswordCredentials.swift in Sources */,
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
-				AAA5549C2889403000283925 /* ForgetPasswordProccedureViewModel.swift in Sources */,
+				4A43C8FB288967B7000547B4 /* CollectionViewCell.swift in Sources */,
 				AADFD3C6286DA7BD00885B68 /* APIServerError.swift in Sources */,
 				4A3E41B728856EE900DB0713 /* MainTabBarController.swift in Sources */,
 				AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */,
@@ -881,6 +894,7 @@
 				AA2AB2292884080400526F34 /* LoginViewModel.swift in Sources */,
 				AAD94665286EEDD900C7FCF4 /* Color.swift in Sources */,
 				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
+				4AD7126728894651001A3D0B /* StorageViewController.swift in Sources */,
 				AA974BE32870B94C00005553 /* Service1.swift in Sources */,
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
 				AADFD3B9286D8A9E00885B68 /* EmailActionSheetController.swift in Sources */,
@@ -903,6 +917,7 @@
 				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
 				AA2AB20E2883190200526F34 /* LoginUsecase.swift in Sources */,
 				AA2AB1FE2882EC1000526F34 /* UserDefaultsRepository.swift in Sources */,
+				4AC6ACB8288966A100AFE9AE /* ProfileViewController.swift in Sources */,
 				AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */,
 				AACCF37D2881EA58004E19A2 /* Codable.swift in Sources */,
 				AA2AB1E428828EB700526F34 /* UserSessionRepository.swift in Sources */,

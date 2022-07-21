@@ -18,12 +18,21 @@ class HistoryViewController : UIViewController {
         super.viewDidLoad()
         setBorder()
         setLabel()
-        navigationController?.navigationBar.tintColor = .black
+        setUpBarButton()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "History"
+    }
+    
+    private func setUpBarButton () {
+        let backButton = UIButton(type: .custom)
+        if let image = UIImage(named: "Bell_tabbar_item") {
+            backButton.setImage(image, for: .normal)
+        }
+        
+        let rightItem = UIBarButtonItem(customView: backButton)
+        self.navigationItem.rightBarButtonItem = rightItem
     }
     
     func setBorder() {
