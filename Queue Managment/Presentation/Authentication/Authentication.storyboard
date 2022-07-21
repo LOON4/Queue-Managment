@@ -690,6 +690,12 @@ to your email address.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNq-cC-lUJ">
+                                                <rect key="frame" x="0.0" y="56" width="358" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="System Font" pointSize="14"/>
+                                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-8e-KfQ" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64" width="358" height="48"/>
                                                 <constraints>
@@ -723,7 +729,6 @@ to your email address.</string>
                             <constraint firstItem="Ojt-zT-BYJ" firstAttribute="top" secondItem="GOL-i1-eWT" secondAttribute="top" priority="750" constant="72" id="Zh3-Mp-MIy"/>
                             <constraint firstItem="GOL-i1-eWT" firstAttribute="trailing" secondItem="Ojt-zT-BYJ" secondAttribute="trailing" constant="16" id="bpq-72-x06"/>
                             <constraint firstItem="Ojt-zT-BYJ" firstAttribute="leading" secondItem="GOL-i1-eWT" secondAttribute="leading" constant="16" id="xN9-hX-slW"/>
-                            <constraint firstItem="GOL-i1-eWT" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ojt-zT-BYJ" secondAttribute="bottom" priority="888" constant="350" id="yuf-sQ-Dgw"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -733,6 +738,7 @@ to your email address.</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="codeTextField" destination="NhF-wM-2TH" id="U67-VN-UFo"/>
+                        <outlet property="errorMessageLabel" destination="gNq-cC-lUJ" id="BvM-Af-mjO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fam-Pb-y3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

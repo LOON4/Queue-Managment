@@ -48,11 +48,9 @@ class ResetPasswordController : UIViewController {
                     case .success(()):
                         self?.errorMessageLabel.isHidden = true
                         self?.resetPasswordViewModel.navigateToCheckEmailScene()
-                        break
                     case .failure(let error):
                         self?.errorMessageLabel.text = error.message
                         self?.errorMessageLabel.isHidden = false
-                        break
                     }
                 }
                 .store(in: &bindings)

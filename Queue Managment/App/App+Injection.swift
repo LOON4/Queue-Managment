@@ -50,7 +50,7 @@ extension Resolver: ResolverRegistering {
         register { ResetPasswordViewModel() }
         register { _, args in CheckEmailViewModel(args()) }
         register { _, args in ResetpasswordCodeViewmodel(args()) }
-        register { NewPasswordViewModel() }
+        register { _, args in NewPasswordViewModel(args()) }
         register { PasswordResetSuccessViewModel() }
     }
     

@@ -19,7 +19,7 @@ enum ForgetPasswordProccedureStage: Int {
         case .checkEmail:
             return "/send-reset-code"
         case .checkCode:
-            return "/send-reset-code"
+            return "/check-code"
         case .checkPassword:
             return "/reset-password"
         }

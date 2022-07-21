@@ -14,20 +14,57 @@ class NewPasswordController: UIViewController {
     
     
     @IBOutlet weak var newPasswordTextField: PaddingTextField!
-    
     @IBOutlet weak var repeatPasswordTextField: PaddingTextField!
     
     @LazyInjected var newPasswordViewModel: NewPasswordViewModel
+    
+    private var bindings = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         newPasswordTextField.becomeFirstResponder()
         setUpTextField()
+        setUpBindings()
+    }
+    
+    private func setUpBindings() {
+        func bindViewToViewModel() {
+            newPasswordTextField.textPublisher()
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.newPasswordTextField, on: newPasswordViewModel)
+                .store(in: &bindings)
+            
+            repeatPasswordTextField.textPublisher()
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.repeatPasswordTextField, on: newPasswordViewModel)
+                .store(in: &bindings)
+        }
+        
+        
+        func bindViewModelToView() {
+            
+            newPasswordViewModel.validationResult
+                .sink { [weak self] receivedValue in
+                    switch receivedValue {
+                    case .success(()):
+//                        self?.errorMessageLabel.isHidden = true
+                        self?.newPasswordViewModel.navigateToPasswordResecSucces()
+                    case .failure(let error):
+//                        self?.errorMessageLabel.text = error.message
+//                        self?.errorMessageLabel.isHidden = false
+                        break
+                    }
+                }
+                .store(in: &bindings)
+        }
+        
+        bindViewToViewModel()
+        bindViewModelToView()
     }
     
     @IBAction func resetPasswordClicked() {
-        newPasswordViewModel.router.showPasswordResetSuccess()
+        newPasswordViewModel.checkPassword()
     }
     
     private func setUpTextField () {

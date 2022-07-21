@@ -21,7 +21,7 @@ protocol OnboardingRouter {
     func showPasswordScreen()
     func showCheckEmailScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials)
     func showCodeEnterSceen(_ forgetPasswordCredentials: ForgetPasswordCredentials)
-    func showNewPasswordScreen()
+    func showNewPasswordScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials)
     func showPasswordResetSuccess()
     func showLoggedInSuccessfully()
 }
@@ -83,9 +83,11 @@ class OnboardingRouterImpl: OnboardingRouter {
         OnboardingRouterImpl.loginNVC.pushViewController(codeEnterVC, animated: true)
     }
     
-    func showNewPasswordScreen(){
-        let newPasswordVC = OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.newPassword)
-            OnboardingRouterImpl.loginNVC.pushViewController(newPasswordVC, animated: true)
+    func showNewPasswordScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials){
+        guard let newPasswordVC = OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.newPassword) as? NewPasswordController else { return }
+        newPasswordVC.newPasswordViewModel = Resolver.resolve(NewPasswordViewModel.self,
+                                                              args: forgetPasswordCredentials)
+        OnboardingRouterImpl.loginNVC.pushViewController(newPasswordVC, animated: true)
     }
     
     func showPasswordResetSuccess(){
