@@ -70,23 +70,29 @@ class OnboardingRouterImpl: OnboardingRouter {
     func showCheckEmailScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials){
         guard let checkEmailVC = OnboardingRouterImpl.authenticationStoryboard
                 .instantiateViewController(withIdentifier: ControllerIDK.checkEmail) as? CheckEmailController else { return }
-        checkEmailVC.checkEmailViewModel = Resolver.resolve(CheckEmailViewModel.self,
-                                                            args: forgetPasswordCredentials)
+        checkEmailVC.checkEmailViewModel =
+            Resolver.resolve(ForgetPasswordProccedureViewModel.self,
+                             args: ["credentials": forgetPasswordCredentials,
+                                    "stage": ForgetPasswordProccedureStage.tryagain])
         OnboardingRouterImpl.loginNVC.pushViewController(checkEmailVC, animated: true)
     }
     
     func showCodeEnterSceen(_ forgetPasswordCredentials: ForgetPasswordCredentials){
         guard let codeEnterVC =
                 OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.passwordScreenCode) as? ResetPasswordCodeController else { return }
-        codeEnterVC.resetpasswordCodeViewmodel = Resolver.resolve(ResetpasswordCodeViewmodel.self,
-                                                                  args: forgetPasswordCredentials)
+        codeEnterVC.resetpasswordCodeViewmodel =
+            Resolver.resolve(ForgetPasswordProccedureViewModel.self,
+                             args: ["credentials": forgetPasswordCredentials,
+                                    "stage": ForgetPasswordProccedureStage.checkCode])
         OnboardingRouterImpl.loginNVC.pushViewController(codeEnterVC, animated: true)
     }
     
     func showNewPasswordScreen(_ forgetPasswordCredentials: ForgetPasswordCredentials){
         guard let newPasswordVC = OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: ControllerIDK.newPassword) as? NewPasswordController else { return }
-        newPasswordVC.newPasswordViewModel = Resolver.resolve(NewPasswordViewModel.self,
-                                                              args: forgetPasswordCredentials)
+        newPasswordVC.newPasswordViewModel =
+            Resolver.resolve(ForgetPasswordProccedureViewModel.self,
+                             args: ["credentials": forgetPasswordCredentials,
+                                    "stage": ForgetPasswordProccedureStage.checkPassword])
         OnboardingRouterImpl.loginNVC.pushViewController(newPasswordVC, animated: true)
     }
     

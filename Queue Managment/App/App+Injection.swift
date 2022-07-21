@@ -48,8 +48,9 @@ extension Resolver: ResolverRegistering {
         register { SplashScreenViewModel() }
         register { LoginViewModel() }
         register { ResetPasswordViewModel() }
-        register { _, args in CheckEmailViewModel(args()) }
-        register { _, args in ResetpasswordCodeViewmodel(args()) }
+        register { _, args in
+            ForgetPasswordProccedureViewModel(args("credentials"), args("stage"))
+        }
         register { _, args in NewPasswordViewModel(args()) }
         register { PasswordResetSuccessViewModel() }
     }

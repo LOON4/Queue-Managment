@@ -18,7 +18,7 @@ class ResetPasswordController : UIViewController {
     
     private let buttonLoweringAnimator = BackgroundFadeButtonLoweringAnimator()
     
-    @LazyInjected var resetPasswordViewModel: ResetPasswordViewModel
+    var resetPasswordViewModel = ForgetPasswordProccedureViewModel()
     private var bindings = Set<AnyCancellable>()
     
     override func viewDidLoad() {
@@ -47,7 +47,7 @@ class ResetPasswordController : UIViewController {
                     switch receivedValue {
                     case .success(()):
                         self?.errorMessageLabel.isHidden = true
-                        self?.resetPasswordViewModel.navigateToCheckEmailScene()
+                        self?.resetPasswordViewModel.navigateToNextScene()
                     case .failure(let error):
                         self?.errorMessageLabel.text = error.message
                         self?.errorMessageLabel.isHidden = false
@@ -81,7 +81,7 @@ class ResetPasswordController : UIViewController {
     }
     
     @IBAction func nextButtonClicked() {
-        resetPasswordViewModel.checkEmail()
+        resetPasswordViewModel.validateForgotPasswordProccedure()
     }
     
     func setupLabels() {

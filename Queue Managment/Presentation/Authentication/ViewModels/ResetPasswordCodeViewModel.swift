@@ -46,6 +46,4 @@ class ResetpasswordCodeViewmodel {
     func navigateToEnterNewPassword() {
         router.showNewPasswordScreen(forgetPasswordCredentials)
     }
-    
-   
 }

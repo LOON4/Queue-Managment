@@ -55,7 +55,7 @@ class EmailActionSheetController {
     
     func addOpenAction(withURL url: URL, andTitleActionTitle: String) {
         let completionHandler = { (completed: Bool) in
-            self.presentingController.checkEmailViewModel.navigateToCheckCode()
+            self.presentingController.checkEmailViewModel.navigateToNextScene()
         }
 
         let action = UIAlertAction(title: andTitleActionTitle, style: .default) { (action) in

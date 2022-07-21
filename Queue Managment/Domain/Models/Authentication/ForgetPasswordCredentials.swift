@@ -11,4 +11,5 @@ struct ForgetPasswordCredentials {
     var email = ""
     var code = ""
     var newPassword = ""
+    var passwordsMatch = true
 }

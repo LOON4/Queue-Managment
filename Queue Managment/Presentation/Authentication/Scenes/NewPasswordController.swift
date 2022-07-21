@@ -9,14 +9,20 @@ import Foundation
 import UIKit
 import Resolver
 import Combine
+import SwiftUI
 
 class NewPasswordController: UIViewController {
     
     
     @IBOutlet weak var newPasswordTextField: PaddingTextField!
     @IBOutlet weak var repeatPasswordTextField: PaddingTextField!
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet weak var passwordRequirmentsLabel: UILabel!
     
-    @LazyInjected var newPasswordViewModel: NewPasswordViewModel
+    var newPasswordTextPublisher: AnyPublisher<String, Never>!
+    var repeatPasswordPublisher: AnyPublisher<String, Never>!
+    
+    @LazyInjected var newPasswordViewModel: ForgetPasswordProccedureViewModel
     
     private var bindings = Set<AnyCancellable>()
     
@@ -24,20 +30,24 @@ class NewPasswordController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         newPasswordTextField.becomeFirstResponder()
+        adjustLabelFont()
         setUpTextField()
         setUpBindings()
     }
     
     private func setUpBindings() {
+        newPasswordTextPublisher = newPasswordTextField.textPublisher()
+        repeatPasswordPublisher = repeatPasswordTextField.textPublisher()
         func bindViewToViewModel() {
-            newPasswordTextField.textPublisher()
-                .receive(on: DispatchQueue.main)
-                .assign(to: \.newPasswordTextField, on: newPasswordViewModel)
-                .store(in: &bindings)
-            
-            repeatPasswordTextField.textPublisher()
-                .receive(on: DispatchQueue.main)
-                .assign(to: \.repeatPasswordTextField, on: newPasswordViewModel)
+            Publishers.CombineLatest(newPasswordTextPublisher, repeatPasswordPublisher)
+                .sink {
+                    if $0 == $1{
+                        self.newPasswordViewModel.forgetPasswordCredentials.newPassword = $0
+                        self.newPasswordViewModel.forgetPasswordCredentials.passwordsMatch = true
+                    } else {
+                        self.newPasswordViewModel.forgetPasswordCredentials.passwordsMatch = false
+                    }
+                }
                 .store(in: &bindings)
         }
         
@@ -48,11 +58,12 @@ class NewPasswordController: UIViewController {
                 .sink { [weak self] receivedValue in
                     switch receivedValue {
                     case .success(()):
-//                        self?.errorMessageLabel.isHidden = true
-                        self?.newPasswordViewModel.navigateToPasswordResecSucces()
+                        self?.errorMessageLabel.isHidden = true
+                        self?.newPasswordViewModel.navigateToNextScene()
                     case .failure(let error):
-//                        self?.errorMessageLabel.text = error.message
-//                        self?.errorMessageLabel.isHidden = false
+                        self?.errorMessageLabel.text = error.message
+                        self?.errorMessageLabel.isHidden = false
+                        self?.passwordRequirmentsLabel.isHidden = true
                         break
                     }
                 }
@@ -64,7 +75,11 @@ class NewPasswordController: UIViewController {
     }
     
     @IBAction func resetPasswordClicked() {
-        newPasswordViewModel.checkPassword()
+        newPasswordViewModel.validateForgotPasswordProccedure()
+    }
+    
+    private func adjustLabelFont() {
+        errorMessageLabel.font = UIFont.SanFranciscoLight(size: 14)
     }
     
     private func setUpTextField () {

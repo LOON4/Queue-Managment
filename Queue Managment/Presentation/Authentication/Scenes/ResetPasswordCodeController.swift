@@ -15,12 +15,13 @@ class ResetPasswordCodeController: UIViewController {
     @IBOutlet weak var codeTextField: PaddingTextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
     
-    @LazyInjected var resetpasswordCodeViewmodel: ResetpasswordCodeViewmodel
+    @LazyInjected var resetpasswordCodeViewmodel: ForgetPasswordProccedureViewModel
     
     private var bindings = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        adjustLabelFont()
         setUpTextField()
         setUpBindings()
     }
@@ -40,7 +41,7 @@ class ResetPasswordCodeController: UIViewController {
                     switch receivedValue {
                     case .success(()):
                         self?.errorMessageLabel.isHidden = true
-                        self?.resetpasswordCodeViewmodel.navigateToEnterNewPassword()
+                        self?.resetpasswordCodeViewmodel.navigateToNextScene()
                     case .failure(let error):
                         self?.errorMessageLabel.text = error.message
                         self?.errorMessageLabel.isHidden = false
@@ -54,7 +55,11 @@ class ResetPasswordCodeController: UIViewController {
     }
     
     @IBAction func nextButtonClicked() {
-        resetpasswordCodeViewmodel.checkCode()
+        resetpasswordCodeViewmodel.validateForgotPasswordProccedure()
+    }
+    
+    private func adjustLabelFont() {
+        errorMessageLabel.font = UIFont.SanFranciscoLight(size: 14)
     }
     
     private func setUpTextField () {

@@ -65,6 +65,8 @@
 		AA974BE32870B94C00005553 /* Service1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE22870B94C00005553 /* Service1.swift */; };
 		AA974BE52870B97300005553 /* Service1Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE42870B97300005553 /* Service1Response.swift */; };
 		AA99A379286AD88D00FB930D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A378286AD88D00FB930D /* UIColor.swift */; };
+		AAA5549C2889403000283925 /* ForgetPasswordProccedureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5549B2889403000283925 /* ForgetPasswordProccedureViewModel.swift */; };
+		AAA554A028896C1800283925 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5549F28896C1800283925 /* AuthenticationError.swift */; };
 		AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */; };
 		AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB16385286989F400C79DB8 /* UINavigationController.swift */; };
 		AAC48E8D28622D4D00B336B2 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */; };
@@ -165,6 +167,8 @@
 		AA974BE22870B94C00005553 /* Service1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1.swift; sourceTree = "<group>"; };
 		AA974BE42870B97300005553 /* Service1Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1Response.swift; sourceTree = "<group>"; };
 		AA99A378286AD88D00FB930D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AAA5549B2889403000283925 /* ForgetPasswordProccedureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureViewModel.swift; sourceTree = "<group>"; };
+		AAA5549F28896C1800283925 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueButtonOne.swift; sourceTree = "<group>"; };
 		AAB16385286989F400C79DB8 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		AAC48E7B28622D4D00B336B2 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
@@ -429,6 +433,7 @@
 				4A23DAEF288471A2006D5ED0 /* CheckEmailViewModel.swift */,
 				4A23DAF1288472DC006D5ED0 /* ResetPasswordCodeViewModel.swift */,
 				4A23DAF328847369006D5ED0 /* NewPasswordViewModel.swift */,
+				AAA5549B2889403000283925 /* ForgetPasswordProccedureViewModel.swift */,
 				4A23DAF528847418006D5ED0 /* PasswordResetSuccessVIewModel.swift */,
 			);
 			path = ViewModels;
@@ -525,6 +530,7 @@
 				AA5BA91F2862FF1800A2977B /* Authentication.storyboard */,
 				AA5BA9232862FF4800A2977B /* Scenes */,
 				AA2AB2272884076600526F34 /* ViewModels */,
+				AAA5549D28896BBE00283925 /* HelperModels */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -550,6 +556,14 @@
 				4A06AC6D2867515500CE6B87 /* PaddingTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		AAA5549D28896BBE00283925 /* HelperModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAA5549F28896C1800283925 /* AuthenticationError.swift */,
+			);
+			path = HelperModels;
 			sourceTree = "<group>";
 		};
 		AAAA8E63286BFAAE003D4429 /* Buttons */ = {
@@ -854,6 +868,7 @@
 			files = (
 				4A8248092886E5C500B268C7 /* ForgetPasswordCredentials.swift in Sources */,
 				AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */,
+				AAA5549C2889403000283925 /* ForgetPasswordProccedureViewModel.swift in Sources */,
 				AADFD3C6286DA7BD00885B68 /* APIServerError.swift in Sources */,
 				4A3E41B728856EE900DB0713 /* MainTabBarController.swift in Sources */,
 				AA3A540F2868DE4600FF4E77 /* CheckEmailController.swift in Sources */,
@@ -880,6 +895,7 @@
 				AA2AB2222883D84000526F34 /* LoaderView.swift in Sources */,
 				AA2AB20A2882FA6900526F34 /* ServerError.swift in Sources */,
 				AA2AB21D2883D65800526F34 /* BasedComponentView.swift in Sources */,
+				AAA554A028896C1800283925 /* AuthenticationError.swift in Sources */,
 				AA2AB1F3288294DC00526F34 /* AuthRemoteAPI.swift in Sources */,
 				AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */,
 				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,

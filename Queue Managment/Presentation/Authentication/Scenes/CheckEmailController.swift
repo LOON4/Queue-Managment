@@ -25,7 +25,7 @@ class CheckEmailController: UIViewController {
     
     @IBOutlet weak var emailNotDetectedLabel: UILabel!
     
-    @LazyInjected var checkEmailViewModel: CheckEmailViewModel
+    @LazyInjected var checkEmailViewModel: ForgetPasswordProccedureViewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +37,11 @@ class CheckEmailController: UIViewController {
     }
     
     @IBAction func skipButtonClicked() {
-        checkEmailViewModel.navigateToCheckCode()
+        checkEmailViewModel.navigateToNextScene()
     }
     
     @IBAction func tryAgainClicked() {
-        checkEmailViewModel.resendCode()
+        checkEmailViewModel.validateForgotPasswordProccedure()
     }
     
     @IBAction func openEmailClicked() {

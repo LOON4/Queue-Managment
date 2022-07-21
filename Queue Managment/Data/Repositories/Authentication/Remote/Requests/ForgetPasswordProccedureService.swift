@@ -11,12 +11,13 @@ import RxCocoa
 
 enum ForgetPasswordProccedureStage: Int {
     case checkEmail = 0
+    case tryagain
     case checkCode
     case checkPassword
     
     func endPoint() -> String {
         switch self {
-        case .checkEmail:
+        case .checkEmail, .tryagain:
             return "/send-reset-code"
         case .checkCode:
             return "/check-code"
@@ -35,7 +36,7 @@ enum ForgetPasswordProccedureStage: Int {
         case .checkCode:
             params["code"] = forgetPasswordCredentials.code
             fallthrough
-        case .checkEmail:
+        case .checkEmail, .tryagain:
             params["email"] = forgetPasswordCredentials.email
         }
         return params
