@@ -23,8 +23,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let storyboard = UIStoryboard(name: "SplashScreen", bundle: nil)
-        guard let rootVC = storyboard.instantiateViewController(identifier: ControllerIDK.splashScreen) as? SplashScreenController else {
+//        let storyboard = UIStoryboard(name: "SplashScreen", bundle: nil)
+//        guard let rootVC = storyboard.instantiateViewController(identifier: ControllerIDK.splashScreen) as? SplashScreenController else {
+//            print("ViewController not found")
+//            return
+//        }
+        let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+        guard let rootVC = storyboard.instantiateViewController(identifier: "MainTabBarController") as? MainTabBarController else {
             print("ViewController not found")
             return
         }

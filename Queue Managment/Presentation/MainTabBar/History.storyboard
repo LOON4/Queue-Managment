@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-73" y="336"/>
         </scene>
-        <!--History View Controller-->
+        <!--History-->
         <scene sceneID="L7F-sw-0Ug">
             <objects>
                 <viewController storyboardIdentifier="ragaca" id="1s4-cd-wJ4" customClass="HistoryViewController" customModule="Queue_Managment" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,9 +82,7 @@
                             <constraint firstItem="MJk-i1-eck" firstAttribute="centerX" secondItem="vgw-zH-bGr" secondAttribute="centerX" id="vA5-PQ-vHo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lqy-e4-GiC">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Bell_tabbar_item" id="OwS-kS-G9W"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="History" id="lqy-e4-GiC"/>
                     <connections>
                         <outlet property="justView" destination="cvK-0J-4np" id="dWl-Dv-VfC"/>
                         <outlet property="label" destination="MJk-i1-eck" id="21J-hp-Hy2"/>
@@ -97,7 +95,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bell_tabbar_item" width="24" height="24"/>
         <image name="History_tabbar_item" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
