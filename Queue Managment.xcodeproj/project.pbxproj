@@ -60,6 +60,7 @@
 		AA3EB63D286211BD0004FDB1 /* Queue_Managment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB63B286211BD0004FDB1 /* Queue_Managment.xcdatamodeld */; };
 		AA3EB63F286211BD0004FDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB63E286211BD0004FDB1 /* Assets.xcassets */; };
 		AA3EB64D286214AA0004FDB1 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */; };
+		AA56E8182889889D0088958E /* ForgetPasswordProccedureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56E8172889889D0088958E /* ForgetPasswordProccedureViewModel.swift */; };
 		AA5B00A1286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B00A0286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift */; };
 		AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B00A2286B31A300C2A79A /* UIView.swift */; };
 		AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA91A2862CD7600A2977B /* UIFont.swift */; };
@@ -69,7 +70,6 @@
 		AA974BE32870B94C00005553 /* Service1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE22870B94C00005553 /* Service1.swift */; };
 		AA974BE52870B97300005553 /* Service1Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE42870B97300005553 /* Service1Response.swift */; };
 		AA99A379286AD88D00FB930D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A378286AD88D00FB930D /* UIColor.swift */; };
-		AAA5549C2889403000283925 /* ForgetPasswordProccedureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5549B2889403000283925 /* ForgetPasswordProccedureViewModel.swift */; };
 		AAA554A028896C1800283925 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5549F28896C1800283925 /* AuthenticationError.swift */; };
 		AAAA8E65286BFAE9003D4429 /* QueueButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */; };
 		AAB16386286989F400C79DB8 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB16385286989F400C79DB8 /* UINavigationController.swift */; };
@@ -166,6 +166,7 @@
 		AA3EB63E286211BD0004FDB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA3EB643286211BD0004FDB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3EB64C286214AA0004FDB1 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		AA56E8172889889D0088958E /* ForgetPasswordProccedureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureViewModel.swift; sourceTree = "<group>"; };
 		AA5B00A0286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundFadeButtonLoweringAnimator.swift; sourceTree = "<group>"; };
 		AA5B00A2286B31A300C2A79A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		AA5BA91A2862CD7600A2977B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -175,7 +176,6 @@
 		AA974BE22870B94C00005553 /* Service1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1.swift; sourceTree = "<group>"; };
 		AA974BE42870B97300005553 /* Service1Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1Response.swift; sourceTree = "<group>"; };
 		AA99A378286AD88D00FB930D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		AAA5549B2889403000283925 /* ForgetPasswordProccedureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureViewModel.swift; sourceTree = "<group>"; };
 		AAA5549F28896C1800283925 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		AAAA8E64286BFAE9003D4429 /* QueueButtonOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueButtonOne.swift; sourceTree = "<group>"; };
 		AAB16385286989F400C79DB8 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
@@ -445,8 +445,8 @@
 				4A23DAEF288471A2006D5ED0 /* CheckEmailViewModel.swift */,
 				4A23DAF1288472DC006D5ED0 /* ResetPasswordCodeViewModel.swift */,
 				4A23DAF328847369006D5ED0 /* NewPasswordViewModel.swift */,
-				AAA5549B2889403000283925 /* ForgetPasswordProccedureViewModel.swift */,
 				4A23DAF528847418006D5ED0 /* PasswordResetSuccessVIewModel.swift */,
+				AA56E8172889889D0088958E /* ForgetPasswordProccedureViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -938,6 +938,7 @@
 				AA2AB1EE2882922600526F34 /* UserSessionDataStore.swift in Sources */,
 				AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
+				AA56E8182889889D0088958E /* ForgetPasswordProccedureViewModel.swift in Sources */,
 				4A06AC652864969200CE6B87 /* UITextField.swift in Sources */,
 				AACCF37F288281E2004E19A2 /* NetworkRequest.swift in Sources */,
 				AA2AB1F82882C79C00526F34 /* App+Injection.swift in Sources */,

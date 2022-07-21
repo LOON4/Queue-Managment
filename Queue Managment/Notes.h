@@ -14,3 +14,4 @@
 
 1. textfield-ებში ბევრი ტექსტის ჩაწერა
 2. textfield-ის რეტარნ კიების ექშენები
+3. keyboardis gaqroba

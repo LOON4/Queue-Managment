@@ -15,9 +15,9 @@ class LoginViewModel {
 
     @Published var isLoading = false
     private let validationResultPassthourgh =
-        PassthroughSubject< Result<Void, ServerError>, Never >()
+        PassthroughSubject< Result<Void, AuthenticationError>, Never >()
 
-    var validationResult: AnyPublisher< Result<Void, ServerError>, Never > {
+    var validationResult: AnyPublisher< Result<Void, AuthenticationError>, Never > {
         validationResultPassthourgh.eraseToAnyPublisher()
     }
 
@@ -35,7 +35,7 @@ class LoginViewModel {
             case .success(_):
                 validationResultPassthourgh.send(.success(()))
             case .failure(let error):
-                validationResultPassthourgh.send(.failure(error))
+                validationResultPassthourgh.send(.failure(AuthenticationError(error.message)))
                 break
             }
         }

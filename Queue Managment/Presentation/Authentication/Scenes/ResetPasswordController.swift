@@ -17,7 +17,6 @@ class ResetPasswordController : UIViewController {
     @IBOutlet weak var errorMessageLabel: UILabel!
     
     private let buttonLoweringAnimator = BackgroundFadeButtonLoweringAnimator()
-    
     var resetPasswordViewModel = ForgetPasswordProccedureViewModel()
     private var bindings = Set<AnyCancellable>()
     

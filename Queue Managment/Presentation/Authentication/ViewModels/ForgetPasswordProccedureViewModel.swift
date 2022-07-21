@@ -57,7 +57,7 @@ class ForgetPasswordProccedureViewModel {
         case .tryagain:
             navigateToCheckCode()
         case .checkCode:
-            navigateToEnterNewPassword() 
+            navigateToEnterNewPassword()
         case .checkPassword:
             navigateToPasswordResecSucces()
         }

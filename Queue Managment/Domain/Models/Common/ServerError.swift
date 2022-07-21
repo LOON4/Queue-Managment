@@ -20,16 +20,22 @@ struct ServerError: Error {
     }
     
     let status: MyStatusCode
-    let message: String
+    var message: String
     
     init(status: MyStatusCode, message: String){
         self.status = status
         self.message = message
+        fixErrorMessage()
     }
     
     init(APIServerError: APIServerError){
         self.status = MyStatusCode(rawValue: Int(APIServerError.status)!) ?? .unknown
         self.message = APIServerError.message
+        fixErrorMessage()
+    }
+    
+    private mutating func fixErrorMessage(){
+        self.message = self.message.components(separatedBy: "/n").joined(separator: "\n")
     }
     
 }

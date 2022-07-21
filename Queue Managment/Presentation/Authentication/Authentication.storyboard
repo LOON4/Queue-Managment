@@ -164,10 +164,11 @@ application</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="appNameLabel" destination="ygM-oO-ztN" id="F9N-aG-zB0"/>
+                        <outlet property="credentialErrorLabel" destination="EGW-9b-0e6" id="eub-7I-uJO"/>
                         <outlet property="emailTextField" destination="SPp-zV-I8n" id="c6F-Qw-70A"/>
-                        <outlet property="errorMessage" destination="EGW-9b-0e6" id="e2o-fx-hRF"/>
                         <outlet property="forgotPasswordButton" destination="6dD-hO-8I9" id="C1A-N0-xh1"/>
                         <outlet property="keepMeSignIcon" destination="6Q5-ql-leK" id="vPN-Ai-Yg6"/>
+                        <outlet property="mailFormatErrorLabel" destination="Dgu-9C-O9N" id="Ia4-zG-G3Z"/>
                         <outlet property="passwordTextField" destination="Q3G-6w-yyw" id="3R3-2N-Wyl"/>
                         <outlet property="signInButton" destination="1gP-2q-4iD" id="exc-Tm-VOC"/>
                     </connections>

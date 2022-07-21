@@ -18,17 +18,12 @@ struct AuthenticationError: Error {
     }
     
     private mutating func stylizeErrorMessage(){
-        print(message)
         self.message.components(separatedBy: "\n").forEach {
             if $0.contains("mail") {
-                mailError = generateErrors($0)
+                mailError += $0
             } else {
-                passwordError = generateErrors($0)
+                passwordError += $0
             }
         }
-    }
-    
-    private func generateErrors(_ string: String) -> String{
-        string.components(separatedBy: "/n").joined(separator: "\n")
     }
 }

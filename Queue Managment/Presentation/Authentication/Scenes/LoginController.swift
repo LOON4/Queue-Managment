@@ -21,7 +21,9 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var signInButton: QueueButtonOne!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-    @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var mailFormatErrorLabel: UILabel!
+    @IBOutlet weak var credentialErrorLabel: UILabel!
+
     private var loader: LoaderView!
 
     @LazyInjected var loginViewModel: LoginViewModel
@@ -71,7 +73,7 @@ class LoginController: UIViewController {
                         self?.displayDefaultState()
                         self?.navigateToProfile()
                     case .failure(let error):
-                        self?.displayErrorState(error.message)
+                        self?.displayErrorState(error)
                     }
                 }
                 .store(in: &bindings)
@@ -82,7 +84,8 @@ class LoginController: UIViewController {
     }
     
     private func displayDefaultState(){
-        errorMessage.isHidden = true
+        mailFormatErrorLabel.isHidden = true
+        credentialErrorLabel.isHidden = true
         emailTextField.layer.borderColor = .none
         emailTextField.layer.borderWidth = 0
         emailTextField.borderStyle = .roundedRect
@@ -93,11 +96,19 @@ class LoginController: UIViewController {
         passwordTextField.text = ""
     }
     
-    private func displayErrorState(_ errorMessage: String){
-        self.errorMessage.isHidden = false
-        self.errorMessage.text = errorMessage
+    private func displayErrorState(_ error: AuthenticationError){
+        if error.passwordError.count > 0 {
+            credentialErrorLabel.isHidden = false
+            credentialErrorLabel.text = error.passwordError
+        }
+        if error.mailError.count > 0 {
+            mailFormatErrorLabel.isHidden = false
+            mailFormatErrorLabel.text = error.mailError
+        }
         emailTextField.layer.borderWidth = 1.0
         passwordTextField.layer.borderWidth = 1.0
+        emailTextField.cornerRadius = 8.0
+        passwordTextField.cornerRadius = 8.0
         emailTextField.layer.borderColor = UIColor.red.cgColor
         passwordTextField.layer.borderColor = UIColor.red.cgColor
         passwordTextField.text = ""
@@ -118,6 +129,7 @@ class LoginController: UIViewController {
     }
     
     @IBAction func signInButtonClicked() {
+        displayDefaultState()
         loginViewModel.loginUser()
     }
     
