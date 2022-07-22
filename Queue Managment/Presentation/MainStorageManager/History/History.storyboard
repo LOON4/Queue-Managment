@@ -35,6 +35,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dE1-eH-gnd" customClass="RequestSegmentView" customModule="Queue_Managment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uq9-n4-I4D"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-J6-jVe" customClass="RotatableView" customModule="Queue_Managment" customModuleProvider="target">
                                 <rect key="frame" x="97.997705987670685" y="363.49770598767071" width="218.0045880246586" height="218.00458802465863"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -76,8 +83,11 @@
                         <constraints>
                             <constraint firstItem="MJk-i1-eck" firstAttribute="centerY" secondItem="vgw-zH-bGr" secondAttribute="centerY" multiplier="0.896256" id="Cpf-Wx-ZDs"/>
                             <constraint firstItem="cvK-0J-4np" firstAttribute="centerX" secondItem="vgw-zH-bGr" secondAttribute="centerX" id="GlZ-7u-DNb"/>
+                            <constraint firstItem="dE1-eH-gnd" firstAttribute="top" secondItem="1MV-3v-e4K" secondAttribute="top" id="HWc-ce-coz"/>
+                            <constraint firstItem="1MV-3v-e4K" firstAttribute="trailing" secondItem="dE1-eH-gnd" secondAttribute="trailing" id="HmF-bK-AJm"/>
                             <constraint firstItem="hH5-J6-jVe" firstAttribute="centerY" secondItem="vgw-zH-bGr" secondAttribute="centerY" multiplier="1.055" id="LA0-5a-2ib"/>
                             <constraint firstItem="cvK-0J-4np" firstAttribute="centerY" secondItem="vgw-zH-bGr" secondAttribute="centerY" multiplier="0.936528" id="Wrw-cy-L70"/>
+                            <constraint firstItem="dE1-eH-gnd" firstAttribute="leading" secondItem="1MV-3v-e4K" secondAttribute="leading" id="b94-xZ-Izy"/>
                             <constraint firstItem="hH5-J6-jVe" firstAttribute="centerX" secondItem="vgw-zH-bGr" secondAttribute="centerX" id="ujs-iY-c32"/>
                             <constraint firstItem="MJk-i1-eck" firstAttribute="centerX" secondItem="vgw-zH-bGr" secondAttribute="centerX" id="vA5-PQ-vHo"/>
                         </constraints>

@@ -21,6 +21,9 @@ extension UIFont {
     static func SanFranciscoRegular(size: CGFloat) -> UIFont? {
         return UIFont(name: "SF Pro Display Regular", size: size)
     }
+    static func SanFranciscoMedium(size: CGFloat) -> UIFont? {
+        return UIFont(name: "SF Pro Display Medium", size: size)
+    }
 }
 
 

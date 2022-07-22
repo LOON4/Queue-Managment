@@ -14,11 +14,13 @@ class BasedComponentView : UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        setUp()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
+        setUp()
     }
     
     func commonInit(){
