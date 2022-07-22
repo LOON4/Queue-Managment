@@ -18,19 +18,18 @@ class RequestSegmentView: BasedComponentView {
     override func setUp() {
         for (index, button) in buttonCollection.enumerated() {
             button.titleLabel?.font = UIFont.SanFranciscoLight(size: 14)
-            //if index != selectedIndex {
-                button.titleLabel?.textColor = UIColor(hex: "#262626", alpha: CGFloat(0.6))
-            //}
+            if index != selectedIndex {
+                button.setTitleColor(UIColor(hex: "#262626", alpha: CGFloat(0.6)), for: .normal)
+            }
         }
     }
     
     @IBAction func buttonClicked(button: UIButton) {
         let newIndex = buttonCollection.firstIndex(of: button)!
         
-        self.buttonCollection[newIndex]
-            .titleLabel?.textColor = UIColor(hex: "#262626")
+        self.buttonCollection[newIndex].setTitleColor(UIColor(hex: "#262626"), for: .normal)
         self.buttonCollection[self.selectedIndex]
-            .titleLabel?.textColor = UIColor(hex: "#262626", alpha: CGFloat(0.6))
+            .setTitleColor(UIColor(hex: "#262626", alpha: CGFloat(0.6)), for: .normal)
         
         UIView.animate(
             withDuration: 0.3,
