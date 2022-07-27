@@ -22,7 +22,9 @@ struct ControllerIDK {
 
 
 struct NavContollerIDK {
-    
     static let loginNavigationController = "LoginNavigationController"
-    
+}
+
+struct TabControllerIDK {
+    static let storageManagerTabBar = "StorageManagerMainTabBarController"
 }

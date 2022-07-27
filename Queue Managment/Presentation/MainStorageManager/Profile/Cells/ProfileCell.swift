@@ -7,15 +7,12 @@
 
 import UIKit
 
-class ProfileCell: UICollectionViewCell {
-
-    enum profileCellState {
-        case redirect
-        case noredirect
-    }
+class ProfileCell: UICollectionViewCell, ConfigurableCell {
     
     @IBOutlet weak var redirectButton: UIButton!
     @IBOutlet weak var label: UILabel!
+    
+    var viewModel: ProfileCellViewModel!
     
     var currentState: profileCellState = .redirect {
         didSet {
@@ -35,9 +32,13 @@ class ProfileCell: UICollectionViewCell {
         redirectButton.imageView?.contentMode = .scaleAspectFit
     }
     
-    func configure (with text: String, for state: profileCellState){
-        self.currentState = state
-        self.label.text = text
+    func configure(_ item: ProfileCellViewModel, at indexPath: IndexPath){
+        self.viewModel = item
+        self.label.text = viewModel.text
+        self.currentState = viewModel.currentState
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
 }

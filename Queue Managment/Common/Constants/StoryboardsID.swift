@@ -11,4 +11,5 @@ import UIKit
 struct StoryboardIDK {
     
     static let authentication = "Authentication"
+    static let storageManager = "StorageManagerMainTabBar"
 }

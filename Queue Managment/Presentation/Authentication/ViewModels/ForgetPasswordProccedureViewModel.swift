@@ -32,7 +32,7 @@ class ForgetPasswordProccedureViewModel {
     func validateForgotPasswordProccedure(){
         if currentStage == .checkPassword && !forgetPasswordCredentials.passwordsMatch {
             self.validationResultPassthourgh.send(
-                .failure(AuthenticationError("Password don't match")))
+                .failure(AuthenticationError("Passwords don't match")))
         } else {
             forgotPasswordUsecase.forgetPasswordProccedure(credentials: forgetPasswordCredentials,
                                           for: currentStage) { [weak self] result in

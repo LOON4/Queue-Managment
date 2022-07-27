@@ -123,7 +123,6 @@ class SplashScreenController: UIViewController {
     }
         
     private func  showLoginScreen() {
-                
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
             self.splashScreenViewModel.determineUserStatus()
         }

@@ -7,11 +7,13 @@
 
 import Foundation
 import UIKit
+import Resolver
 
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let collectionViewModel = [["Profile information", "Change password", "Privacy & terms"],                             ["Log out"]]
+    @LazyInjected var profileViewModel: ProfileViewModel
+    var collectionViewDataSource: BaseCollectionViewDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +22,15 @@ class ProfileViewController: UIViewController {
     }
     
     private func setUpCollectionView(){
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(UINib(nibName: "ProfileCell", bundle: nil),             forCellWithReuseIdentifier: "ProfileCell")
+        
+        collectionViewDataSource = BaseCollectionViewDataSource(
+            collectionView: collectionView,
+            dataProvider: ArrayDataProvider(array: profileViewModel.collectionwModel),
+            flowLayoutConstants: CollectionFlowLayoutConstantsProvider(
+                cellHeight: .rawSize(size: 64)))
+        
+        collectionViewDataSource.registerCell(item: ProfileCellViewModel.self,
+                                              forCell: ProfileCell.self)
 
     }
     
@@ -33,46 +41,5 @@ class ProfileViewController: UIViewController {
         }
         let rightItem = UIBarButtonItem(customView: backButton)
         self.navigationItem.rightBarButtonItem = rightItem
-    }
-}
-
-extension ProfileViewController : UICollectionViewDataSource,
-                                  UICollectionViewDelegateFlowLayout {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        collectionViewModel.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        collectionViewModel[section].count
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCell",
-                                                      for: indexPath)
-        let text = collectionViewModel[indexPath.section][indexPath.row]
-        if let profileCell = cell as? ProfileCell {
-            if indexPath.section == 0 {
-                profileCell.configure(with: text, for: .redirect)
-            } else {
-                profileCell.configure(with: text, for: .noredirect)
-            }
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width - (2 * Constants.spacing) -
-        CGFloat(Constants.itemsCountInLine - 1) * Constants.spacing
-        return CGSize(width: Int(width) / Constants.itemsCountInLine, height: 64)
-    }
-    
-}
-
-extension ProfileViewController {
-    struct Constants {
-        static let itemsCountInLine = 1
-        static let spacing: CGFloat = 0
     }
 }

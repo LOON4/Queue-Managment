@@ -8,7 +8,7 @@
 import Foundation
 import Resolver
 
-protocol RefreshTokenUseCase {
+protocol RestoreTokenUsecase {
     func determineUserStatus(completion:  @escaping (Result<(userStatus: UserStatus,
                                                              token: Token?), ServerError>) -> Void)
 }
@@ -19,7 +19,7 @@ enum UserStatus {
     case sessionExpired
 }
 
-class RefreshTokenUseCaseImpl: RefreshTokenUseCase {
+class RestoreTokenUsecaseImpl: RestoreTokenUsecase {
     
     @LazyInjected private var userDefaults: UserDefaultsRepository
     @LazyInjected private var userSession: UserSessionRepository

@@ -23,6 +23,9 @@ extension Resolver: ResolverRegistering {
         register { _, args in
             OnboardingRouterImpl(args())
         }.implements(OnboardingRouter.self).scope(.application)
+        register { _, args in
+            StorageManagerRouterImpl(args())
+        }.implements(StorageManagerRouter.self).scope(.application)
     }
 
     private static func RegisterRepositories() {
@@ -39,7 +42,7 @@ extension Resolver: ResolverRegistering {
     }
     
     private static func RegisterUseCases(){
-        register { RefreshTokenUseCaseImpl() }.implements(RefreshTokenUseCase.self).scope(.application)
+        register { RestoreTokenUsecaseImpl() }.implements(RestoreTokenUsecase.self).scope(.application)
         register { LoginUsecaseImpl() }.implements(LoginUsecase.self).scope(.application)
         register { ForgetPasswordProccedureUsecaseImpl() }.implements(ForgetPasswordProccedureUsecase.self).scope(.application)
     }
@@ -53,6 +56,7 @@ extension Resolver: ResolverRegistering {
         }
         register { _, args in NewPasswordViewModel(args()) }
         register { PasswordResetSuccessViewModel() }
+        register { ProfileViewModel() }
     }
     
 }

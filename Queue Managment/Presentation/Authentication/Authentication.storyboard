@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-QZ-rDx">
-                                <rect key="frame" x="16" y="205" width="358" height="434"/>
+                                <rect key="frame" x="16" y="206" width="358" height="432"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygM-oO-ztN">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="84"/>
@@ -89,14 +91,14 @@ application</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hqt-va-QsG">
                                                 <rect key="frame" x="0.0" y="128" width="358" height="20"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q5-ql-leK" customClass="CheckboxButton" customModule="Queue_Managment" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q5-ql-leK" customClass="CheckboxButton" customModule="Queue_Managment" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="21k-Nf-nrj"/>
                                                             <constraint firstAttribute="height" constant="20" id="aQq-pK-0Fz"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="checkedBox1"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="" image="checkedBox1"/>
                                                         <connections>
                                                             <action selector="rememberMeClicked" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1NX-Gr-DE2"/>
                                                         </connections>
@@ -112,32 +114,29 @@ application</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ahA-Qp-Nue">
-                                        <rect key="frame" x="0.0" y="328" width="358" height="106"/>
+                                        <rect key="frame" x="0.0" y="328" width="358" height="104"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-2q-4iD" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-2q-4iD" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="8YH-3S-u8a"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Sign in">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Sign in">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="signInButtonClicked" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Cng-5C-Rea"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dD-hO-8I9">
-                                                <rect key="frame" x="98.000000000000014" y="72" width="162.33333333333337" height="34"/>
-                                                <inset key="contentEdgeInsets" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                </buttonConfiguration>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dD-hO-8I9">
+                                                <rect key="frame" x="109.66666666666669" y="72" width="139" height="32"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Forgot password?">
+                                                    <color key="titleColor" name="AccentColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="forgotPasswordClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="R7y-61-tYA"/>
                                                 </connections>
@@ -315,21 +314,19 @@ to your email address.</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-R9-Y1d">
-                                                <rect key="frame" x="72.666666666666671" y="311.66666666666669" width="160.66666666666663" height="48"/>
+                                                <rect key="frame" x="72.666666666666686" y="311.66666666666669" width="161" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-yT-z9h" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="48"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="iE9-nX-PuC"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Open email app" buttonSize="large">
-                                                            <backgroundConfiguration key="background">
-                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                            </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                        </buttonConfiguration>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Open email app">
+                                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="openEmailClicked" destination="vll-sl-za9" eventType="touchUpInside" id="F4N-oK-OfI"/>
                                                         </connections>
@@ -509,14 +506,11 @@ to your email address.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="dvL-h5-jh9"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Reset Password">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Reset Password">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="resetPasswordClicked" destination="LiC-E3-MZd" eventType="touchUpInside" id="bCG-qv-Drl"/>
                                                 </connections>
@@ -602,19 +596,16 @@ to your email address.</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-va-zcf" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-va-zcf" customClass="QueueButtonOne" customModule="Queue_Managment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="371.33333333333331" width="358" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="EBM-9J-nHP"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sign in">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="signInClicked" destination="LKC-iN-vET" eventType="touchUpInside" id="gaP-MC-BKh"/>
                                         </connections>
@@ -710,14 +701,11 @@ to your email address.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="evT-7A-ZhM"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Next">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="nextButtonClicked" destination="cbw-zf-wNc" eventType="touchUpInside" id="cY5-C5-xnl"/>
                                                 </connections>
@@ -788,16 +776,16 @@ to your email address.</string>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-7Q-hwB">
-                                                <rect key="frame" x="0.0" y="249.00000000000003" width="358" height="86.333333333333343"/>
+                                                <rect key="frame" x="35" y="249.00000000000003" width="288" height="86.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8P-uh-g3T">
-                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
                                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged In successfully" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vd-aU-AXA">
-                                                        <rect key="frame" x="92" y="66" width="174" height="20.333333333333329"/>
+                                                        <rect key="frame" x="57" y="66" width="174" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.34901960780000002" alpha="0.55771419700000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -814,14 +802,11 @@ to your email address.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="qet-aR-Lv9"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Service 1">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Service 1">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="service1Clicked:" destination="bbQ-bc-VIO" eventType="touchUpInside" id="ZbP-YY-GWc"/>
                                                 </connections>
@@ -831,14 +816,11 @@ to your email address.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="fE0-ns-4Tk"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Service 2">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Service 2">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="service2Clicked:" destination="bbQ-bc-VIO" eventType="touchUpInside" id="6Ch-ID-qTh"/>
                                                 </connections>
@@ -867,6 +849,9 @@ to your email address.</string>
         <image name="Password Reset Successfully" width="49" height="53"/>
         <image name="checkedBox1" width="24" height="24"/>
         <image name="email8" width="215.66667175292969" height="147"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

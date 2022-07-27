@@ -36,6 +36,7 @@ class OnboardingRouterImpl: OnboardingRouter {
     private static let loginNVC = { authenticationStoryboard.instantiateViewController(withIdentifier: NavContollerIDK.loginNavigationController) as! UINavigationController
     }()
     
+    @LazyInjected var storageManagerRouter: StorageManagerRouter
     private var rootViewController: UIViewController
     
     init(_ rootViewController: UIViewController){
@@ -102,8 +103,9 @@ class OnboardingRouterImpl: OnboardingRouter {
     }
     
     func showLoggedInSuccessfully(){
-        let loggedInSuccessfullyVC = OnboardingRouterImpl.authenticationStoryboard.instantiateViewController(withIdentifier: "LoggedInSuccessfully")
-            OnboardingRouterImpl.loginNVC.pushViewController(loggedInSuccessfullyVC, animated: true)
+        storageManagerRouter = Resolver.resolve(StorageManagerRouter.self,
+                                                args: OnboardingRouterImpl.loginNVC.viewControllers.first)
+        storageManagerRouter.showStorageFirstPage()
     }
 }
 

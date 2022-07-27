@@ -34,7 +34,7 @@ class LoginController: UIViewController {
         setupTextFields()
         setupLoader()
         setUpBindings()
-        adjustLabelFontSizes()
+        adjustFontSizes()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -133,7 +133,7 @@ class LoginController: UIViewController {
         loginViewModel.loginUser()
     }
     
-    private func adjustLabelFontSizes () {
+    private func adjustFontSizes () {
         appNameLabel.adjustsFontSizeToFitWidth = true
     }
     

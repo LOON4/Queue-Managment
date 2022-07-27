@@ -97,7 +97,7 @@ class ResetPasswordController : UIViewController {
     private func setUpBarButton () {
         let backButton = UIButton(type: .custom)
         backButton.addTarget(self, action: #selector(backButtonClicked), for: .touchUpInside)
-        backButton.configuration = .navigationBarButtonTemplate()
+        //backButton.configuration = .navigationBarButtonTemplate()
         let leftItem1 = UIBarButtonItem(customView: backButton)
         self.navigationItem.leftBarButtonItem = leftItem1
     }
