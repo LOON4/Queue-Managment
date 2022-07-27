@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import RxCocoa
 
 enum ForgetPasswordProccedureStage: Int {
     case checkEmail = 0
