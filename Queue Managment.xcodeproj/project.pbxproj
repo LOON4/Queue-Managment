@@ -125,6 +125,7 @@
 		AAFE80F2289106F500506034 /* APIStorageManagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F1289106F500506034 /* APIStorageManagerRepository.swift */; };
 		AAFE80F4289109CD00506034 /* PartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F3289109CD00506034 /* PartRequest.swift */; };
 		AAFE80F728910F9900506034 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F628910F9900506034 /* String.swift */; };
+		AAFE80FA2891446A00506034 /* FetchPartRequestsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F92891446A00506034 /* FetchPartRequestsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -251,6 +252,7 @@
 		AAFE80F1289106F500506034 /* APIStorageManagerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStorageManagerRepository.swift; sourceTree = "<group>"; };
 		AAFE80F3289109CD00506034 /* PartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartRequest.swift; sourceTree = "<group>"; };
 		AAFE80F628910F9900506034 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		AAFE80F92891446A00506034 /* FetchPartRequestsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPartRequestsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -788,9 +790,9 @@
 		AACCF38428828745004E19A2 /* Usacases */ = {
 			isa = PBXGroup;
 			children = (
-				AAFE80F82891127E00506034 /* StorageManager */,
-				AA2AB2012882EC5E00526F34 /* RefreshToken */,
 				AA2AB20C288318EF00526F34 /* Authentication */,
+				AA2AB2012882EC5E00526F34 /* RefreshToken */,
+				AAFE80F82891127E00506034 /* StorageManager */,
 			);
 			path = Usacases;
 			sourceTree = "<group>";
@@ -966,6 +968,7 @@
 		AAFE80F82891127E00506034 /* StorageManager */ = {
 			isa = PBXGroup;
 			children = (
+				AAFE80F92891446A00506034 /* FetchPartRequestsUseCase.swift */,
 			);
 			path = StorageManager;
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				AAFE80F728910F9900506034 /* String.swift in Sources */,
 				AA2AB1E82882907D00526F34 /* QueueUserSessionRepository.swift in Sources */,
 				AA436703288A71B7003B2512 /* ProfileCell.swift in Sources */,
+				AAFE80FA2891446A00506034 /* FetchPartRequestsUseCase.swift in Sources */,
 				4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */,
 				AA2AB1FC2882EBDE00526F34 /* SplashScreenViewModel.swift in Sources */,
 				4A23DAF0288471A2006D5ED0 /* CheckEmailViewModel.swift in Sources */,

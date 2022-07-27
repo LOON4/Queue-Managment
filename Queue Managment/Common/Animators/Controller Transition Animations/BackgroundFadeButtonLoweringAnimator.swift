@@ -22,7 +22,7 @@ extension BackgroundFadeButtonLoweringAnimator: UIViewControllerAnimatedTransiti
         guard let fromController = transitionContext.viewController(forKey: .from) as? ResetPasswordController,
               let toController = transitionContext.viewController(forKey: .to) as? CheckEmailController
         else { return }
-        
+                
         let toView = toController.view!
         let fromView = fromController.view!
         let toViewContainer = toController.containerView!

@@ -48,6 +48,7 @@ class ResetPasswordController : UIViewController {
                         self?.errorMessageLabel.isHidden = true
                         self?.resetPasswordViewModel.navigateToNextScene()
                     case .failure(let error):
+                        self?.view.isUserInteractionEnabled = true
                         self?.errorMessageLabel.text = error.message
                         self?.errorMessageLabel.isHidden = false
                     }
@@ -80,6 +81,7 @@ class ResetPasswordController : UIViewController {
     }
     
     @IBAction func nextButtonClicked() {
+        self.view.isUserInteractionEnabled = false
         resetPasswordViewModel.validateForgotPasswordProccedure()
     }
     

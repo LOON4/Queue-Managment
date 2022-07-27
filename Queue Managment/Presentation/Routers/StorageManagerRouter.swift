@@ -14,12 +14,12 @@ protocol StorageManagerRouter {
 
 class StorageManagerRouterImpl: StorageManagerRouter {
     private static let storageManagerStoryboard = {
-        UIStoryboard(name: StoryboardIDK.authentication,
+        UIStoryboard(name: StoryboardIDK.storageManager,
                     bundle: .main)
     }()
     
     private static let storageManagerMainTabBar = {
-        storageManagerStoryboard.instantiateViewController(withIdentifier: "LoggedInSuccessfully")
+        storageManagerStoryboard.instantiateViewController(withIdentifier: TabControllerIDK.storageManagerTabBar )
     }()
     
     private var presentingController: UIViewController
