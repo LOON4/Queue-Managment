@@ -27,6 +27,7 @@
 		4A8248092886E5C500B268C7 /* ForgetPasswordCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8248082886E5C500B268C7 /* ForgetPasswordCredentials.swift */; };
 		4A82480B2886F84800B268C7 /* ForgetPasswordProccedureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A82480A2886F84800B268C7 /* ForgetPasswordProccedureService.swift */; };
 		4AA2BAD12885EEEA007143BB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */; };
+		4ABDA1EA289144E40039B0DF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABDA1E9289144E40039B0DF /* UIViewController.swift */; };
 		4AC6ACB8288966A100AFE9AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6ACB7288966A000AFE9AE /* ProfileViewController.swift */; };
 		4AD7126728894651001A3D0B /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7126628894651001A3D0B /* StorageViewController.swift */; };
 		550C27F1A996BD222C0E84AE /* libPods-Queue Managment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */; };
@@ -151,6 +152,7 @@
 		4A8248082886E5C500B268C7 /* ForgetPasswordCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordCredentials.swift; sourceTree = "<group>"; };
 		4A82480A2886F84800B268C7 /* ForgetPasswordProccedureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordProccedureService.swift; sourceTree = "<group>"; };
 		4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		4ABDA1E9289144E40039B0DF /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4AC6ACB7288966A000AFE9AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4AD7126628894651001A3D0B /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
 		50E2414B09EFE14911836F4E /* libPods-Queue Managment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Queue Managment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -959,6 +961,7 @@
 				AAB16385286989F400C79DB8 /* UINavigationController.swift */,
 				AA99A378286AD88D00FB930D /* UIColor.swift */,
 				AA5B00A2286B31A300C2A79A /* UIView.swift */,
+				4ABDA1E9289144E40039B0DF /* UIViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1166,6 +1169,7 @@
 				AA2AB1EE2882922600526F34 /* UserSessionDataStore.swift in Sources */,
 				AA3A08EB288A5D04007B1386 /* RequestSegmentView.swift in Sources */,
 				AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */,
+				4ABDA1EA289144E40039B0DF /* UIViewController.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
 				AA56E8182889889D0088958E /* ForgetPasswordProccedureViewModel.swift in Sources */,
 				4A06AC652864969200CE6B87 /* UITextField.swift in Sources */,
