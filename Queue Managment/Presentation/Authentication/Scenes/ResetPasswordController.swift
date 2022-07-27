@@ -91,6 +91,8 @@ class ResetPasswordController : UIViewController {
     }
     
     private func setUpTextField () {
+        self.hideKeyboardWhenTappedAround()
+        emailAdressTextField.delegate = self
         emailAdressTextField.becomeFirstResponder()
         emailAdressTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         emailAdressTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
@@ -120,5 +122,14 @@ extension ResetPasswordController: UINavigationControllerDelegate {
         } else {
             return nil
         }
+    }
+}
+
+
+extension ResetPasswordController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nextButtonClicked()
+        return true
     }
 }

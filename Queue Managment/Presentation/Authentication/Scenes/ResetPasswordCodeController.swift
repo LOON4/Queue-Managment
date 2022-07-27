@@ -63,9 +63,20 @@ class ResetPasswordCodeController: UIViewController {
     }
     
     private func setUpTextField () {
+        self.hideKeyboardWhenTappedAround()
+        codeTextField.delegate = self
         codeTextField.becomeFirstResponder()
         codeTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
         codeTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
     }
     
+}
+
+
+extension ResetPasswordCodeController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nextButtonClicked()
+        return true
+    }
 }

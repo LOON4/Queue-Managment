@@ -138,6 +138,9 @@ class LoginController: UIViewController {
     }
     
     private func setupTextFields () {
+        self.hideKeyboardWhenTappedAround()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         emailTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         passwordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         emailTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
@@ -147,5 +150,14 @@ class LoginController: UIViewController {
     private func setupLoader() {
         loader = LoaderView(view)
         loader.stopLoader()
+    }
+}
+
+
+extension LoginController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        signInButtonClicked()
+        return true
     }
 }

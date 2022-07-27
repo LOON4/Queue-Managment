@@ -83,9 +83,21 @@ class NewPasswordController: UIViewController {
     }
     
     private func setUpTextField () {
+        self.hideKeyboardWhenTappedAround()
+        newPasswordTextField.delegate = self
+        repeatPasswordTextField.delegate = self
         newPasswordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         repeatPasswordTextField.setPadding(padding: UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0))
         newPasswordTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
         repeatPasswordTextField.setPlaceholderFont(color: .myLightBlack, font: .SanFranciscoLight(size: 17)!)
+    }
+}
+
+
+extension NewPasswordController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        resetPasswordClicked()
+        return true
     }
 }
