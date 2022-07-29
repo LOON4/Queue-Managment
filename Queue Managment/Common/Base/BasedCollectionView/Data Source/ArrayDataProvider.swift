@@ -36,4 +36,11 @@ class ArrayDataProvider: CollectionDataProvider {
         }
         return items[indexPath.section][indexPath.row]
     }
+    
+    func insertItems(at indexPath: [IndexPath], item: [CellViewModel]){
+        for index in 0..<indexPath.count {
+            let currentIndexPath = indexPath[index]
+            items[currentIndexPath.section].insert(item[index], at: currentIndexPath.row)
+        }
+    }
 }

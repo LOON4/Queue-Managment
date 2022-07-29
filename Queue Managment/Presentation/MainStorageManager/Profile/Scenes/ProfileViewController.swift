@@ -30,7 +30,8 @@ class ProfileViewController: UIViewController {
                 cellHeight: .rawSize(size: 64)))
         
         collectionViewDataSource.registerCell(item: ProfileCellViewModel.self,
-                                              forCell: ProfileCell.self)
+                                              forCell: ProfileCell.self,
+                                              preconfig: { _,_,_  in })
 
     }
     

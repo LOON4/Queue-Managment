@@ -31,7 +31,7 @@ class LoggedInSuccessfully : UIViewController {
     }
     
     @IBAction func service2Clicked(_ sender: Any) {
-        let service2 = GSMPartRequestService(page: 0, pageSize: 25)
+        let service2 = CurrentPartRequestService(page: 0, pageSize: 25)
         service2.execute {result in
             switch result {
             case .success(let serviceResponse):

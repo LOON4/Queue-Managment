@@ -54,5 +54,25 @@ class Token: NSObject, NSCoding {
         self.refreshTokenExpirein = APIToken.refreshTokenExpirein
         self.expiringDate = Date(timeIntervalSinceNow: TimeInterval(APIToken.expiresIn))
     }
+    
+    func decodeToken() -> [String: Any]? {
+        func base64Decode(_ base64: String) -> Data? {
+            let padded = base64.padding(toLength: ((base64.count + 3) / 4) * 4, withPad: "=", startingAt: 0)
+            guard let decoded = Data(base64Encoded: padded) else { return nil }
+            return decoded
+        }
+        
+        func decodeJWTPart(_ value: String) -> [String: Any]? {
+            guard let bodyData = base64Decode(value) else { return nil }
+            let json = try? JSONSerialization.jsonObject(with: bodyData, options: [])
+            guard let payload = json as? [String: Any] else { return nil }
+            return payload
+        }
+        
+        let jwtToken = self.accessToken
+        
+        let segments = jwtToken.components(separatedBy: ".")
+        return decodeJWTPart(segments[1])
+    }
  
 }

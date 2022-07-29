@@ -21,10 +21,8 @@ struct AuthenticationError: Error {
         self.message.components(separatedBy: "\n").forEach {
             if $0.contains("mail") {
                 mailError += $0 + "\n"
-                print(mailError)
             } else {
                 passwordError += $0 + "\n"
-                print(passwordError)
             }
         }
     }

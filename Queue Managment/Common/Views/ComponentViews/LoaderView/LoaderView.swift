@@ -14,11 +14,13 @@ class LoaderView: BasedComponentView {
     @IBOutlet weak var pleasWaitLabel: UILabel!
     
     var superView: UIView
+    var parentView: UIView
     
     init(_ superView: UIView) {
         self.superView = superView
+        self.parentView = superView.superview ?? superView
         super.init(frame: superView.frame)
-        superView.addSubview(self)
+        parentView.addSubview(self)
     }
     
     required init?(coder: NSCoder) {

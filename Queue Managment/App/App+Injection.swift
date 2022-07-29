@@ -31,10 +31,15 @@ extension Resolver: ResolverRegistering {
     private static func RegisterRepositories() {
         register { StandardUserDefaults() }.implements(UserDefaultsRepository.self).scope(.application)
         register { QueueUserSessionRepository() }.implements(UserSessionRepository.self).scope(.application)
+        register { APIPartRequestRepositoryImp() }
+            .implements(PartRequestRepository.self).scope(.application)
+        register { APIPartsRepositoryImpl() }
+            .implements(PartsRepository.self).scope(.application)
     }
     
     private static func RegisterLocalDataSources(){
         register { KeyChainUserSession() }.implements(UserSessionDataStore.self).scope(.application)
+        register { FetchPartRequestsUseCaseImpl() }.implements(FetchPartRequestsUseCase.self).scope(.application)
     }
     
     private static func RegisterRemoteDataSources(){
@@ -45,6 +50,7 @@ extension Resolver: ResolverRegistering {
         register { RestoreTokenUsecaseImpl() }.implements(RestoreTokenUsecase.self).scope(.application)
         register { LoginUsecaseImpl() }.implements(LoginUsecase.self).scope(.application)
         register { ForgetPasswordProccedureUsecaseImpl() }.implements(ForgetPasswordProccedureUsecase.self).scope(.application)
+        register { GetPartsUseCaseImpl() }.implements(GetPartsUseCase.self).scope(.application)
     }
     
     private static func RegisterViewModels(){
@@ -57,6 +63,7 @@ extension Resolver: ResolverRegistering {
         register { _, args in NewPasswordViewModel(args()) }
         register { PasswordResetSuccessViewModel() }
         register { ProfileViewModel() }
+        register { HistoryViewModel() }
     }
     
 }

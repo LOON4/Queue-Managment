@@ -20,7 +20,7 @@ class APIPartRequest: Codable, PartRequestEntity {
     
     func partRequest() -> PartRequest {
         PartRequest(partRequestID: partRequestID,
-                           partID: partID,
+                           part: Part(partID: partID),
                            amount: amount,
                            totalPrice: totalPrice,
                            status: PartRequestStatus.init(rawValue: status)!,

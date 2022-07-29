@@ -11,4 +11,5 @@ protocol CollectionDataProvider {
     func numberOfSections() -> Int
     func numberOfItems(in section: Int) -> Int
     func item(at indexPath: IndexPath) -> CellViewModel?
+    func insertItems(at indexPath: [IndexPath], item: [CellViewModel])
 }

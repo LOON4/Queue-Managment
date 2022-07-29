@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 protocol PartRequestEntity: Codable {
     func partRequest() -> PartRequest
@@ -15,9 +16,9 @@ enum PartRequestStatus: String {
     case approvedBySM = "APPROVED_SM"
 }
 
-class PartRequest {
+class PartRequest: CustomStringConvertible {
     var partRequestID: Int
-    var partID: Int
+    @Published var part: Part?
     var amount: Int
     var totalPrice: Int
     var status: PartRequestStatus
@@ -25,14 +26,14 @@ class PartRequest {
     
     
     init(partRequestID: Int,
-         partID: Int,
+         part: Part?,
          amount: Int,
          totalPrice: Int,
          status: PartRequestStatus,
          creationDate: Date){
         
         self.partRequestID = partRequestID
-        self.partID = partID
+        self.part = part
         self.amount = amount
         self.totalPrice = totalPrice
         self.status = status

@@ -29,6 +29,7 @@ class ProfileCell: UICollectionViewCell, ConfigurableCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        redirectButton.imageView?.tintColor = .black
         redirectButton.imageView?.contentMode = .scaleAspectFit
     }
     

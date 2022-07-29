@@ -69,6 +69,18 @@
 		AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA91A2862CD7600A2977B /* UIFont.swift */; };
 		AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA91F2862FF1800A2977B /* Authentication.storyboard */; };
 		AA5BA9222862FF3800A2977B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA9212862FF3800A2977B /* LoginController.swift */; };
+		AA9073F728918D9900BD9D06 /* PartRequestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9073F628918D9900BD9D06 /* PartRequestRepository.swift */; };
+		AA9073F928918DB300BD9D06 /* PartsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9073F828918DB300BD9D06 /* PartsRepository.swift */; };
+		AA9073FC28918E3500BD9D06 /* APIPartsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9073FB28918E3500BD9D06 /* APIPartsRepository.swift */; };
+		AA90740128918EA700BD9D06 /* APIPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90740028918EA700BD9D06 /* APIPart.swift */; };
+		AA90740328918F7900BD9D06 /* PartByIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90740228918F7900BD9D06 /* PartByIDService.swift */; };
+		AA9074062891A8F000BD9D06 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9074052891A8F000BD9D06 /* Part.swift */; };
+		AA9074092891AD5000BD9D06 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9074082891AD5000BD9D06 /* Car.swift */; };
+		AA90740C2891B20800BD9D06 /* GetPartsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90740B2891B20800BD9D06 /* GetPartsUseCase.swift */; };
+		AA90740F2892269F00BD9D06 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90740E2892269F00BD9D06 /* HistoryViewModel.swift */; };
+		AA9074162892293C00BD9D06 /* PartRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9074142892293C00BD9D06 /* PartRequestCell.swift */; };
+		AA9074172892293C00BD9D06 /* PartRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9074152892293C00BD9D06 /* PartRequestCell.xib */; };
+		AA9074192892298A00BD9D06 /* PartRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9074182892298A00BD9D06 /* PartRequestViewModel.swift */; };
 		AA974BE12870B67000005553 /* LoggedInSuccessfully.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE02870B67000005553 /* LoggedInSuccessfully.swift */; };
 		AA974BE32870B94C00005553 /* Service1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE22870B94C00005553 /* Service1.swift */; };
 		AA974BE52870B97300005553 /* Service1Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA974BE42870B97300005553 /* Service1Response.swift */; };
@@ -118,15 +130,14 @@
 		AAFE80DC288FCE3400506034 /* CollectionFlowLayoutConstantsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80DB288FCE3400506034 /* CollectionFlowLayoutConstantsProvider.swift */; };
 		AAFE80DE288FF64900506034 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80DD288FF64900506034 /* ProfileViewModel.swift */; };
 		AAFE80E0288FF67200506034 /* ProfileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80DF288FF67200506034 /* ProfileCellViewModel.swift */; };
-		AAFE80E22890EC6800506034 /* PageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80E12890EC6800506034 /* PageInfo.swift */; };
 		AAFE80E42890EDCE00506034 /* APIPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80E32890EDCE00506034 /* APIPageInfo.swift */; };
-		AAFE80E92890F01C00506034 /* GSMPartRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80E82890F01C00506034 /* GSMPartRequestService.swift */; };
+		AAFE80E92890F01C00506034 /* CurrentPartRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80E82890F01C00506034 /* CurrentPartRequestService.swift */; };
 		AAFE80EC2890F0C100506034 /* APIPartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80EB2890F0C100506034 /* APIPartRequest.swift */; };
-		AAFE80F02891066100506034 /* StorageManagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80EF2891066100506034 /* StorageManagerRepository.swift */; };
-		AAFE80F2289106F500506034 /* APIStorageManagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F1289106F500506034 /* APIStorageManagerRepository.swift */; };
+		AAFE80F2289106F500506034 /* APIPartRequestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F1289106F500506034 /* APIPartRequestRepository.swift */; };
 		AAFE80F4289109CD00506034 /* PartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F3289109CD00506034 /* PartRequest.swift */; };
 		AAFE80F728910F9900506034 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F628910F9900506034 /* String.swift */; };
 		AAFE80FA2891446A00506034 /* FetchPartRequestsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80F92891446A00506034 /* FetchPartRequestsUseCase.swift */; };
+		AAFE80FE28916FCA00506034 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE80FD28916FCA00506034 /* UserRole.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +208,18 @@
 		AA5BA91A2862CD7600A2977B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		AA5BA91F2862FF1800A2977B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		AA5BA9212862FF3800A2977B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AA9073F628918D9900BD9D06 /* PartRequestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartRequestRepository.swift; sourceTree = "<group>"; };
+		AA9073F828918DB300BD9D06 /* PartsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsRepository.swift; sourceTree = "<group>"; };
+		AA9073FB28918E3500BD9D06 /* APIPartsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPartsRepository.swift; sourceTree = "<group>"; };
+		AA90740028918EA700BD9D06 /* APIPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPart.swift; sourceTree = "<group>"; };
+		AA90740228918F7900BD9D06 /* PartByIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartByIDService.swift; sourceTree = "<group>"; };
+		AA9074052891A8F000BD9D06 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
+		AA9074082891AD5000BD9D06 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		AA90740B2891B20800BD9D06 /* GetPartsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPartsUseCase.swift; sourceTree = "<group>"; };
+		AA90740E2892269F00BD9D06 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		AA9074142892293C00BD9D06 /* PartRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartRequestCell.swift; sourceTree = "<group>"; };
+		AA9074152892293C00BD9D06 /* PartRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartRequestCell.xib; sourceTree = "<group>"; };
+		AA9074182892298A00BD9D06 /* PartRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartRequestViewModel.swift; sourceTree = "<group>"; };
 		AA974BE02870B67000005553 /* LoggedInSuccessfully.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInSuccessfully.swift; sourceTree = "<group>"; };
 		AA974BE22870B94C00005553 /* Service1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1.swift; sourceTree = "<group>"; };
 		AA974BE42870B97300005553 /* Service1Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1Response.swift; sourceTree = "<group>"; };
@@ -246,15 +269,14 @@
 		AAFE80DB288FCE3400506034 /* CollectionFlowLayoutConstantsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFlowLayoutConstantsProvider.swift; sourceTree = "<group>"; };
 		AAFE80DD288FF64900506034 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AAFE80DF288FF67200506034 /* ProfileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellViewModel.swift; sourceTree = "<group>"; };
-		AAFE80E12890EC6800506034 /* PageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfo.swift; sourceTree = "<group>"; };
 		AAFE80E32890EDCE00506034 /* APIPageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPageInfo.swift; sourceTree = "<group>"; };
-		AAFE80E82890F01C00506034 /* GSMPartRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSMPartRequestService.swift; sourceTree = "<group>"; };
+		AAFE80E82890F01C00506034 /* CurrentPartRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPartRequestService.swift; sourceTree = "<group>"; };
 		AAFE80EB2890F0C100506034 /* APIPartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPartRequest.swift; sourceTree = "<group>"; };
-		AAFE80EF2891066100506034 /* StorageManagerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerRepository.swift; sourceTree = "<group>"; };
-		AAFE80F1289106F500506034 /* APIStorageManagerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStorageManagerRepository.swift; sourceTree = "<group>"; };
+		AAFE80F1289106F500506034 /* APIPartRequestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPartRequestRepository.swift; sourceTree = "<group>"; };
 		AAFE80F3289109CD00506034 /* PartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartRequest.swift; sourceTree = "<group>"; };
 		AAFE80F628910F9900506034 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AAFE80F92891446A00506034 /* FetchPartRequestsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPartRequestsUseCase.swift; sourceTree = "<group>"; };
+		AAFE80FD28916FCA00506034 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,7 +444,9 @@
 			isa = PBXGroup;
 			children = (
 				AA2AB2112883D61100526F34 /* Common */,
-				AAFE80ED2890FC0800506034 /* StorageManager */,
+				AAFE80ED2890FC0800506034 /* PartRequest */,
+				AA9074042891A8D500BD9D06 /* Parts */,
+				AA9074072891AD3D00BD9D06 /* Cars */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -437,9 +461,8 @@
 		AA2AB2112883D61100526F34 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				AADFD3C8286DAB1A00885B68 /* Token.swift */,
+				AAFE80FC28916FB800506034 /* UserSession */,
 				AA2AB2092882FA6900526F34 /* ServerError.swift */,
-				AAFE80E12890EC6800506034 /* PageInfo.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -505,7 +528,9 @@
 			isa = PBXGroup;
 			children = (
 				4A3E41AE2885603D00DB0713 /* History.storyboard */,
-				4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */,
+				AA90740D2892267900BD9D06 /* Scenes */,
+				AA907410289226A300BD9D06 /* ViewModels */,
+				AA9074112892285E00BD9D06 /* Cells */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -522,10 +547,10 @@
 		AA3A08E72889BAA9007B1386 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				AA436700288A7184003B2512 /* Cells */,
 				4A3E41B22885605700DB0713 /* Profile.storyboard */,
-				4AC6ACB7288966A000AFE9AE /* ProfileViewController.swift */,
-				AAFE80DD288FF64900506034 /* ProfileViewModel.swift */,
+				AA90741A28922B8E00BD9D06 /* Scenes */,
+				AA90741B28922B9600BD9D06 /* ViewModels */,
+				AA436700288A7184003B2512 /* Cells */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -656,6 +681,106 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		AA9073F528918D8500BD9D06 /* PartRequest */ = {
+			isa = PBXGroup;
+			children = (
+				AA9073F628918D9900BD9D06 /* PartRequestRepository.swift */,
+			);
+			path = PartRequest;
+			sourceTree = "<group>";
+		};
+		AA9073FA28918E0900BD9D06 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				AA9073FD28918E6D00BD9D06 /* Remote */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		AA9073FD28918E6D00BD9D06 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				AA9073FB28918E3500BD9D06 /* APIPartsRepository.swift */,
+				AA9073FE28918E7F00BD9D06 /* Entities */,
+				AA9073FF28918E8D00BD9D06 /* Requests */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		AA9073FE28918E7F00BD9D06 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AA90740028918EA700BD9D06 /* APIPart.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AA9073FF28918E8D00BD9D06 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				AA90740228918F7900BD9D06 /* PartByIDService.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		AA9074042891A8D500BD9D06 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				AA9074052891A8F000BD9D06 /* Part.swift */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		AA9074072891AD3D00BD9D06 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				AA9074082891AD5000BD9D06 /* Car.swift */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		AA90740D2892267900BD9D06 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4AA2BAD02885EEEA007143BB /* HistoryViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA907410289226A300BD9D06 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA90740E2892269F00BD9D06 /* HistoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA9074112892285E00BD9D06 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA9074142892293C00BD9D06 /* PartRequestCell.swift */,
+				AA9074152892293C00BD9D06 /* PartRequestCell.xib */,
+				AA9074182892298A00BD9D06 /* PartRequestViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA90741A28922B8E00BD9D06 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4AC6ACB7288966A000AFE9AE /* ProfileViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA90741B28922B9600BD9D06 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAFE80DD288FF64900506034 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		AA99A37A286ADD1F00FB930D /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,7 +909,8 @@
 			children = (
 				AA2AB2022882EEC800526F34 /* UserDefaults */,
 				AACCF38628828DC4004E19A2 /* Authentication */,
-				AAFE80EE2891064300506034 /* StorageManager */,
+				AA9073F528918D8500BD9D06 /* PartRequest */,
+				AAFE80FF28918C4000506034 /* Parts */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -804,7 +930,8 @@
 			children = (
 				AA2AB2032882F03E00526F34 /* UserDefaults */,
 				AA2AB1E9288290F800526F34 /* Authentication */,
-				AAFE80E52890EF7800506034 /* StorageManager */,
+				AAFE80E52890EF7800506034 /* PartRequest */,
+				AA9073FA28918E0900BD9D06 /* Parts */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -903,18 +1030,18 @@
 			path = "Data Source";
 			sourceTree = "<group>";
 		};
-		AAFE80E52890EF7800506034 /* StorageManager */ = {
+		AAFE80E52890EF7800506034 /* PartRequest */ = {
 			isa = PBXGroup;
 			children = (
-				AAFE80F1289106F500506034 /* APIStorageManagerRepository.swift */,
 				AAFE80E62890EFA700506034 /* Remote */,
 			);
-			path = StorageManager;
+			path = PartRequest;
 			sourceTree = "<group>";
 		};
 		AAFE80E62890EFA700506034 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				AAFE80F1289106F500506034 /* APIPartRequestRepository.swift */,
 				AAFE80EA2890F0A300506034 /* Entities */,
 				AAFE80E72890EFD100506034 /* Requests */,
 			);
@@ -924,7 +1051,7 @@
 		AAFE80E72890EFD100506034 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				AAFE80E82890F01C00506034 /* GSMPartRequestService.swift */,
+				AAFE80E82890F01C00506034 /* CurrentPartRequestService.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -937,20 +1064,12 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		AAFE80ED2890FC0800506034 /* StorageManager */ = {
+		AAFE80ED2890FC0800506034 /* PartRequest */ = {
 			isa = PBXGroup;
 			children = (
 				AAFE80F3289109CD00506034 /* PartRequest.swift */,
 			);
-			path = StorageManager;
-			sourceTree = "<group>";
-		};
-		AAFE80EE2891064300506034 /* StorageManager */ = {
-			isa = PBXGroup;
-			children = (
-				AAFE80EF2891066100506034 /* StorageManagerRepository.swift */,
-			);
-			path = StorageManager;
+			path = PartRequest;
 			sourceTree = "<group>";
 		};
 		AAFE80F528910F8700506034 /* UIKit */ = {
@@ -972,8 +1091,26 @@
 			isa = PBXGroup;
 			children = (
 				AAFE80F92891446A00506034 /* FetchPartRequestsUseCase.swift */,
+				AA90740B2891B20800BD9D06 /* GetPartsUseCase.swift */,
 			);
 			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		AAFE80FC28916FB800506034 /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				AADFD3C8286DAB1A00885B68 /* Token.swift */,
+				AAFE80FD28916FCA00506034 /* UserRole.swift */,
+			);
+			path = UserSession;
+			sourceTree = "<group>";
+		};
+		AAFE80FF28918C4000506034 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				AA9073F828918DB300BD9D06 /* PartsRepository.swift */,
+			);
+			path = Parts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1056,6 +1193,7 @@
 				AAC48E9C28622D4D00B336B2 /* SF-Pro-Display-Black.otf in Resources */,
 				AAC48E9A28622D4D00B336B2 /* SF-Pro-Display-LightItalic.otf in Resources */,
 				4A3E41B32885605700DB0713 /* Profile.storyboard in Resources */,
+				AA9074172892293C00BD9D06 /* PartRequestCell.xib in Resources */,
 				AAC48E9828622D4D00B336B2 /* SF-Pro-Display-Ultralight.otf in Resources */,
 				AA5BA9202862FF1800A2977B /* Authentication.storyboard in Resources */,
 				AAC48E9328622D4D00B336B2 /* SF-Pro-Display-Medium.otf in Resources */,
@@ -1108,6 +1246,7 @@
 				AA2AB2052882F07900526F34 /* StandardUserDefaults.swift in Sources */,
 				AAFE80F728910F9900506034 /* String.swift in Sources */,
 				AA2AB1E82882907D00526F34 /* QueueUserSessionRepository.swift in Sources */,
+				AAFE80FE28916FCA00506034 /* UserRole.swift in Sources */,
 				AA436703288A71B7003B2512 /* ProfileCell.swift in Sources */,
 				AAFE80FA2891446A00506034 /* FetchPartRequestsUseCase.swift in Sources */,
 				4A59320828687FDD00DA9193 /* StoryboardsID.swift in Sources */,
@@ -1119,31 +1258,35 @@
 				AAD94665286EEDD900C7FCF4 /* Color.swift in Sources */,
 				4A06AC6E2867515500CE6B87 /* PaddingTextField.swift in Sources */,
 				AAFE80E0288FF67200506034 /* ProfileCellViewModel.swift in Sources */,
-				AAFE80F02891066100506034 /* StorageManagerRepository.swift in Sources */,
 				4AD7126728894651001A3D0B /* StorageViewController.swift in Sources */,
 				AA974BE32870B94C00005553 /* Service1.swift in Sources */,
 				4A59320628687EC100DA9193 /* ControllerID.swift in Sources */,
+				AA90740C2891B20800BD9D06 /* GetPartsUseCase.swift in Sources */,
 				AADFD3B9286D8A9E00885B68 /* EmailActionSheetController.swift in Sources */,
 				4A5932042868732800DA9193 /* ResetPasswordController.swift in Sources */,
 				AA974BE12870B67000005553 /* LoggedInSuccessfully.swift in Sources */,
 				AA974BE52870B97300005553 /* Service1Response.swift in Sources */,
 				4A06AC6928674B1700CE6B87 /* Image.swift in Sources */,
 				AA99A379286AD88D00FB930D /* UIColor.swift in Sources */,
-				AAFE80F2289106F500506034 /* APIStorageManagerRepository.swift in Sources */,
+				AAFE80F2289106F500506034 /* APIPartRequestRepository.swift in Sources */,
+				AA90740328918F7900BD9D06 /* PartByIDService.swift in Sources */,
 				AA1FF5942888009A007E1BF2 /* ForgetPasswordProccedureUsacase.swift in Sources */,
+				AA90740F2892269F00BD9D06 /* HistoryViewModel.swift in Sources */,
 				4A23DAF2288472DC006D5ED0 /* ResetPasswordCodeViewModel.swift in Sources */,
-				AAFE80E92890F01C00506034 /* GSMPartRequestService.swift in Sources */,
+				AAFE80E92890F01C00506034 /* CurrentPartRequestService.swift in Sources */,
 				AADFD3BD286D9B4C00885B68 /* NetworkLayer.swift in Sources */,
 				AA2AB2222883D84000526F34 /* LoaderView.swift in Sources */,
 				AAFE80E42890EDCE00506034 /* APIPageInfo.swift in Sources */,
 				AAFE80F4289109CD00506034 /* PartRequest.swift in Sources */,
+				AA9074092891AD5000BD9D06 /* Car.swift in Sources */,
+				AA9073FC28918E3500BD9D06 /* APIPartsRepository.swift in Sources */,
 				AA2AB20A2882FA6900526F34 /* ServerError.swift in Sources */,
 				AA2AB21D2883D65800526F34 /* BasedComponentView.swift in Sources */,
 				AAA554A028896C1800283925 /* AuthenticationError.swift in Sources */,
+				AA9073F728918D9900BD9D06 /* PartRequestRepository.swift in Sources */,
 				AA2AB1F3288294DC00526F34 /* AuthRemoteAPI.swift in Sources */,
 				AADE246C2869FF6400C54A8C /* NewPasswordController.swift in Sources */,
 				AA3A54092868AA8300FF4E77 /* UIImage.swift in Sources */,
-				AAFE80E22890EC6800506034 /* PageInfo.swift in Sources */,
 				AA2AB2002882EC5A00526F34 /* RestoreTokenUsecase.swift in Sources */,
 				AADE246E2869FFE100C54A8C /* PasswordResetSuccessController.swift in Sources */,
 				AA2AB20E2883190200526F34 /* LoginUsecase.swift in Sources */,
@@ -1159,6 +1302,7 @@
 				AA3A540D2868D0B400FF4E77 /* UIButtonConfiguration.swift in Sources */,
 				AA5BA91B2862CD7600A2977B /* UIFont.swift in Sources */,
 				AAFE80D5288FA6F100506034 /* CollectionDataProvider.swift in Sources */,
+				AA9074062891A8F000BD9D06 /* Part.swift in Sources */,
 				AADE246A2869F56000C54A8C /* ResetPasswordCodeController.swift in Sources */,
 				4A82480B2886F84800B268C7 /* ForgetPasswordProccedureService.swift in Sources */,
 				AA2AB22F2884262F00526F34 /* UITextField+Publisher.swift in Sources */,
@@ -1168,15 +1312,18 @@
 				4AA2BAD12885EEEA007143BB /* HistoryViewController.swift in Sources */,
 				AAFE80D0288FA62200506034 /* CellViewModel.swift in Sources */,
 				4A23DAEE28846F49006D5ED0 /* ResetPasswordViewModel.swift in Sources */,
+				AA90740128918EA700BD9D06 /* APIPart.swift in Sources */,
 				AA2AB1F62882AC2600526F34 /* APIToken.swift in Sources */,
 				AADFD3C9286DAB1A00885B68 /* Token.swift in Sources */,
 				AA2AB1EE2882922600526F34 /* UserSessionDataStore.swift in Sources */,
 				AA3A08EB288A5D04007B1386 /* RequestSegmentView.swift in Sources */,
 				AA5B00A3286B31A300C2A79A /* UIView.swift in Sources */,
+				AA9074192892298A00BD9D06 /* PartRequestViewModel.swift in Sources */,
 				4ABDA1EA289144E40039B0DF /* UIViewController.swift in Sources */,
 				AA3EB633286211BD0004FDB1 /* AppDelegate.swift in Sources */,
 				AA56E8182889889D0088958E /* ForgetPasswordProccedureViewModel.swift in Sources */,
 				4A06AC652864969200CE6B87 /* UITextField.swift in Sources */,
+				AA9073F928918DB300BD9D06 /* PartsRepository.swift in Sources */,
 				AACCF37F288281E2004E19A2 /* NetworkRequest.swift in Sources */,
 				AA2AB1F82882C79C00526F34 /* App+Injection.swift in Sources */,
 				AA5B00A1286B1F8300C2A79A /* BackgroundFadeButtonLoweringAnimator.swift in Sources */,
@@ -1189,6 +1336,7 @@
 				AAEEF7BA288E7D9E009BAF0A /* StorageManagerRouter.swift in Sources */,
 				AAFE80D7288FA75F00506034 /* ArrayDataProvider.swift in Sources */,
 				4A06AC6C28674CB500CE6B87 /* CheckboxButton.swift in Sources */,
+				AA9074162892293C00BD9D06 /* PartRequestCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1318,7 +1466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = TAT2LGGYX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Queue Managment/Info.plist";
@@ -1348,7 +1496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = TAT2LGGYX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Queue Managment/Info.plist";

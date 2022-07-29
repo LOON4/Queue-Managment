@@ -103,9 +103,12 @@ class OnboardingRouterImpl: OnboardingRouter {
     }
     
     func showLoggedInSuccessfully(){
-        storageManagerRouter = Resolver.resolve(StorageManagerRouter.self,
-                                                args: OnboardingRouterImpl.loginNVC.viewControllers.first)
-        storageManagerRouter.showStorageFirstPage()
+        
+        if UserRole.getRole() == .GSM {
+            storageManagerRouter = Resolver.resolve(StorageManagerRouter.self,
+                                                    args: OnboardingRouterImpl.loginNVC.viewControllers.first)
+            storageManagerRouter.showStorageFirstPage()
+        }
     }
 }
 
